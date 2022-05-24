@@ -1,6 +1,9 @@
+@import '@fontsource/inter/variable.css';
+
 :root {
 	--hero-background: #{$hero-background};
-	--text-color: #{$text-color};
+	--dark-text-color: #{$dark-text-color};
+	--light-text-color: #{$light-text-color};
 	--underline-red: #{$underline-red};
 	--cookie-blue: #{$cookie-blue};
 	--light-page-background: #{$light-page-background};
@@ -8,6 +11,10 @@
 }
 
 body {
-	background-color: $hero-background;
-	background-color: var(--hero-background);
+	background-color: $light-page-background;
+	background-color: var(--light-page-background);
+	color: $light-text-color;
+	color: var(--light-text-color);
+	font-family: "InterVariable", Arial;
+	font-weight: 400;
 }
