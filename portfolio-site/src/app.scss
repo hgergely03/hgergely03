@@ -1,0 +1,13 @@
+:root {
+	--hero-background: #{$hero-background};
+	--text-color: #{$text-color};
+	--underline-red: #{$underline-red};
+	--cookie-blue: #{$cookie-blue};
+	--light-page-background: #{$light-page-background};
+	--dark-page-background: #{$dark-page-background};
+}
+
+body {
+	background-color: $hero-background;
+	background-color: var(--hero-background);
+}
