@@ -2,6 +2,7 @@
 	import { browser, dev } from '$app/env';
 	import Hero from '$lib/Hero.svelte';
 	import Works from '$lib/Works.svelte';
+	import About from '$lib/About.svelte';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -26,19 +27,7 @@
 
 <Hero/>
 <Works/>
-
-<section>
-	<h1>
-		<div class="welcome">
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2 id="try">
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-</section>
+<About/>
 
 <style lang="scss">
 </style>

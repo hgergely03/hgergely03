@@ -1,13 +1,13 @@
 <script lang="ts">
 	export let title = 'Lorem';
 	export let description = 'ipsum';
-    export let halfSize = false;
+	export let halfSize = false;
 	export let backgroundImage =
 		'https://cdn.pixabay.com/photo/2022/03/23/13/43/bird-7087260_960_720.jpg';
 </script>
 
 <article style="background-image: url({backgroundImage}); min-height: {halfSize ? 15 : 24}vh;">
-	<div class="grid-content">
+	<div class="grid-content" style="height: {halfSize ? 7 : 10}rem;">
 		<h3 class="grid-title">{title}</h3>
 		<p class="grid-description">{description}</p>
 	</div>
@@ -30,17 +30,28 @@
 	.grid-title,
 	.grid-description {
 		margin: 0px;
-		padding-left: 6px;
-	}
-
-	.grid-description {
-		padding-bottom: 6px;
+		padding-left: 12px;
+		padding-right: 12px;
 	}
 
 	.grid-title {
-		padding-top: 6px;
+		font-size: 2.2rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
+	.grid-description {
+		padding-bottom: 12px;
+		font-size: 1.2rem;
+		font-weight: 200;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	/* Todo: create hover animations */
 	.grid-content {
 		background: rgb(48, 48, 48);
 		background: -moz-linear-gradient(
@@ -73,11 +84,9 @@
 			rgba(48, 48, 48, 0.02) 88%,
 			rgba(48, 48, 48, 0) 100%
 		);
-		height: 7rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
 		border-radius: 3px;
 	}
-
 </style>
