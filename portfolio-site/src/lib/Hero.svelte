@@ -1,7 +1,7 @@
 <script lang="ts">
     import Typewriter  from 'svelte-typewriter';
     import { animateScroll } from 'svelte-scrollto-element';
-    import { linear } from 'svelte/easing';
+    import { cubicInOut } from 'svelte/easing';
     import IoIosArrowDropdown from 'svelte-icons/io/IoIosArrowDropdown.svelte';
 
 
@@ -20,7 +20,7 @@
             <a on:click={() => animateScroll.scrollTo({
                 // @ts-ignore
                 element: '#try',
-                easing: linear,
+                easing: cubicInOut,
                 })}>
                 <div class="icon mx-auto">
                     <IoIosArrowDropdown />

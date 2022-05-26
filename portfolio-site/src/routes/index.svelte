@@ -1,6 +1,7 @@
 <script context="module">
 	import { browser, dev } from '$app/env';
 	import Hero from '$lib/Hero.svelte';
+	import Works from '$lib/Works.svelte';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -24,6 +25,7 @@
 </svelte:head>
 
 <Hero/>
+<Works/>
 
 <section>
 	<h1>
