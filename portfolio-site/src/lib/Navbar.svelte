@@ -9,7 +9,7 @@
 		NavItem,
 		NavLink
 	} from 'sveltestrap';
-	import { MoonIcon } from 'svelte-feather-icons';
+	import FaRegMoon from 'svelte-icons/fa/FaRegMoon.svelte'
 	let isOpen = false;
 
 	function handleUpdate(event: any) {
@@ -49,7 +49,7 @@
 			</Nav>
 			<Nav>
 				<NavItem>
-					<NavLink href="https://github.com/bestguy/sveltestrap"><MoonIcon /></NavLink>
+					<NavLink href="https://github.com/bestguy/sveltestrap"><div id="dark-mode-icon"><FaRegMoon /></div></NavLink>
 				</NavItem>
 				<NavItem>
 					<NavLink href="https://github.com/bestguy/sveltestrap">HU</NavLink>
@@ -60,4 +60,7 @@
 </header>
 
 <style lang="scss">
+	#dark-mode-icon {
+		width: 24px;
+	}
 </style>

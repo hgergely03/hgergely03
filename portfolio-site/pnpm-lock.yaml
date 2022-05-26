@@ -20,8 +20,9 @@ specifiers:
   sass: ^1.52.1
   svelte: ^3.48.0
   svelte-check: ^2.2.6
-  svelte-feather-icons: ^4.0.0
+  svelte-icons: ^2.1.0
   svelte-preprocess: ^4.10.1
+  svelte-scrollto-element: ^0.7.0
   svelte-typewriter: ^3.0.0-alpha.11
   sveltestrap: github:laxadev/sveltestrap
   tslib: ^2.3.1
@@ -35,7 +36,8 @@ dependencies:
   bootstrap: 5.1.3_@popperjs+core@2.11.5
   cookie: 0.4.2
   sass: 1.52.1
-  svelte-feather-icons: 4.0.0
+  svelte-icons: 2.1.0
+  svelte-scrollto-element: 0.7.0_svelte@3.48.0
   svelte-typewriter: 3.0.0-alpha.11_svelte@3.48.0
   sveltestrap: github.com/laxadev/sveltestrap/d01fce867e16efddbfafe0b89575c7f2ad03ef6c_svelte@3.48.0
 
@@ -2057,12 +2059,6 @@ packages:
       - sugarss
     dev: true
 
-  /svelte-feather-icons/4.0.0:
-    resolution: {integrity: sha512-4ieUsjp+VYa1r6y80jDt9zRiRUZyJNbESpRdHdJJhiBubyuXX96A7f1UZSK4olxzP6Qsg5ZAuyZlnmvD+/swAA==}
-    dependencies:
-      svelte: 3.48.0
-    dev: false
-
   /svelte-hmr/0.14.11_svelte@3.48.0:
     resolution: {integrity: sha512-R9CVfX6DXxW1Kn45Jtmx+yUe+sPhrbYSUp7TkzbW0jI5fVPn6lsNG9NEs5dFg5qRhFNAoVdRw5qQDLALNKhwbQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -2071,6 +2067,10 @@ packages:
     dependencies:
       svelte: 3.48.0
     dev: true
+
+  /svelte-icons/2.1.0:
+    resolution: {integrity: sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==}
+    dev: false
 
   /svelte-preprocess/4.10.6_3941405d512d2a1d35cb09b3c1a7370c:
     resolution: {integrity: sha512-I2SV1w/AveMvgIQlUF/ZOO3PYVnhxfcpNyGt8pxpUVhPfyfL/CZBkkw/KPfuFix5FJ9TnnNYMhACK3DtSaYVVQ==}
@@ -2124,6 +2124,14 @@ packages:
       typescript: 4.6.4
     dev: true
 
+  /svelte-scrollto-element/0.7.0_svelte@3.48.0:
+    resolution: {integrity: sha512-bESbhGeJFwkgMSlklvPrQlYoeMLI7ODWaTzIOzZqSjQJ6nRmub4DcaD8aojKygVX8KotPQu4Qi727nC2eXRRSQ==}
+    peerDependencies:
+      svelte: '3'
+    dependencies:
+      svelte: 3.48.0
+    dev: false
+
   /svelte-typewriter/3.0.0-alpha.11_svelte@3.48.0:
     resolution: {integrity: sha512-7SO2UR3jTbAWyxgRVdLL+iMHucModnKTcPr+K9oBKHU1Y36OZgDYTTL3B+wZYRPGKdUnzk4xheXvHaDBFV8/Uw==}
     peerDependencies:
@@ -2135,6 +2143,7 @@ packages:
   /svelte/3.48.0:
     resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
     engines: {node: '>= 8'}
+    dev: true
 
   /tar/4.4.19:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}

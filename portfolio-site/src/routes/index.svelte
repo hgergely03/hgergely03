@@ -33,7 +33,7 @@
 		to your new<br />SvelteKit app
 	</h1>
 
-	<h2>
+	<h2 id="try">
 		try editing <strong>src/routes/index.svelte</strong>
 	</h2>
 </section>
