@@ -1,17 +1,20 @@
 <script lang="ts">
 	export let title = 'Lorem';
 	export let description = 'ipsum';
+	export let href = '/about';
 	export let halfSize = false;
 	export let backgroundImage =
 		'https://cdn.pixabay.com/photo/2022/03/23/13/43/bird-7087260_960_720.jpg';
 </script>
 
-<article style="background-image: url({backgroundImage}); min-height: {halfSize ? 15 : 27}vh;">
-	<div class="grid-content" style="height: {halfSize ? 7 : 10}rem;">
-		<h3 class="grid-title">{title}</h3>
-		<p class="grid-description">{description}</p>
-	</div>
-</article>
+<a href={href}>
+	<article style="background-image: url({backgroundImage}); min-height: {halfSize ? 15 : 27}vh;">
+		<div class="grid-content" style="height: {halfSize ? 7 : 10}rem;">
+			<h3 class="grid-title">{title}</h3>
+			<p class="grid-description">{description}</p>
+		</div>
+	</article>
+</a>
 
 <style lang="scss">
 	article {
@@ -24,6 +27,13 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
+	}
+
+	/* TODO: Create hover effect */
+	a {
+		color: $dark-text-color;
+		color: var(--dark-text-color);
+		text-decoration: none;
 	}
 
 	.grid-title,

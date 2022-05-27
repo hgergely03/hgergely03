@@ -1,5 +1,15 @@
 <script lang="ts">
 	import GridItem from '$lib/GridItem.svelte';
+	import { posts } from '$lib/posts';
+
+	const postList = [
+		posts.find((p) => p.slug === 'hello-world'),
+		posts.find((p) => p.slug === 'post-1'),
+		posts.find((p) => p.slug === 'post-1'),
+		posts.find((p) => p.slug === 'post-1'),
+		posts.find((p) => p.slug === 'post-1'),
+		posts.find((p) => p.slug === 'post-1'),
+	];
 </script>
 
 <section>
@@ -8,9 +18,10 @@
 		<div class="row g-sm-2">
 			<div class="col-sm-6">
 				<GridItem
-					title={'Title'}
-					description={'Desc'}
-					backgroundImage={'https://cdn.pixabay.com/photo/2022/05/12/13/04/fresh-strawberries-7191555_960_720.jpg'}
+					title={postList[0]?.title}
+					description={postList[0]?.motto}
+					href={'/post/' + postList[0]?.slug}
+					backgroundImage={postList[0]?.coverImageUrl}
 				/>
 			</div>
 			<div class="col-sm-6">

@@ -20,7 +20,7 @@
 
 <script lang="ts">
 </script>
-
+<!-- TODO: SEO: Meta tags, change description, etc. -->
 <svelte:head>
 	<title>{$t('home.title')}</title>
 	<meta name="description" content="Svelte demo app" />

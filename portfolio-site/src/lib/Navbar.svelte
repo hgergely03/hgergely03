@@ -63,7 +63,7 @@
 					<NavLink href="/">{$t('common.home')}</NavLink>
 				</NavItem>
 				<NavItem>
-					<NavLink href="/work">{$t('common.works')}</NavLink>
+					<NavLink href="/works">{$t('common.works')}</NavLink>
 				</NavItem>
 				<NavItem>
 					<NavLink href="/about">{$t('common.about')}</NavLink>

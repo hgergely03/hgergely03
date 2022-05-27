@@ -1,9 +1,12 @@
 <script lang="ts">
+	export let title: string;
 </script>
 
 <section id="post-cover">
-	<h1>About me</h1>
-	<p class="light-text">Knowledge, education, competitions, fun facts</p>
+	<h1>{title}</h1>
+	<p class="light-text">
+		<slot />
+	</p>
 </section>
 
 <style lang="scss">

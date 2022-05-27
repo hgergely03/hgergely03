@@ -1,11 +1,11 @@
 <script lang="ts">
+	export let summaryTitle: string;
 </script>
 
 <section id="post-summary">
-	<h1 class="pt-5 pb-2">Summary</h1>
+	<h1 class="pt-5 pb-2">{summaryTitle}</h1>
 	<p class="pb-5 light-text" id="summary-text">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi placerat id vulputate et at sit
-		vitae, nunc. Dui, rhoncus elementum sed amet vitae, elementum.
+		<slot/>
 	</p>
 </section>
 

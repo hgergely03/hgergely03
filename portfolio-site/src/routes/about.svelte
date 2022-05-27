@@ -4,8 +4,11 @@
 </script>
 
 <section>
-	<PostCover />
-	<PostSummary />
+	<PostCover title="About me">Knowledge, education, competitions, fun facts</PostCover>
+	<PostSummary summaryTitle="Summary">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi placerat id vulputate et at sit
+		vitae, nunc. Dui, rhoncus elementum sed amet vitae, elementum.
+	</PostSummary>
 	<div class="container" id="about">
 		<div class="row">
 			<div class="col">
