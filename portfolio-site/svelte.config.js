@@ -16,6 +16,9 @@ const config = {
 			pages: 'docs',
 			assets: 'docs'
 		}),
+		prerender: {
+			default: true,
+		},
 		vite: {
 			css: {
 				preprocessorOptions: {
