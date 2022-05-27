@@ -81,7 +81,7 @@
 		color: #a3a3a3;
 	}
 
-	@media (max-width: 512px) {
+	@media only screen and (max-width: 512px) {
 		#name {
 			left: 10%;
 		}

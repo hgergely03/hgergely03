@@ -2,19 +2,23 @@
 	import GridItem from '$lib/GridItem.svelte';
 </script>
 
-<section>
-	<div class="container" id="about-me">
-		<div class="row mx-auto">
+<section id="about-me">
+	<div class="container">
+		<div class="row">
 			<div class="col-md-6">
-				<h2>About me</h2>
+				<h2 class="large-heading">About me</h2>
 			</div>
 		</div>
+	</div>
+	<div class="container left-line">
 		<div class="row my-sm-2">
 			<div class="col mt-2 mt-sm-0">
-				<GridItem
-					title={'About me'}
-					description={'Knowledge, education, competitions, fun facts'}
-				/>
+				<a href="/about">
+					<GridItem
+						title={'About me'}
+						description={'Knowledge, education, competitions, fun facts'}
+					/>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -23,17 +27,14 @@
 <style lang="scss">
 	// TODO: Unify font sizes with variables
 	// TODO: Unify padding as well
-	h2 {
+
+	a {
 		color: $dark-text-color;
 		color: var(--dark-text-color);
-		text-decoration: underline;
-		text-decoration-color: $underline-red;
-		text-decoration-color: var(--underline-red);
-		font-size: 2.5rem;
+		text-decoration: none;
 	}
 
 	#about-me {
-		padding-top: 2rem;
-		padding-bottom: 1rem;
+		margin-top: 3rem;
 	}
 </style>

@@ -2,7 +2,7 @@
 	import { browser, dev } from '$app/env';
 	import Hero from '$lib/Hero.svelte';
 	import Works from '$lib/Works.svelte';
-	import About from '$lib/About.svelte';
+	import About from '$lib/AboutMe.svelte';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...

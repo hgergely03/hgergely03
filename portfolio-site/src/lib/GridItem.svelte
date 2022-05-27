@@ -29,6 +29,9 @@
 
 	.grid-title,
 	.grid-description {
+		color: $light-text-color;
+		color: var(--light-text-color);
+		text-decoration: none;
 		margin: 0px;
 		padding-left: 12px;
 		padding-right: 12px;

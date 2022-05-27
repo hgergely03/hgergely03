@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<div class="container" id="border">
+	<div class="container left-line">
         <!-- Top row -->
 		<div class="row g-sm-2">
 			<div class="col-sm-6">
@@ -45,10 +45,5 @@
 <style lang="scss">
 	section {
 		min-height: 40vh;
-	}
-
-	#border {
-		padding-bottom: 1rem;
-		border-left: 1px solid rgba(48, 48, 48, 0.4);
 	}
 </style>

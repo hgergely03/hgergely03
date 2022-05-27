@@ -38,7 +38,7 @@
 		font-weight: 200;
 	}
 
-	@media (min-width: 480px) {
+	@media only screen and (min-width: 480px) {
 		footer {
 			padding: 20px 0;
 		}

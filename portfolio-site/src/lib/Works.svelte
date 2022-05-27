@@ -5,9 +5,9 @@
 
 <section>
 	<div class="container" id="latest-works">
-		<div class="row mx-auto">
+		<div class="row">
 			<div class="col-md-6">
-				<h2>Latest works</h2>
+				<h2 class="large-heading">Latest works</h2>
 			</div>
 			<div class="col-md-6" id="all-works">
 				<a href="/allworks" id="all-works-link">
@@ -23,14 +23,7 @@
 <style lang="scss">
 	// TODO: Unify font sizes with variables
 	// TODO: Unify padding as well
-	h2 {
-		color: $dark-text-color;
-		color: var(--dark-text-color);
-		text-decoration: underline;
-		text-decoration-color: $underline-red;
-		text-decoration-color: var(--underline-red);
-		font-size: 2.5rem;
-	}
+	
 
 	#all-works-link {
 		color: $dark-text-color;
@@ -58,7 +51,7 @@
 		display: inline-block;
 	}
 
-	@media (max-width: 512px) {
+	@media only screen and (max-width: 512px) {
 		#all-works {
 			justify-content: start;
 		}
