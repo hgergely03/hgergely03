@@ -13,8 +13,6 @@
 }
 
 body {
-	background-color: $light-page-background;
-	background-color: var(--light-page-background);
 	color: $light-text-color;
 	color: var(--light-text-color);
 	font-family: "InterVariable", Arial;
@@ -41,6 +39,16 @@ body {
 	text-decoration-color: $underline-red;
 	text-decoration-color: var(--underline-red);
 	font-size: 2.5rem;
+}
+
+.nav-item, .nav-link {
+	color: $light-text-color !important;
+	color: var(--light-text-color) !important;
+
+	a {
+		color: $light-text-color;
+		color: var(--light-text-color);
+	}
 }
 
 @media (max-width: 512px) {

@@ -1,14 +1,38 @@
+<script lang="ts" context="module">
+	export const theme = writable('light');
+</script>
+
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { browser } from '$app/env';
 	import { t } from '$lib/translations';
 	import { locale } from '$lib/translations';
 	import FaRegMoon from 'svelte-icons/fa/FaRegMoon.svelte';
+	import FaRegSun from 'svelte-icons/fa/FaRegSun.svelte';
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'sveltestrap';
+	import { writable } from 'svelte/store';
 
 	let currentLocale = locale.get();
-	function loc() {
+	function setLocale() {
 		currentLocale = currentLocale === 'en' ? 'hu' : 'en';
 		locale.set(currentLocale);
+		if (browser) {
+			localStorage.setItem('locale', currentLocale);
+		}
+	}
+
+	let currentTheme: string;
+	theme.subscribe((value) => {
+		currentTheme = value;
+	});
+
+	function setTheme() {
+		currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+		theme.set(currentTheme);
+		console.log('Theme set to: ', currentTheme);
+		if (browser) {
+			localStorage.setItem('theme', currentTheme);
+		}
 	}
 
 	let isOpen = false;
@@ -57,12 +81,17 @@
 			</Nav>
 			<Nav>
 				<NavItem>
-					<NavLink href="https://github.com/bestguy/sveltestrap"
-						><div id="dark-mode-icon"><FaRegMoon /></div></NavLink
-					>
+					<NavLink on:click={setTheme}>
+						<div class="nav-icon" id="dark-mode-icon">
+							{#if currentTheme === 'light'}
+								<FaRegSun />
+							{:else}
+								<FaRegMoon />
+							{/if}
+						</div></NavLink>
 				</NavItem>
 				<NavItem>
-					<NavLink on:click={loc}>{currentLocale.toUpperCase()}</NavLink>
+					<NavLink on:click={setLocale}>{currentLocale.toUpperCase()}</NavLink>
 				</NavItem>
 			</Nav>
 		</Collapse>
@@ -79,15 +108,17 @@
 	}
 
 	.nav-transparent {
-		background-color: transparent !important;
+		background-color: transparent;
 	}
 
 	.nav-filled {
-		background-color: $hero-background !important;
-		background-color: var(--hero-background) !important;
+		background-color: $hero-background;
+		background-color: var(--hero-background);
 	}
-
+	
 	#dark-mode-icon {
+		color: $light-text-color;
+		color: var(--light-text-color);
 		width: 24px;
 	}
 </style>
