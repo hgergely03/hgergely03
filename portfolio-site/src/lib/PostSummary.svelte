@@ -23,6 +23,7 @@
 	h1 {
 		font-size: 2.5rem;
 		font-weight: 400;
+		text-align: center;
 	}
 
 	#summary-text {
@@ -34,13 +35,13 @@
 	}
 
 	@media only screen and (max-width: 1024px) {
-		p {
+		#summary-text {
 			max-width: 40vw;
 		}
 	}
 
 	@media only screen and (max-width: 768px) {
-		p {
+		#summary-text {
 			max-width: 70vw;
 			text-align: center;
 		}

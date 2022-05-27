@@ -7,7 +7,7 @@ const config = ({
             locale: 'en',
             key: 'common',
             loader: async () => (
-                await import('./translations/en/common.json')
+                await import('./locales/en/common.json')
             ).default,
         },
         {
@@ -15,7 +15,7 @@ const config = ({
             key: 'home',
             routes: ['/'], // you can use regexes as well!
             loader: async () => (
-                await import('./translations/en/home.json')
+                await import('./locales/en/home.json')
             ).default,
         },
         {
@@ -23,7 +23,7 @@ const config = ({
             key: 'about',
             routes: ['/about'],
             loader: async () => (
-                await import('./translations/en/about.json')
+                await import('./locales/en/about.json')
             ).default,
         },
         {
@@ -31,14 +31,14 @@ const config = ({
             key: 'work',
             routes: ['/work'],
             loader: async () => (
-                await import('./translations/en/work.json')
+                await import('./locales/en/work.json')
             ).default,
         },
         {
             locale: 'hu',
             key: 'common',
             loader: async () => (
-                await import('./translations/hu/common.json')
+                await import('./locales/hu/common.json')
             ).default,
         },
         {
@@ -46,7 +46,7 @@ const config = ({
             key: 'home',
             routes: ['/'],
             loader: async () => (
-                await import('./translations/hu/home.json')
+                await import('./locales/hu/home.json')
             ).default,
         },
         {
@@ -54,7 +54,7 @@ const config = ({
             key: 'about',
             routes: ['/about'],
             loader: async () => (
-                await import('./translations/hu/about.json')
+                await import('./locales/hu/about.json')
             ).default,
         },
         {
@@ -62,7 +62,7 @@ const config = ({
             key: 'work',
             routes: ['/work'],
             loader: async () => (
-                await import('./translations/hu/work.json')
+                await import('./locales/hu/work.json')
             ).default,
         },
     ],

@@ -1,17 +1,18 @@
 <script lang="ts">
 	import WorksGrid from '$lib/WorksGrid.svelte';
 	import FaArrowRight from 'svelte-icons/fa/FaArrowRight.svelte';
+	import { t } from '$lib/translations';
 </script>
 
 <section>
 	<div class="container" id="latest-works">
 		<div class="row">
 			<div class="col-md-6">
-				<h2 class="large-heading">Latest works</h2>
+				<h2 class="large-heading">{$t('home.latestWorks')}</h2>
 			</div>
 			<div class="col-md-6" id="all-works">
 				<a href="/works" id="all-works-link">
-					See all my works
+					{$t('home.all')}
 					<div class="icon" id="all-works-icon"><FaArrowRight /></div>
 				</a>
 			</div>
@@ -21,10 +22,6 @@
 </section>
 
 <style lang="scss">
-	// TODO: Unify font sizes with variables
-	// TODO: Unify padding as well
-	
-
 	#all-works-link {
 		text-decoration: none;
 		font-size: 1.5rem;

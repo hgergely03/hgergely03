@@ -26,7 +26,7 @@
 						</p>
 					</div>
 					<div class="col-md-6">
-						<img src={paragraph.imageUrl} alt={paragraph.title} />
+						<img class="img-fluid" src={paragraph.imageUrl} alt={paragraph.title} />
 					</div>
 				</div>
 			{/each}
@@ -35,10 +35,10 @@
 					<h2 class="large-heading">Stack</h2>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row left-line">
 				{#each post.stack as stackItem}
 					<div class="col-sm stack-item">
-						<img class="img-fluid rounded-circle " src={stackItem.imageUrl} alt={stackItem.title} />
+						<img class="img-fluid rounded-circle pb-1" src={stackItem.imageUrl} alt={stackItem.title} />
 						<p class="">{stackItem.title}</p>
 					</div>
 				{/each}

@@ -9,6 +9,8 @@ export type Post = {
     stack: StackItem[];
 }
 
+// TODO: add localisation support
+
 type Paragraph = {
     title: string;
     text: string;

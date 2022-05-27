@@ -8,14 +8,6 @@
 </section>
 
 <style lang="scss">
-	p {
-		text-align: justify;
-	}
-
-	#post-body {
-		margin-top: 2rem;
-	}
-
 	#page-not-found {
 		height: 90vh;
 		display: flex;

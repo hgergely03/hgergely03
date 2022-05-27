@@ -30,7 +30,6 @@ body {
 
 .left-line {
 	padding-bottom: 1rem;
-	border-left: 1px solid rgba(48, 48, 48, 0.2);
 }
 
 .large-heading {
@@ -61,6 +60,10 @@ body {
 		color: $dark-theme-text-color;
 		color: var(--dark-theme-text-color);
 	}
+
+	.left-line {
+		border-left: 1px solid rgba(255, 255, 255, 0.2);
+	}
 }
 
 .light-theme {
@@ -70,6 +73,10 @@ body {
 	.large-heading, p, #all-works-link, #all-works-icon {
 		color: $dark-text-color;
 		color: var(--dark-text-color);
+	}
+
+	.left-line {
+		border-left: 1px solid rgba(48, 48, 48, 0.2);
 	}
 }
 

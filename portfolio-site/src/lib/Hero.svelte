@@ -3,6 +3,7 @@
     import { animateScroll } from 'svelte-scrollto-element';
     import { linear } from 'svelte/easing';
 	import IoIosArrowDropdown from 'svelte-icons/io/IoIosArrowDropdown.svelte';
+	import { t } from '$lib/translations';
 
 	const color = '#FF6161';
 </script>
@@ -13,7 +14,7 @@
 			<h1 id="last-name">Horváth</h1>
 			<h1 id="first-name">Gergely</h1>
 			<Typewriter interval={40} cursor={color} loop={60000}
-				><p id="typewrite" class="light-text">Student, button masher & creative</p></Typewriter
+				><p id="typewrite" class="light-text">{$t('home.typewriter')}</p></Typewriter
 			>
 		</div>
 		<div id="scroll-down">
