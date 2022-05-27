@@ -1,15 +1,18 @@
 <script lang="ts">
+	const year = new Date().getFullYear();
 </script>
 
 <footer>
 	<div class="container">
 		<div class="row justify-content-md-center">
-			<div class="col-md-auto"><a href="https://github.com/hgergely03" target="_blank">GitHub</a></div>
+			<div class="col-md-auto">
+				<a href="https://github.com/hgergely03" target="_blank">GitHub</a>
+			</div>
 			<!-- <div class="col-md-auto"><a href="https://github.com/hgergely03">GitHub</a></div>
 			<div class="col-md-auto"><a href="https://github.com/hgergely03">GitHub</a></div> -->
 		</div>
 		<div class="row mt-4">
-			<p>&copy; Horváth Gergely 2022</p>
+			<p>&copy; Horváth Gergely {year}</p>
 		</div>
 	</div>
 </footer>
@@ -33,7 +36,7 @@
 		text-decoration: none;
 	}
 
-	p {	
+	p {
 		font-size: 20px;
 		font-weight: 200;
 	}

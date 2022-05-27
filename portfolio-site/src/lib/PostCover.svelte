@@ -3,7 +3,7 @@
 
 <section id="post-cover">
 	<h1>About me</h1>
-	<p>Knowledge, education, competitions, fun facts</p>
+	<p class="light-text">Knowledge, education, competitions, fun facts</p>
 </section>
 
 <style lang="scss">

@@ -10,6 +10,7 @@
 	--cookie-blue: #{$cookie-blue};
 	--light-page-background: #{$light-page-background};
 	--dark-page-background: #{$dark-page-background};
+	--dark-theme-text-color: #{$dark-theme-text-color};
 }
 
 body {
@@ -41,14 +42,40 @@ body {
 	font-size: 2.5rem;
 }
 
-.nav-item, .nav-link {
-	color: $light-text-color !important;
+.nav-item,
+.nav-link {
+	color: $light-text-color  !important;
 	color: var(--light-text-color) !important;
 
 	a {
 		color: $light-text-color;
 		color: var(--light-text-color);
 	}
+}
+
+.dark-theme {
+	background-color: $dark-page-background;
+	background-color: var(--dark-page-background);
+
+	.large-heading, p, #all-works-link, #all-works-icon {
+		color: $dark-theme-text-color;
+		color: var(--dark-theme-text-color);
+	}
+}
+
+.light-theme {
+	background-color: $light-page-background;
+	background-color: var(--light-page-background);
+
+	.large-heading, p, #all-works-link, #all-works-icon {
+		color: $dark-text-color;
+		color: var(--dark-text-color);
+	}
+}
+
+.light-text {
+	color: $light-text-color !important;
+	color: var(--light-text-color) !important;
 }
 
 @media (max-width: 512px) {

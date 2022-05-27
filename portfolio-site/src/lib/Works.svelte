@@ -12,7 +12,7 @@
 			<div class="col-md-6" id="all-works">
 				<a href="/work" id="all-works-link">
 					See all my works
-					<div class="icon"><FaArrowRight /></div>
+					<div class="icon" id="all-works-icon"><FaArrowRight /></div>
 				</a>
 			</div>
 		</div>
@@ -26,8 +26,6 @@
 	
 
 	#all-works-link {
-		color: $dark-text-color;
-		color: var(--dark-text-color);
 		text-decoration: none;
 		font-size: 1.5rem;
 	}
@@ -44,8 +42,6 @@
 	}
 
 	.icon {
-		color: $dark-text-color;
-		color: var(--dark-text-color);
 		width: 16px;
 		height: 16px;
 		display: inline-block;

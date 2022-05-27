@@ -84,8 +84,6 @@
 
 <style lang="scss">
 	p {
-		color: $dark-text-color;
-		color: var(--dark-text-color);
 		text-align: justify;
 	}
 
@@ -96,6 +94,5 @@
 
 	#about {
 		margin-top: 2rem;
-		margin-bottom: 1rem;
 	}
 </style>

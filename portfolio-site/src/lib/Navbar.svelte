@@ -29,7 +29,6 @@
 	function setTheme() {
 		currentTheme = currentTheme === 'light' ? 'dark' : 'light';
 		theme.set(currentTheme);
-		console.log('Theme set to: ', currentTheme);
 		if (browser) {
 			localStorage.setItem('theme', currentTheme);
 		}
@@ -40,11 +39,6 @@
 	function handleUpdate(event: any) {
 		isOpen = event.detail.isOpen;
 	}
-
-	let scroll = 0;
-	let transparent = true;
-
-	$: transparent = scroll < 500;
 </script>
 
 <!-- 
@@ -57,9 +51,7 @@
 			</li>
  -->
 
-<svelte:window bind:scrollY={scroll} />
-
-<header class={transparent ? 'nav-transparent' : 'nav-filled'}>
+<header class="nav-filled">
 	<!-- TODO: Overwrite BS animation -->
 	<!-- https://getbootstrap.com/docs/5.0/customize/sass/ Sigh -->
 	<Navbar dark expand="md">
@@ -75,7 +67,8 @@
 				</NavItem>
 				<NavItem>
 					<NavLink href="/about">{$t('common.about')}</NavLink>
-				</NavItem><NavItem>
+				</NavItem>
+				<NavItem>
 					<NavLink href="/contact">{$t('common.contact')}</NavLink>
 				</NavItem>
 			</Nav>
@@ -88,7 +81,8 @@
 							{:else}
 								<FaRegMoon />
 							{/if}
-						</div></NavLink>
+						</div></NavLink
+					>
 				</NavItem>
 				<NavItem>
 					<NavLink on:click={setLocale}>{currentLocale.toUpperCase()}</NavLink>
@@ -107,15 +101,15 @@
 		z-index: 10;
 	}
 
-	.nav-transparent {
+	/* .nav-transparent {
 		background-color: transparent;
-	}
+	} */
 
 	.nav-filled {
 		background-color: $hero-background;
 		background-color: var(--hero-background);
 	}
-	
+
 	#dark-mode-icon {
 		color: $light-text-color;
 		color: var(--light-text-color);

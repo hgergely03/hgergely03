@@ -13,7 +13,7 @@
 			<h1 id="last-name">Horváth</h1>
 			<h1 id="first-name">Gergely</h1>
 			<Typewriter interval={40} cursor={color} loop={60000}
-				><p id="typewrite">Student, button masher & creative</p></Typewriter
+				><p id="typewrite" class="light-text">Student, button masher & creative</p></Typewriter
 			>
 		</div>
 		<div id="scroll-down">

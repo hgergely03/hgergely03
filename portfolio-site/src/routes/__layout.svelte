@@ -32,8 +32,10 @@
 	theme.subscribe((value) => {
 		currentTheme = value;
 	});
+
 	if (browser) {
 		currentTheme = localStorage.getItem('theme') || 'light';
+		theme.set(currentTheme);
 	}
 </script>
 
@@ -46,13 +48,4 @@
 <Footer />
 
 <style lang="scss">
-	.dark-theme {
-		background-color: $dark-page-background;
-		background-color: var(--dark-page-background);
-	}
-
-	.light-theme {
-		background-color: $light-page-background;
-		background-color: var(--light-page-background);
-	}
 </style>
