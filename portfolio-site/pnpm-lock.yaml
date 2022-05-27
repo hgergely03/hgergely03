@@ -24,6 +24,7 @@ specifiers:
   svelte-preprocess: ^4.10.1
   svelte-scrollto-element: ^0.7.0
   svelte-typewriter: ^3.0.0-alpha.11
+  sveltekit-i18n: ^2.2.2
   sveltestrap: github:laxadev/sveltestrap
   tslib: ^2.3.1
   typescript: ~4.6.2
@@ -39,6 +40,7 @@ dependencies:
   svelte-icons: 2.1.0
   svelte-scrollto-element: 0.7.0_svelte@3.48.0
   svelte-typewriter: 3.0.0-alpha.11_svelte@3.48.0
+  sveltekit-i18n: 2.2.2_svelte@3.48.0
   sveltestrap: github.com/laxadev/sveltestrap/d01fce867e16efddbfafe0b89575c7f2ad03ef6c_svelte@3.48.0
 
 devDependencies:
@@ -264,6 +266,20 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@sveltekit-i18n/base/1.2.1_svelte@3.48.0:
+    resolution: {integrity: sha512-F8gqG2+KAOeT0o2wYlUrW3TRCX7zaD7rBy/1CEVNw0irfw9TgFf/ODmhubkHHT3+6Zk+SMz8RNgeuffBfAMbJw==}
+    peerDependencies:
+      svelte: ^3.x
+    dependencies:
+      svelte: 3.48.0
+    optionalDependencies:
+      '@sveltekit-i18n/parser-default': 1.0.3
+    dev: false
+
+  /@sveltekit-i18n/parser-default/1.0.3:
+    resolution: {integrity: sha512-HheveklTjp3hxpYQhoHfyA6B4bQaUeSV5MQf2usIv/58UF2jY/YqhCAWj9bDBjufbuZc5pSz4BXvdX3WVT+viA==}
+    dev: false
 
   /@types/cookie/0.4.1:
     resolution: {integrity: sha512-XW/Aa8APYr6jSVVA1y/DEIZX0/GMKLEVekNG727R8cs56ahETkRAy/3DR7+fJyh7oUgGwNQaRfXCun0+KbWY7Q==}
@@ -2144,6 +2160,16 @@ packages:
     resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
     engines: {node: '>= 8'}
     dev: true
+
+  /sveltekit-i18n/2.2.2_svelte@3.48.0:
+    resolution: {integrity: sha512-6eygICleGCSL7elY7A3trF8XUhV+mlW56ZSoD0UUKXlw+Y6u0MTTHDq48u1LyY73SfnlbPHXgTarhTjZ0BvUKA==}
+    peerDependencies:
+      svelte: ^3.x
+    dependencies:
+      '@sveltekit-i18n/base': 1.2.1_svelte@3.48.0
+      '@sveltekit-i18n/parser-default': 1.0.3
+      svelte: 3.48.0
+    dev: false
 
   /tar/4.4.19:
     resolution: {integrity: sha512-a20gEsvHnWe0ygBY8JbxoM4w3SJdhc7ZAuxkLqh+nvNQN2IOt0B5lLgM490X5Hl8FF0dl0tOf2ewFYAlIFgzVA==}

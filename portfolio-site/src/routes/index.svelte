@@ -3,6 +3,7 @@
 	import Hero from '$lib/Hero.svelte';
 	import Works from '$lib/Works.svelte';
 	import About from '$lib/AboutMe.svelte';
+	import { t } from '$lib/translations';
 
 	// we don't need any JS on this page, though we'll load
 	// it in dev so that we get hot module replacement...
@@ -21,7 +22,7 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>{$t('home.title')}</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 

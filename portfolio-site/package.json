@@ -41,6 +41,7 @@
 		"svelte-icons": "^2.1.0",
 		"svelte-scrollto-element": "^0.7.0",
 		"svelte-typewriter": "^3.0.0-alpha.11",
+		"sveltekit-i18n": "^2.2.2",
 		"sveltestrap": "github:laxadev/sveltestrap"
 	}
 }

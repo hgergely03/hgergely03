@@ -6,7 +6,7 @@
 		'https://cdn.pixabay.com/photo/2022/03/23/13/43/bird-7087260_960_720.jpg';
 </script>
 
-<article style="background-image: url({backgroundImage}); min-height: {halfSize ? 15 : 24}vh;">
+<article style="background-image: url({backgroundImage}); min-height: {halfSize ? 15 : 27}vh;">
 	<div class="grid-content" style="height: {halfSize ? 7 : 10}rem;">
 		<h3 class="grid-title">{title}</h3>
 		<p class="grid-description">{description}</p>
@@ -15,7 +15,6 @@
 
 <style lang="scss">
 	article {
-		min-height: 15vh;
 		height: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;

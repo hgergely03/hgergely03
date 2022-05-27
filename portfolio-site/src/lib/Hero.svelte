@@ -24,7 +24,8 @@
 						// @ts-ignore
 						element: '#latest-works',
 						easing: linear,
-						duration: 200
+						duration: 200,
+						offset: -24,
 					})}
 			>
 				<div class="icon mx-auto">

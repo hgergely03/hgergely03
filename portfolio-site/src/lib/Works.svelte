@@ -10,7 +10,7 @@
 				<h2 class="large-heading">Latest works</h2>
 			</div>
 			<div class="col-md-6" id="all-works">
-				<a href="/allworks" id="all-works-link">
+				<a href="/work" id="all-works-link">
 					See all my works
 					<div class="icon"><FaArrowRight /></div>
 				</a>
