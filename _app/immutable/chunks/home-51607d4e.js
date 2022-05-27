@@ -1,0 +1,1 @@
+const t="Home",e="About me",o="Latest works",s="Knowledge, education, competitions, fun facts",a="See all my works",n="Student, button masher & creative";var r={title:t,about:e,latestWorks:o,aboutDescription:s,all:a,typewriter:n};export{e as about,s as aboutDescription,a as all,r as default,o as latestWorks,t as title,n as typewriter};
