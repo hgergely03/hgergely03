@@ -32,4 +32,10 @@
 	#about-me {
 		margin-top: 3rem;
 	}
+	
+	@media only screen and (max-width: 512px) {
+		#about-me {
+			margin-top: 2rem;
+		}
+	}
 </style>

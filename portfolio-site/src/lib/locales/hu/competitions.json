@@ -1,0 +1,120 @@
+{
+    "dusza-hagyomanyos-2018": {
+        "slug": "dusza-hagyomanyos-2018",
+        "title": "Dusza Hagyományos",
+        "date": "2018-2019",
+        "place": "1. hely"
+    },
+
+    "webex-hackathon": {
+        "slug": "webex-hackathon",
+        "title": "Webex Hackathon",
+        "date": "2019",
+        "place": "1. hely"
+    },
+
+    "dusza-mobil-2019": {
+        "slug": "dusza-mobil-2019",
+        "title": "Dusza Mobil",
+        "date": "2019-2020",
+        "place": "1. hely"
+    },
+
+    "dusza-hagyomanyos-2019": {
+        "slug": "dusza-hagyomanyos-2019",
+        "title": "Dusza Hagyományos",
+        "date": "2019-2020",
+        "place": "1. hely"
+    },
+
+    "sziiv-parkmyst": {
+        "slug": "sziiv-parkmyst",
+        "title": "SZIIV ParkMyst",
+        "date": "2020",
+        "place": "1. hely"
+    },
+
+    "dusza-mobil-2020": {
+        "slug": "dusza-mobil-2020",
+        "title": "Dusza Mobil",
+        "date": "2020-2021",
+        "place": "1. hely"
+    },
+
+    "webgraf-2020": {
+        "slug": "webgraf-2020",
+        "title": "Webgráf",
+        "date": "2020-2021",
+        "place": "1. hely"
+    },
+
+    "gamf-prog": {
+        "slug": "gamf-prog",
+        "title": "GAMF PROG",
+        "date": "2021",
+        "place": "1. hely"
+    },
+
+    "bakonyi-bitfaragok-2021": {
+        "slug": "bakonyi-bitfaragok-2021",
+        "title": "Bakonyi Bitfaragók",
+        "date": "2021",
+        "place": "1. hely"
+    },
+
+    "sziiv-napp": {
+        "slug": "sziiv-napp",
+        "title": "SZIIV nApp",
+        "date": "2021",
+        "place": "1. hely"
+    },
+
+    "bakonyi-bitfaragok-2022": {
+        "slug": "bakonyi-bitfaragok-2022",
+        "title": "Bakonyi Bitfaragók",
+        "date": "2022",
+        "place": "1. hely"
+    },
+
+    "webgraf-2021": {
+        "slug": "webgraf-2021",
+        "title": "Webgráf",
+        "date": "2021",
+        "place": "1. hely"
+    },
+
+    "dusza-mobil-2021": {
+        "slug": "dusza-mobil-2021",
+        "title": "Dusza Mobil",
+        "date": "2021",
+        "place": "1. hely"
+    },
+
+    "skills-junior-web": {
+        "slug": "skills-junior-web",
+        "title": "Skills Junior Web",
+        "date": "2022",
+        "place": "1. hely"
+    },
+
+    "skills-junior-net": {
+        "slug": "skills-junior-net",
+        "title": "Skills Junior Net",
+        "date": "2022",
+        "place": "1. hely"
+    },
+
+    "sziiv-elmesema": {
+        "slug": "sziiv-elmesema",
+        "title": "SZIIV ElmeSéma",
+        "date": "2022",
+        "place": "1. hely"
+    },
+
+    "aszev": {
+        "slug": "aszev",
+        "title": "ÁSZÉV",
+        "date": "2022",
+        "place": "1. hely"
+    }
+}

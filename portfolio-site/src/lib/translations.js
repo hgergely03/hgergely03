@@ -13,7 +13,7 @@ const config = ({
         {
             locale: 'en',
             key: 'home',
-            // routes: ['/'], // you can use regexes as well!
+            routes: ['/'], // you can use regexes as well!
             loader: async () => (
                 await import('./locales/en/home.json')
             ).default,
@@ -21,15 +21,23 @@ const config = ({
         {
             locale: 'en',
             key: 'about',
-            // routes: ['/about'],
+            routes: ['/about'],
             loader: async () => (
                 await import('./locales/en/about.json')
             ).default,
         },
         {
             locale: 'en',
+            key: 'competitions',
+            routes: ['/about'],
+            loader: async () => (
+                await import('./locales/en/competitions.json')
+            ).default,
+        },
+        {
+            locale: 'en',
             key: 'work',
-            // routes: ['/work'],
+            routes: ['/work'],
             loader: async () => (
                 await import('./locales/en/work.json')
             ).default,
@@ -44,7 +52,7 @@ const config = ({
         {
             locale: 'hu',
             key: 'home',
-            // routes: ['/'],
+            routes: ['/'],
             loader: async () => (
                 await import('./locales/hu/home.json')
             ).default,
@@ -52,15 +60,23 @@ const config = ({
         {
             locale: 'hu',
             key: 'about',
-            // routes: ['/about'],
+            routes: ['/about'],
             loader: async () => (
                 await import('./locales/hu/about.json')
             ).default,
         },
         {
             locale: 'hu',
+            key: 'competitions',
+            routes: ['/about'],
+            loader: async () => (
+                await import('./locales/hu/competitions.json')
+            ).default,
+        },
+        {
+            locale: 'hu',
             key: 'work',
-            // routes: ['/work'],
+            routes: ['/work'],
             loader: async () => (
                 await import('./locales/hu/work.json')
             ).default,

@@ -7,5 +7,12 @@
     "skills": "Ismeretek és kompetenciák",
     "competitions": "Versenyek és díjak",
     "neumann": "BMSZC Neumann János Informatikai Technikum",
-    "neumannDescription": "Az itt töltött öt év alatt lehetőségem nyílt az informatika számos terén tudásra szert tenni, többek között a programozás, webfejlesztés, adatbázisok és hálózatok terén. Mindezt különböző projektmunkákban, hackathonokon, illetve versenyeken hasznosíthattam."
+    "neumannDescription": "Az itt töltött öt év alatt lehetőségem nyílt az informatika számos terén tudásra szert tenni, többek között a programozás, webfejlesztés, adatbázisok és hálózatok terén. Mindezt különböző projektmunkákban, hackathonokon, illetve versenyeken hasznosíthattam.",
+    "cSharp": "C#",
+    "dartFlutter": "Dart és Flutter",
+    "webTechs": "HTML, CSS, JS, TS",
+    "javaAndAngular": "Java, Angular (alapfokú ismeretek)",
+    "git": "Git",
+    "linux": "Linux",
+    "sql": "SQL"
 }
