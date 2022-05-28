@@ -7,8 +7,8 @@
 	import { browser } from '$app/env';
 	import { t } from '$lib/translations';
 	import { locale } from '$lib/translations';
-	import FaRegMoon from 'svelte-icons/fa/FaRegMoon.svelte';
-	import FaRegSun from 'svelte-icons/fa/FaRegSun.svelte';
+	import FaMoon from 'svelte-icons/fa/FaMoon.svelte'
+	import FaSun from 'svelte-icons/fa/FaSun.svelte'
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'sveltestrap';
 	import { writable } from 'svelte/store';
 
@@ -77,9 +77,9 @@
 					<NavLink on:click={setTheme}>
 						<div class="nav-icon" id="dark-mode-icon">
 							{#if currentTheme === 'light'}
-								<FaRegSun />
+								<FaSun />
 							{:else}
-								<FaRegMoon />
+								<FaMoon />
 							{/if}
 						</div></NavLink
 					>

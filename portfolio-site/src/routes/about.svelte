@@ -103,7 +103,7 @@
 				<h2 class="large-heading">{$t('about.competitions')}</h2>
 			</div>
 		</div>
-		<div class="mx-auto" id="awards">
+		<div class="mx-auto pb-2" id="awards">
 			{#each competitions as competition}
 				<div class="row award-item d-flex align-items-center mb-2 p-2">
 					<div class="col-8 award-name">{$t('competitions.' + competition + '.title')}</div>

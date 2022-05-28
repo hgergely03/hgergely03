@@ -37,9 +37,9 @@ const config = ({
         {
             locale: 'en',
             key: 'work',
-            routes: ['/work'],
+            routes: ['/works'],
             loader: async () => (
-                await import('./locales/en/work.json')
+                await import('./locales/en/works.json')
             ).default,
         },
         {
@@ -76,9 +76,9 @@ const config = ({
         {
             locale: 'hu',
             key: 'work',
-            routes: ['/work'],
+            routes: ['/works'],
             loader: async () => (
-                await import('./locales/hu/work.json')
+                await import('./locales/hu/works.json')
             ).default,
         },
     ],
