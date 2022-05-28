@@ -8,8 +8,8 @@
 			<div class="col-md-auto">
 				<a href="https://github.com/hgergely03" target="_blank">GitHub</a>
 			</div>
-			<!-- <div class="col-md-auto"><a href="https://github.com/hgergely03">GitHub</a></div>
-			<div class="col-md-auto"><a href="https://github.com/hgergely03">GitHub</a></div> -->
+			<div class="col-md-auto"><a href="/contact">Contact</a></div>
+			<div class="col-md-auto"><a href="/privacy">Privacy</a></div>
 		</div>
 		<div class="row mt-4">
 			<p>&copy; Horváth Gergely {year}</p>

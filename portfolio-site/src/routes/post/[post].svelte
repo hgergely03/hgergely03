@@ -39,7 +39,7 @@
 				{#each post.stack as stackItem}
 					<div class="col-sm stack-item">
 						<img class="img-fluid rounded-circle pb-1" src={stackItem.imageUrl} alt={stackItem.title} />
-						<p class="">{stackItem.title}</p>
+						<p>{stackItem.title}</p>
 					</div>
 				{/each}
 			</div>
@@ -54,12 +54,6 @@
 <style lang="scss">
 	p {
 		text-align: justify;
-	}
-
-	.stack-item {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
 	}
 
 	#post-body {

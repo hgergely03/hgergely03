@@ -56,7 +56,7 @@ body {
 	background-color: $dark-page-background;
 	background-color: var(--dark-page-background);
 
-	.large-heading, p, #all-works-link, #all-works-icon {
+	.large-heading, p, #all-works-link, #all-works-icon, li {
 		color: $dark-theme-text-color;
 		color: var(--dark-theme-text-color);
 	}
@@ -70,7 +70,7 @@ body {
 	background-color: $light-page-background;
 	background-color: var(--light-page-background);
 
-	.large-heading, p, #all-works-link, #all-works-icon {
+	.large-heading, p, #all-works-link, #all-works-icon, li {
 		color: $dark-text-color;
 		color: var(--dark-text-color);
 	}
@@ -83,6 +83,12 @@ body {
 .light-text {
 	color: $light-text-color !important;
 	color: var(--light-text-color) !important;
+}
+
+.stack-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 @media (max-width: 512px) {

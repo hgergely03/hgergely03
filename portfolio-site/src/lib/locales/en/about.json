@@ -6,5 +6,6 @@
     "education": "Education",
     "skills": "Skills & knowledge",
     "competitions": "Competitions & awards",
-    "neumann": "BMSZC Neumann János Informatikai Technikum"
+    "neumann": "BMSZC Neumann János Informatikai Technikum",
+    "neumannDescription": "During the five years spent here, I had the chance to gain knowledge in many fields of computer science, including programming, web development, database management, networking, and more. All of this was used in projects, hackathons, and competitions."
 }

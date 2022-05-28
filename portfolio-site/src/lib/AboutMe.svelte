@@ -17,6 +17,7 @@
 				<GridItem
 					title={$t('home.about')}
 					description={$t('home.aboutDescription')}
+					backgroundImage="assets/about_me.jpg"
 					href={'/about'}
 				/>
 			</div>
