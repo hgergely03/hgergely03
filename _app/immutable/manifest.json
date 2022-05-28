@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-5cc7e44f.js",
+    "file": "start-3de63bc0.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -30,7 +30,7 @@
       "_preload-helper-5490f6b6.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-99c3dd31.css"
+      "assets/pages/__layout.svelte-0a672f2f.css"
     ],
     "assets": [
       "assets/inter-cyrillic-variable-wghtOnly-normal-da8675c1.woff2",
