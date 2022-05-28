@@ -10,10 +10,10 @@ export let competitions = [
     'bakonyi-bitfaragok-2021',
     'sziiv-napp',
     'bakonyi-bitfaragok-2022',
-    'webgraf-2021',
+    // 'webgraf-2021',
     'dusza-mobil-2021',
     'skills-junior-web',
-    'skills-junior-net',
+    'skills-junior-sysadmin',
     'sziiv-elmesema',
     'aszev'
 ];

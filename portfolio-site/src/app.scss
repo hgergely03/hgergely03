@@ -60,7 +60,7 @@ body {
 	p,
 	#all-works-link,
 	#all-works-icon,
-	li {
+	li, .award-item {
 		color: $dark-theme-text-color;
 		color: var(--dark-theme-text-color);
 	}
@@ -74,10 +74,11 @@ body {
 		background-color: var(--underline-red);
 	}
 
-	.list-group-item {
+	.award-item {
 		background-color: $hero-background;
 		background-color: var(--hero-background);
 		border: 1px solid rgba(255, 255, 255, 0.2);
+		overflow: scroll;
 	}
 }
 
@@ -89,7 +90,7 @@ body {
 	p,
 	#all-works-link,
 	#all-works-icon,
-	li {
+	li, .award-item {
 		color: $dark-text-color;
 		color: var(--dark-text-color);
 	}
@@ -103,8 +104,10 @@ body {
 		background-color: var(--underline-red);
 	}
 
-	.list-group-item {
+	.award-item{
+		background-color: white;
 		border: 1px solid rgba(48, 48, 48, 0.11);
+		overflow: scroll;
 	}
 }
 

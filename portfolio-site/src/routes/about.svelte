@@ -105,13 +105,27 @@
 		</div>
 		<div class="mx-auto" id="awards">
 			{#each competitions as competition}
-				<ul class="list-group">
+				<div class="row award-item d-flex align-items-center mb-2 p-2">
+					<div class="col-8 award-name">{$t('competitions.' + competition + '.title')}</div>
+					<div class="col-4 d-flex justify-content-end">
+						<div class="align-right">
+							<span class="badge award-bubble rounded-pill">
+								{$t('competitions.' + competition + '.date')}
+								</span>
+							<span class="badge award-bubble rounded-pill"
+								>
+								{$t('competitions.' + competition + '.place')}
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- <ul class="list-group">
 					<li class="list-group-item d-flex align-items-center mb-2">
-						<div class="me-auto">{$t('competitions.' + competition + '.title')}</div>
-						<span class="badge award-bubble rounded-pill mx-4">{$t('competitions.' + competition + '.date')}</span>
-						<span class="badge award-bubble rounded-pill">{$t('competitions.' + competition + '.place')}</span>
+						<div class="me-auto"></div>
+						<span class="badge award-bubble rounded-pill mx-4"></span>
+						<div class="place"><span class="badge award-bubble rounded-pill"></span></div>
 					</li>
-				</ul>
+				</ul> -->
 				<!-- <div class="row">
 					<div class="col-md-6 gx-md-5">
 						<p class="text-start text-md-end school">
@@ -141,12 +155,15 @@
 	}
 
 	#awards {
-		max-width: 50vw;
-		overflow: scroll;
+		max-width: 60vw;
 	}
 
 	#about {
 		margin-top: 2rem;
+	}
+
+	.align-right {
+		text-align: right;
 	}
 
 	@media only screen and (max-width: 768px) {

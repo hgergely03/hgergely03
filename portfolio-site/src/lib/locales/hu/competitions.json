@@ -1,7 +1,7 @@
 {
     "dusza-hagyomanyos-2018": {
         "slug": "dusza-hagyomanyos-2018",
-        "title": "Dusza Hagyományos",
+        "title": "Dusza Árpád Országos Programozói Emlékverseny Hagyományos kategória",
         "date": "2018-2019",
         "place": "1. hely"
     },
@@ -15,28 +15,28 @@
 
     "dusza-mobil-2019": {
         "slug": "dusza-mobil-2019",
-        "title": "Dusza Mobil",
+        "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2019-2020",
         "place": "1. hely"
     },
 
     "dusza-hagyomanyos-2019": {
         "slug": "dusza-hagyomanyos-2019",
-        "title": "Dusza Hagyományos",
+        "title": "Dusza Árpád Országos Programozói Emlékverseny Hagyományos kategória",
         "date": "2019-2020",
-        "place": "1. hely"
+        "place": "2. hely"
     },
 
     "sziiv-parkmyst": {
         "slug": "sziiv-parkmyst",
-        "title": "SZIIV ParkMyst",
+        "title": "Szegedi Innovatív Informatika Verseny - Parkmyst",
         "date": "2020",
         "place": "1. hely"
     },
 
     "dusza-mobil-2020": {
         "slug": "dusza-mobil-2020",
-        "title": "Dusza Mobil",
+        "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2020-2021",
         "place": "1. hely"
     },
@@ -45,33 +45,33 @@
         "slug": "webgraf-2020",
         "title": "Webgráf",
         "date": "2020-2021",
-        "place": "1. hely"
+        "place": "2. hely"
     },
 
     "gamf-prog": {
         "slug": "gamf-prog",
-        "title": "GAMF PROG",
+        "title": "Neumann János Egyetem Programozóverseny",
         "date": "2021",
-        "place": "1. hely"
+        "place": "2. hely"
     },
 
     "bakonyi-bitfaragok-2021": {
         "slug": "bakonyi-bitfaragok-2021",
-        "title": "Bakonyi Bitfaragók",
+        "title": "Bakonyi Bitfaragó Bajnokság",
         "date": "2021",
         "place": "1. hely"
     },
 
     "sziiv-napp": {
         "slug": "sziiv-napp",
-        "title": "SZIIV nApp",
+        "title": "Szegedi Innovatív Informatika Verseny - nApp",
         "date": "2021",
-        "place": "1. hely"
+        "place": "2. hely"
     },
 
     "bakonyi-bitfaragok-2022": {
         "slug": "bakonyi-bitfaragok-2022",
-        "title": "Bakonyi Bitfaragók",
+        "title": "Bakonyi Bitfaragó Bajnokság",
         "date": "2022",
         "place": "1. hely"
     },
@@ -80,41 +80,41 @@
         "slug": "webgraf-2021",
         "title": "Webgráf",
         "date": "2021",
-        "place": "1. hely"
+        "place": "Döntő"
     },
 
     "dusza-mobil-2021": {
         "slug": "dusza-mobil-2021",
-        "title": "Dusza Mobil",
+        "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2021",
         "place": "1. hely"
     },
 
     "skills-junior-web": {
         "slug": "skills-junior-web",
-        "title": "Skills Junior Web",
+        "title": "Skills Junior web kategória",
         "date": "2022",
-        "place": "1. hely"
+        "place": "7. hely"
     },
 
-    "skills-junior-net": {
-        "slug": "skills-junior-net",
-        "title": "Skills Junior Net",
+    "skills-junior-sysadmin": {
+        "slug": "skills-junior-sysadmin",
+        "title": "Skills Junior informatikai rendszerüzemeltető kategória",
         "date": "2022",
-        "place": "1. hely"
+        "place": "9. hely"
     },
 
     "sziiv-elmesema": {
         "slug": "sziiv-elmesema",
-        "title": "SZIIV ElmeSéma",
+        "title": "Szegedi Innovatív Informatika Verseny - ElmeSéma",
         "date": "2022",
-        "place": "1. hely"
+        "place": "Döntő"
     },
 
     "aszev": {
         "slug": "aszev",
-        "title": "ÁSZÉV",
+        "title": "Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye",
         "date": "2022",
-        "place": "1. hely"
+        "place": "10. hely"
     }
 }
