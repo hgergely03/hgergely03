@@ -2,18 +2,22 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="./favicon.png" />
+		<link rel="icon" href="../favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content="">
 	<link rel="stylesheet" href="/_app/immutable/assets/pages/__layout.svelte-eef871c5.css">
 	<link rel="stylesheet" href="/_app/immutable/assets/IconBase-05c40767.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/pages/works/_work_.svelte-eb53a523.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/PostSummary-f132776e.css">
 	<link rel="modulepreload" href="/_app/immutable/start-529fba34.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/index-bdf7da45.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/preload-helper-5490f6b6.js">
 	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-8c3b9849.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/translations-e627d32d.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/IconBase-a68aa371.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/contact.svelte-48881e07.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/works/_work_.svelte-f2df6923.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/works-871108a2.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/PostSummary-0da52654.js">
 	</head>
 	<body>
 		<div>
@@ -32,7 +36,19 @@
 </div></nav>
 </header>
 
-<main class="light-theme"><section><h1>Contact me</h1>
+<main class="light-theme"><section><div style="background-image: url(../assets/elmesema-cover.png);" class="svelte-8jl8zo"><section id="post-cover" class="svelte-8jl8zo"><h1 class="svelte-8jl8zo">ElmeSéma</h1>
+		<p class="light-text svelte-8jl8zo">The park is a place of magic.</p></section>
+</div>
+		<section id="post-summary" class="svelte-5sp0bg"><h1 class="pt-5 pb-2 svelte-5sp0bg">About the project</h1>
+	<p class="pb-5 light-text svelte-5sp0bg" id="summary-text">The park is a place of magic.</p>
+</section>
+		<div class="container svelte-hcw5k7" id="post-body"><div class="row"><div class="col"><h2 class="large-heading">P1 Title</h2></div></div>
+				<div class="row left-line"><div class="col-md-6 gx-md-5"><p class="svelte-hcw5k7">Lorem ipsum</p></div>
+					<div class="col-md-6"><img class="img-fluid post-image" src="../assets/elmesema-cover.png" alt="../assets/elmesema-cover.png"></div></div>
+			<div class="row pt-5"><div class="col"><h2 class="large-heading">Stack</h2></div></div>
+			<div class="row left-line"><div class="col-sm stack-item"><img class="img-fluid rounded-circle mb-3 stack-img" src="../assets/dart-flutter.png" alt="Flutter">
+						<p class="svelte-hcw5k7">Flutter</p>
+					</div></div></div>
 </section></main>
 
 <footer class="svelte-10d6lzv"><div class="container"><div class="row justify-content-md-center"><div class="col-md-auto"><a href="https://github.com/hgergely03" target="_blank" class="svelte-10d6lzv">GitHub</a></div>
@@ -42,10 +58,10 @@
 </footer>
 
 
-		<script type="module" data-sveltekit-hydrate="1gfq5n7">
+		<script type="module" data-sveltekit-hydrate="8g9s4c">
 		import { start } from "/_app/immutable/start-529fba34.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="1gfq5n7"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="8g9s4c"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -54,9 +70,9 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 3],
-				params: {},
-				routeId: "contact"
+				nodes: [0, 6],
+				params: {work:"elmesema"},
+				routeId: "works/[work]"
 			}
 		});
 	</script></div>
