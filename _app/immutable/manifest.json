@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-3de63bc0.js",
+    "file": "start-7e38770a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -12,20 +12,20 @@
       "src/routes/__error.svelte",
       "src/routes/about.svelte",
       "src/routes/contact.svelte",
-      "_index-f558eab5.js",
+      "_index-35bc0079.js",
       "src/routes/post/[post].svelte",
       "src/routes/privacy.svelte",
       "src/routes/works.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-7c72b4ef.js",
+    "file": "pages/__layout.svelte-447ef77b.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-bdf7da45.js",
-      "_translations-46076d5d.js",
+      "_translations-a5be54ba.js",
       "_IconBase-a68aa371.js",
       "_preload-helper-5490f6b6.js"
     ],
@@ -55,14 +55,14 @@
     ]
   },
   "src/routes/about.svelte": {
-    "file": "pages/about.svelte-7592b118.js",
+    "file": "pages/about.svelte-74e25dd0.js",
     "src": "src/routes/about.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_index-bdf7da45.js",
       "_PostSummary-0da52654.js",
-      "_translations-46076d5d.js",
+      "_translations-a5be54ba.js",
       "_preload-helper-5490f6b6.js"
     ],
     "css": [
@@ -116,13 +116,13 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-aa3fd4f2.js",
+    "file": "pages/index.svelte-7e08a2b4.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "imports": [
       "_index-bdf7da45.js",
-      "_translations-46076d5d.js",
-      "_index-f558eab5.js",
+      "_translations-a5be54ba.js",
+      "_index-35bc0079.js",
       "_preload-helper-5490f6b6.js",
       "_GridItem-150b6a65.js",
       "_posts-e32a2494.js",
@@ -138,8 +138,8 @@
       "_index-bdf7da45.js"
     ]
   },
-  "_translations-46076d5d.js": {
-    "file": "chunks/translations-46076d5d.js",
+  "_translations-a5be54ba.js": {
+    "file": "chunks/translations-a5be54ba.js",
     "imports": [
       "_preload-helper-5490f6b6.js",
       "_index-bdf7da45.js"
@@ -149,12 +149,12 @@
       "src/lib/locales/en/home.json",
       "src/lib/locales/en/about.json",
       "src/lib/locales/en/competitions.json",
-      "src/lib/locales/en/work.json",
+      "src/lib/locales/en/works.json",
       "src/lib/locales/hu/common.json",
       "src/lib/locales/hu/home.json",
       "src/lib/locales/hu/about.json",
       "src/lib/locales/hu/competitions.json",
-      "src/lib/locales/hu/work.json"
+      "src/lib/locales/hu/works.json"
     ]
   },
   "_IconBase-a68aa371.js": {
@@ -175,12 +175,12 @@
       "assets/PostSummary-f132776e.css"
     ]
   },
-  "_index-f558eab5.js": {
-    "file": "chunks/index-f558eab5.js",
+  "_index-35bc0079.js": {
+    "file": "chunks/index-35bc0079.js",
     "isDynamicEntry": true,
     "imports": [
       "_index-bdf7da45.js",
-      "_translations-46076d5d.js",
+      "_translations-a5be54ba.js",
       "_GridItem-150b6a65.js",
       "_posts-e32a2494.js",
       "_IconBase-a68aa371.js",
@@ -228,9 +228,9 @@
     "src": "src/lib/locales/en/competitions.json",
     "isDynamicEntry": true
   },
-  "src/lib/locales/en/work.json": {
-    "file": "chunks/work-568574e5.js",
-    "src": "src/lib/locales/en/work.json",
+  "src/lib/locales/en/works.json": {
+    "file": "chunks/works-178788b9.js",
+    "src": "src/lib/locales/en/works.json",
     "isDynamicEntry": true
   },
   "src/lib/locales/hu/common.json": {
@@ -253,32 +253,32 @@
     "src": "src/lib/locales/hu/competitions.json",
     "isDynamicEntry": true
   },
-  "src/lib/locales/hu/work.json": {
-    "file": "chunks/work-35853491.js",
-    "src": "src/lib/locales/hu/work.json",
+  "src/lib/locales/hu/works.json": {
+    "file": "chunks/works-9d714f32.js",
+    "src": "src/lib/locales/hu/works.json",
     "isDynamicEntry": true
   },
   "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/loopTypewriter.js": {
-    "file": "chunks/loopTypewriter-4a0ad8cf.js",
+    "file": "chunks/loopTypewriter-efa62d74.js",
     "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/loopTypewriter.js",
     "isDynamicEntry": true,
     "imports": [
-      "_writeEffect-9be447e9.js",
-      "_index-f558eab5.js",
+      "_writeEffect-a389051e.js",
+      "_index-35bc0079.js",
       "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
       "_index-bdf7da45.js",
-      "_translations-46076d5d.js",
+      "_translations-a5be54ba.js",
       "_preload-helper-5490f6b6.js",
       "_GridItem-150b6a65.js",
       "_posts-e32a2494.js",
       "_IconBase-a68aa371.js"
     ]
   },
-  "_writeEffect-9be447e9.js": {
-    "file": "chunks/writeEffect-9be447e9.js",
+  "_writeEffect-a389051e.js": {
+    "file": "chunks/writeEffect-a389051e.js",
     "imports": [
       "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
-      "_index-f558eab5.js"
+      "_index-35bc0079.js"
     ]
   },
   "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js": {
@@ -287,14 +287,14 @@
     "isDynamicEntry": true
   },
   "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/scramble.js": {
-    "file": "chunks/scramble-8d611707.js",
+    "file": "chunks/scramble-a43237fd.js",
     "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/scramble.js",
     "isDynamicEntry": true,
     "imports": [
       "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
-      "_index-f558eab5.js",
+      "_index-35bc0079.js",
       "_index-bdf7da45.js",
-      "_translations-46076d5d.js",
+      "_translations-a5be54ba.js",
       "_preload-helper-5490f6b6.js",
       "_GridItem-150b6a65.js",
       "_posts-e32a2494.js",
@@ -302,16 +302,16 @@
     ]
   },
   "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/typewriter.js": {
-    "file": "chunks/typewriter-aef0dce3.js",
+    "file": "chunks/typewriter-2e7bac02.js",
     "src": "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/modes/typewriter.js",
     "isDynamicEntry": true,
     "imports": [
       "_preload-helper-5490f6b6.js",
-      "_writeEffect-9be447e9.js",
+      "_writeEffect-a389051e.js",
       "_index-bdf7da45.js",
       "node_modules/.pnpm/svelte-typewriter@3.0.0-alpha.11_svelte@3.48.0/node_modules/svelte-typewriter/src/helpers/sleep.js",
-      "_index-f558eab5.js",
-      "_translations-46076d5d.js",
+      "_index-35bc0079.js",
+      "_translations-a5be54ba.js",
       "_GridItem-150b6a65.js",
       "_posts-e32a2494.js",
       "_IconBase-a68aa371.js"
