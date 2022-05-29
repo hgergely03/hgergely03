@@ -1,15 +1,8 @@
 <script lang="ts">
 	import GridItem from '$lib/GridItem.svelte';
-	import { works } from '$lib/content/works';
+	import { t } from '$lib/translations';
 
-	const featuredWorks = [
-		works.find((p) => p.slug === 'hello-world'),
-		works.find((p) => p.slug === 'hello-world-2'),
-		works.find((p) => p.slug === 'hello-world'),
-		works.find((p) => p.slug === 'hello-world-2'),
-		works.find((p) => p.slug === 'hello-world-3'),
-		works.find((p) => p.slug === 'hello-world-2')
-	];
+	const featuredWorks = ['parkmyst', 'elmesema', 'flutter-nameday-api', 'napp', 'hazizz', 'parkmyst'];
 </script>
 
 <section>
@@ -18,29 +11,29 @@
 		<div class="row g-sm-2">
 			<div class="col-sm-6">
 				<GridItem
-					title={featuredWorks[0]?.title}
-					description={featuredWorks[0]?.motto}
-					href={'/works/' + featuredWorks[0]?.slug}
-					backgroundImage={featuredWorks[0]?.coverImageUrl}
+					title={$t('work.' + featuredWorks[0] + '.title')}
+					description={$t('work.' + featuredWorks[0] + '.motto')}
+					href={'/works/' + featuredWorks[0]}
+					backgroundImage={$t('work.' + featuredWorks[0] + '.coverImageUrl')}
 				/>
 			</div>
 			<div class="col-sm-6">
 				<div class="row">
 					<div class="col-sm-12 mt-2 mt-sm-0">
 						<GridItem
-							title={featuredWorks[1]?.title}
-							description={featuredWorks[1]?.motto}
-							href={'/works/' + featuredWorks[1]?.slug}
-							backgroundImage={featuredWorks[1]?.coverImageUrl}
+							title={$t('work.' + featuredWorks[1] + '.title')}
+							description={$t('work.' + featuredWorks[1] + '.motto')}
+							href={'/works/' + featuredWorks[1]}
+							backgroundImage={$t('work.' + featuredWorks[1] + '.coverImageUrl')}
 							halfSize={true}
 						/>
 					</div>
 					<div class="col-sm-12 gy-sm-2 mt-2">
 						<GridItem
-							title={featuredWorks[2]?.title}
-							description={featuredWorks[2]?.motto}
-							href={'/works/' + featuredWorks[2]?.slug}
-							backgroundImage={featuredWorks[2]?.coverImageUrl}
+							title={$t('work.' + featuredWorks[2] + '.title')}
+							description={$t('work.' + featuredWorks[2] + '.motto')}
+							href={'/works/' + featuredWorks[2]}
+							backgroundImage={$t('work.' + featuredWorks[2] + '.coverImageUrl')}
 							halfSize={true}
 						/>
 					</div>
@@ -51,10 +44,10 @@
 		<div class="row my-sm-2">
 			<div class="col mt-2 mt-sm-0">
 				<GridItem
-					title={featuredWorks[3]?.title}
-					description={featuredWorks[3]?.motto}
-					href={'/works/' + featuredWorks[3]?.slug}
-					backgroundImage={featuredWorks[3]?.coverImageUrl}
+					title={$t('work.' + featuredWorks[3] + '.title')}
+					description={$t('work.' + featuredWorks[3] + '.motto')}
+					href={'/works/' + featuredWorks[3]}
+					backgroundImage={$t('work.' + featuredWorks[3] + '.coverImageUrl')}
 				/>
 			</div>
 		</div>
@@ -62,18 +55,18 @@
 		<div class="row g-sm-2">
 			<div class="col-sm-4 mt-2">
 				<GridItem
-					title={featuredWorks[4]?.title}
-					description={featuredWorks[4]?.motto}
-					href={'/works/' + featuredWorks[4]?.slug}
-					backgroundImage={featuredWorks[4]?.coverImageUrl}
+					title={$t('work.' + featuredWorks[4] + '.title')}
+					description={$t('work.' + featuredWorks[4] + '.motto')}
+					href={'/works/' + featuredWorks[4]}
+					backgroundImage={$t('work.' + featuredWorks[4] + '.coverImageUrl')}
 				/>
 			</div>
 			<div class="col-sm-8 mt-2">
 				<GridItem
-					title={featuredWorks[5]?.title}
-					description={featuredWorks[5]?.motto}
-					href={'/works/' + featuredWorks[5]?.slug}
-					backgroundImage={featuredWorks[5]?.coverImageUrl}
+					title={$t('work.' + featuredWorks[5] + '.title')}
+					description={$t('work.' + featuredWorks[5] + '.motto')}
+					href={'/works/' + featuredWorks[5]}
+					backgroundImage={$t('work.' + featuredWorks[5] + '.coverImageUrl')}
 				/>
 			</div>
 		</div>

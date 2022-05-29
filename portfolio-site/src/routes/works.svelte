@@ -15,10 +15,10 @@
 			<div class="row pb-2">
 				<div class="col">
 					<GridItem
-						title={work.title}
-						description={work.motto}
+						title={$t('work.' + work.slug + '.title')}
+						description={$t('work.' + work.slug + '.motto')}
 						href={'/works/' + work.slug}
-						backgroundImage={work.coverImageUrl}
+						backgroundImage={$t('work.' + work.slug + '.coverImageUrl')}
 					/>
 				</div>
 			</div>

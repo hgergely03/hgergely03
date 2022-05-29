@@ -96,6 +96,48 @@ body::-webkit-scrollbar {
 		background-color: var(--hero-background);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 	}
+
+	.stack-img {
+		box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.1);
+	}
+
+	.post-image {
+		box-shadow: 0px 5px 20px 1px rgba(255, 255, 255, 0.267);
+	}
+
+	.grid-content {
+		background: rgb(48, 48, 48);
+		background: -moz-linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 50%,
+			rgba(48, 48, 48, 0.15) 65%,
+			rgba(48, 48, 48, 0.07) 75%,
+			rgba(48, 48, 48, 0.04) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
+		background: -webkit-linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 50%,
+			rgba(48, 48, 48, 0.15) 65%,
+			rgba(48, 48, 48, 0.07) 75%,
+			rgba(48, 48, 48, 0.04) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
+		background: linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 55%,
+			rgba(48, 48, 48, 0.18) 65%,
+			rgba(48, 48, 48, 0.12) 75%,
+			rgba(48, 48, 48, 0.05) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
+	}
 }
 
 .light-theme {
@@ -124,6 +166,44 @@ body::-webkit-scrollbar {
 	.award-item {
 		background-color: white;
 		border: 1px solid rgba(48, 48, 48, 0.11);
+	}
+
+	.stack-img, .post-image {
+		box-shadow: 0px 5px 20px 1px rgba(0, 0, 0, 0.1);
+	}
+
+	.grid-content {
+		background: rgb(48, 48, 48);
+		background: -moz-linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 50%,
+			rgba(48, 48, 48, 0.15) 65%,
+			rgba(48, 48, 48, 0.07) 75%,
+			rgba(48, 48, 48, 0.04) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
+		background: -webkit-linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 50%,
+			rgba(48, 48, 48, 0.15) 65%,
+			rgba(48, 48, 48, 0.07) 75%,
+			rgba(48, 48, 48, 0.04) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
+		background: linear-gradient(
+			0deg,
+			rgba(48, 48, 48, 1) 0%,
+			rgba(48, 48, 48, 0.3) 50%,
+			rgba(48, 48, 48, 0.15) 65%,
+			rgba(48, 48, 48, 0.07) 75%,
+			rgba(48, 48, 48, 0.04) 83%,
+			rgba(48, 48, 48, 0.02) 88%,
+			rgba(48, 48, 48, 0) 100%
+		);
 	}
 }
 

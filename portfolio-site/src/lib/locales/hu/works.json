@@ -2,18 +2,103 @@
     "title": "Works",
     "allWorks": "Az összes munkám",
     "parkmyst": {
-        "title": "Park Myst",
+        "title": "ParkMyst",
+        "motto": "Egy interaktív kincskereső-játék készítő",
+        "summaryTitle": "A projektről",
+        "summary": "A ParkMysttel könnyedén lehet élményeket létrehozni.",
+        "coverImageUrl": "../assets/parkmyst-promo.png",
+        "p1": {
+            "title": "Promóciós és admin oldal",
+            "content": "A ParkMyst rendelkezeik egy admin felülettel és egy promóciós oldallal. A promóciós oldalon a felhasználók megismerkedhetnek a játékkal, míg az admin oldal az a hely, ahol a varázslat megtörténik.",
+            "imgUrl": "../assets/parkmyst-promo-2.png"
+        },
+        "stack0": {
+            "title": "Svelte",
+            "imgUrl": "../assets/svelte.png"
+        },
+        "stack1": {
+            "title": "HTML, CSS",
+            "imgUrl": "../assets/html-css-js.png"
+        }
+    },
+    "napp": {
+        "title": "nApp",
         "motto": "The park is a place of magic.",
-        "summaryTitle": "Park Myst",
+        "summaryTitle": "A projektről",
         "summary": "The park is a place of magic.",
-        "coverImageUrl": "https://www.nps.gov/common/uploads/structured_data/3C7B8B1A-1DD8-B71B-0B8F8D8D8D8D8D8D.jpg",
+        "coverImageUrl": "../assets/napp-cover.png",
         "p1": {
             "title": "P1 Title",
-            "content": "Lorem ipsum"
+            "content": "Lorem ipsum",
+            "imgUrl": "../assets/napp-cover.png"
         },
-        "p2": {
-            "title": "P2 Title",
-            "content": "Lorem ipsum"
+        "stack0": {
+            "title": "Flutter",
+            "imgUrl": "../assets/dart-flutter.png"
+        }
+    },
+    "elmesema": {
+        "title": "ElmeSéma",
+        "motto": "The park is a place of magic.",
+        "summaryTitle": "A projektről",
+        "summary": "The park is a place of magic.",
+        "coverImageUrl": "../assets/elmesema-cover.png",
+        "p1": {
+            "title": "P1 Title",
+            "content": "Lorem ipsum",
+            "imgUrl": "../assets/elmesema-cover.png"
+        },
+        "stack0": {
+            "title": "Flutter",
+            "imgUrl": "../assets/dart-flutter.png"
+        }
+    },
+    "hazizz": {
+        "title": "Házizz",
+        "motto": "The park is a place of magic.",
+        "summaryTitle": "A projektről",
+        "summary": "The park is a place of magic.",
+        "coverImageUrl": "../assets/hazizz-cover.png",
+        "p1": {
+            "title": "P1 Title",
+            "content": "Lorem ipsum",
+            "imgUrl": "../assets/hazizz-cover.png"
+        },
+        "stack0": {
+            "title": "Flutter",
+            "imgUrl": ".../assets/dart-flutter.png"
+        }
+    },
+    "flutter-nameday-api": {
+        "title": "Fluter Nameday API",
+        "motto": "The park is a place of magic.",
+        "summaryTitle": "A projektről",
+        "summary": "The park is a place of magic.",
+        "coverImageUrl": "../assets/flutter-nameday-api-cover.png",
+        "p1": {
+            "title": "P1 Title",
+            "content": "Lorem ipsum",
+            "imgUrl": "./assets/flutter-nameday-api-cover.png"
+        },
+        "stack0": {
+            "title": "Dart",
+            "imgUrl": "../assets/dart-flutter.png"
+        }
+    },
+    "project6": {
+        "title": "The secret project 6",
+        "motto": "What could it be?",
+        "summaryTitle": "[REDACTED]",
+        "summary": "Something that is not yet ready.",
+        "coverImageUrl": "https://cdn.pixabay.com/photo/2017/02/10/04/54/top-secret-2054429_960_720.png",
+        "p1": {
+            "title": "[REDACTED]",
+            "content": "So secretive, much interesting.",
+            "imgUrl": "https://cdn.pixabay.com/photo/2017/02/10/04/54/top-secret-2054429_960_720.png"
+        },
+        "stack0": {
+            "title": "[REDACTED]",
+            "imgUrl": "https://cdn.pixabay.com/photo/2017/02/10/04/54/top-secret-2054429_960_720.png"
         }
     }
 }

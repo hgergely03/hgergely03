@@ -3,48 +3,50 @@
 	import { works } from '$lib/content/works';
 	import PostCover from '$lib/PostCover.svelte';
 	import PostSummary from '$lib/PostSummary.svelte';
-		import { t } from '$lib/translations';
+	import { t } from '$lib/translations';
 
 	const slug = $page.params.work;
 	let post = works.find((p) => p.slug === slug);
+	let url = '';
+	if (post) {
+		url = 'work.' + post.slug;
+	}
 </script>
 
 <section>
 	{#if post}
-		<PostCover title={post.title}>{post.motto}</PostCover>
-		<PostSummary summaryTitle={post.summaryTitle}>{post.summary}</PostSummary>
+		<PostCover title={$t(url + '.title')} backgroundUrl={$t(url + '.coverImageUrl')}>{$t(url + '.motto')}</PostCover>
+		<PostSummary summaryTitle={$t(url + '.summaryTitle')}>{$t(url + '.summary')}</PostSummary>
 		<div class="container" id="post-body">
-			{#each post.content as paragraph}
 				<div class="row">
 					<div class="col">
-						<h2 class="large-heading">{paragraph.title}</h2>
+						<h2 class="large-heading">{$t(url + '.p1' + '.title')}</h2>
 					</div>
 				</div>
 				<div class="row left-line">
 					<div class="col-md-6 gx-md-5">
 						<p>
-							{paragraph.text}
+							{$t(url + '.p1' + '.content')}
 						</p>
 					</div>
 					<div class="col-md-6">
-						<img class="img-fluid" src={paragraph.imageUrl} alt={paragraph.title} />
+						<img class="img-fluid post-image" src={$t(url + '.p1' + '.imgUrl')} alt={$t(url + '.coverImageUrl')} />
 					</div>
 				</div>
-			{/each}
 			<div class="row pt-5">
 				<div class="col">
 					<h2 class="large-heading">Stack</h2>
 				</div>
 			</div>
 			<div class="row left-line">
-				{#each post.stack as stackItem}
+				{#each Array(post.stackNumber) as _, index}
 					<div class="col-sm stack-item">
-						<img
-							class="img-fluid rounded-circle pb-1"
-							src={stackItem.imageUrl}
-							alt={stackItem.title}
-						/>
-						<p>{stackItem.title}</p>
+							<img
+								class="img-fluid rounded-circle mb-3 stack-img"
+								src={$t(url + '.stack' + index + '.imgUrl')}
+								alt={$t(url + '.stack' + index + '.title')}
+							/>
+						<p>{$t(url + '.stack' + index + '.title')}</p>
 					</div>
 				{/each}
 			</div>

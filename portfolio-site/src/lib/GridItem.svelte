@@ -65,37 +65,6 @@
 
 	/* Todo: create hover animations */
 	.grid-content {
-		background: rgb(48, 48, 48);
-		background: -moz-linear-gradient(
-			0deg,
-			rgba(48, 48, 48, 1) 0%,
-			rgba(48, 48, 48, 0.3) 50%,
-			rgba(48, 48, 48, 0.15) 65%,
-			rgba(48, 48, 48, 0.07) 75%,
-			rgba(48, 48, 48, 0.04) 83%,
-			rgba(48, 48, 48, 0.02) 88%,
-			rgba(48, 48, 48, 0) 100%
-		);
-		background: -webkit-linear-gradient(
-			0deg,
-			rgba(48, 48, 48, 1) 0%,
-			rgba(48, 48, 48, 0.3) 50%,
-			rgba(48, 48, 48, 0.15) 65%,
-			rgba(48, 48, 48, 0.07) 75%,
-			rgba(48, 48, 48, 0.04) 83%,
-			rgba(48, 48, 48, 0.02) 88%,
-			rgba(48, 48, 48, 0) 100%
-		);
-		background: linear-gradient(
-			0deg,
-			rgba(48, 48, 48, 1) 0%,
-			rgba(48, 48, 48, 0.3) 50%,
-			rgba(48, 48, 48, 0.15) 65%,
-			rgba(48, 48, 48, 0.07) 75%,
-			rgba(48, 48, 48, 0.04) 83%,
-			rgba(48, 48, 48, 0.02) 88%,
-			rgba(48, 48, 48, 0) 100%
-		);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;

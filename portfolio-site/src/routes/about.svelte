@@ -40,61 +40,61 @@
 			<div class="row px-2 px-lg-0">
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/csharp-logo.png"
 						alt="img"
 					/>
 					<p>{$t('about.cSharp')}</p>
 				</div>
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/dart-flutter.png"
 						alt="img"
 					/>
 					<p>{$t('about.dartFlutter')}</p>
 				</div>
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/html-css-js.png"
 						alt="img"
 					/>
 					<p>{$t('about.webTechs')}</p>
 				</div>
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/bootstrap.png"
 						alt="img"
 					/>
-					<p>{$t('about.javaAndAngular')}</p>
+					<p>{$t('about.bootstrap')}</p>
 				</div>
 			</div>
 			<div class="row mt-sm-5 d-flex justify-content-center">
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/svelte.png"
 						alt="img"
 					/>
-					<p>{$t('about.sql')}</p>
+					<p>{$t('about.svelte')}</p>
 				</div>
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/figma.png"
 						alt="img"
 					/>
-					<p>{$t('about.git')}</p>
+					<p>{$t('about.figma')}</p>
 				</div>
 				<div class="col-sm stack-item">
 					<img
-						class="img-fluid rounded-circle pb-1"
-						src="https://picsum.photos/150/150"
+						class="img-fluid rounded-circle mb-3 stack-img"
+						src="/assets/git-linux.png"
 						alt="img"
 					/>
-					<p>{$t('about.linux')}</p>
+					<p>{$t('about.gitAndLinux')}</p>
 				</div>
 			</div>
 		</div>

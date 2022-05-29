@@ -12,7 +12,9 @@
     "dartFlutter": "Dart és Flutter",
     "webTechs": "HTML, CSS, JS, TS",
     "javaAndAngular": "Java, Angular (alapfokú ismeretek)",
-    "git": "Git",
-    "linux": "Linux",
-    "sql": "SQL"
+    "bootstrap": "Bootstrap",
+    "svelte": "Svelte",
+    "gitAndLinux": "Git, Linux",
+    "sql": "MySQL",
+    "figma": "Figma, Adobe XD"
 }

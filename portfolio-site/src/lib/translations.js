@@ -37,7 +37,7 @@ const config = ({
         {
             locale: 'en',
             key: 'work',
-            routes: ['/works', /\/works\/.*/], // Regex:  translations are loaded for all pages under works
+            routes: ['/works', /\/works\/.*/, '/'], // Regex:  translations are loaded for all pages under works
             loader: async () => (
                 await import('./locales/en/works.json')
             ).default,
@@ -76,7 +76,7 @@ const config = ({
         {
             locale: 'hu',
             key: 'work',
-            routes: ['/works', /\/works\/.*/],
+            routes: ['/works', /\/works\/.*/, '/'],
             loader: async () => (
                 await import('./locales/hu/works.json')
             ).default,
