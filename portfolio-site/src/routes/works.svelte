@@ -1,23 +1,24 @@
 <script lang="ts">
 	import GridItem from '$lib/GridItem.svelte';
-	import { posts } from '$lib/posts';
+	import { works } from '$lib/content/works';
+	import { t } from '$lib/translations';
 </script>
 
 <section>
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h2 class="large-heading">All my works</h2>
+				<h2 class="large-heading">{$t('work.allWorks')}</h2>
 			</div>
 		</div>
-		{#each posts as post}
+		{#each works as work}
 			<div class="row pb-2">
 				<div class="col">
 					<GridItem
-						title={post.title}
-						description={post.motto}
-						href={'/post/' + post.slug}
-						backgroundImage={post.coverImageUrl}
+						title={work.title}
+						description={work.motto}
+						href={'/works/' + work.slug}
+						backgroundImage={work.coverImageUrl}
 					/>
 				</div>
 			</div>

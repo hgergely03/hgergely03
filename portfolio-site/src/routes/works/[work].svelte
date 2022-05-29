@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { posts } from '$lib/posts';
+	import { works } from '$lib/content/works';
 	import PostCover from '$lib/PostCover.svelte';
 	import PostSummary from '$lib/PostSummary.svelte';
+		import { t } from '$lib/translations';
 
-	const slug = $page.params.post;
-	let post = posts.find((p) => p.slug === slug);
+	const slug = $page.params.work;
+	let post = works.find((p) => p.slug === slug);
 </script>
 
 <section>
@@ -38,7 +39,11 @@
 			<div class="row left-line">
 				{#each post.stack as stackItem}
 					<div class="col-sm stack-item">
-						<img class="img-fluid rounded-circle pb-1" src={stackItem.imageUrl} alt={stackItem.title} />
+						<img
+							class="img-fluid rounded-circle pb-1"
+							src={stackItem.imageUrl}
+							alt={stackItem.title}
+						/>
 						<p>{stackItem.title}</p>
 					</div>
 				{/each}

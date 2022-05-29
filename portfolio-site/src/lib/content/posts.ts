@@ -10,6 +10,7 @@ export type Post = {
 }
 
 // TODO: add localisation support
+// TODO: If ever making a blog, could use a headless CMS like https://prismic.io/dashboard/
 
 type Paragraph = {
     title: string;

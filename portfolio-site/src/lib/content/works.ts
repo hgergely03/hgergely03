@@ -1,18 +1,7 @@
-export type Post = {
-    slug: string;
-    paragraphNumber: number;
-    stack: StackItem[];
-}
-
-type StackItem = {
-    title: string;
-    imageUrl: string;
-}
-
-export let posts = [
+export let works = [
     {
         slug: "hello-world",
-        title: "The first post",
+        title: "The first work",
         motto: "This is the first post",
         summaryTitle: "Summary of the first post",
         summary: "This is the summary of the first post",
@@ -46,7 +35,7 @@ export let posts = [
     },
     {
         slug: "hello-world-2",
-        title: "The second post",
+        title: "The second work",
         motto: "This is the second post",
         summaryTitle: "Summary of the second post",
         summary: "This is the summary of the second post",
@@ -72,7 +61,7 @@ export let posts = [
     },
     {
         slug: "hello-world-3",
-        title: "The third post",
+        title: "The third work",
         motto: "This is the third post",
         summaryTitle: "Summary of the third post",
         summary: "This is the summary of the third post",

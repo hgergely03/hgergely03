@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { competitions } from '$lib/competitions';
+	import { competitions } from '$lib/content/competitions';
 	import PostCover from '$lib/PostCover.svelte';
 	import PostSummary from '$lib/PostSummary.svelte';
 	import { t } from '$lib/translations';
@@ -111,9 +111,8 @@
 						<div class="align-right">
 							<span class="badge award-bubble rounded-pill">
 								{$t('competitions.' + competition + '.date')}
-								</span>
-							<span class="badge award-bubble rounded-pill"
-								>
+							</span>
+							<span class="badge award-bubble rounded-pill">
 								{$t('competitions.' + competition + '.place')}
 							</span>
 						</div>

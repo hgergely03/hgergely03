@@ -1,3 +1,19 @@
 {
-    "title": "Works"
+    "title": "Works",
+    "allWorks": "Az összes munkám",
+    "parkmyst": {
+        "title": "Park Myst",
+        "motto": "The park is a place of magic.",
+        "summaryTitle": "Park Myst",
+        "summary": "The park is a place of magic.",
+        "coverImageUrl": "https://www.nps.gov/common/uploads/structured_data/3C7B8B1A-1DD8-B71B-0B8F8D8D8D8D8D8D.jpg",
+        "p1": {
+            "title": "P1 Title",
+            "content": "Lorem ipsum"
+        },
+        "p2": {
+            "title": "P2 Title",
+            "content": "Lorem ipsum"
+        }
+    }
 }

@@ -101,4 +101,10 @@
 		justify-content: flex-end;
 		border-radius: 3px;
 	}
+
+	@media only screen and (max-width: 512px) {
+		article {
+			min-height: 27vh !important;
+		}
+	}
 </style>
