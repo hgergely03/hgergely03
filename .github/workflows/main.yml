@@ -1,0 +1,39 @@
+# Build svelte-kit site and deploy on gh-pages
+
+name: Node.js CI
+
+env:
+  NODE_VERSION: '16.15.0'
+  
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: Build
+    steps:
+      - uses: actions/checkout@v1
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 7.0.0
+      - name: Use Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'pnpm'
+          cache-dependency-path: '**/pnpm-lock.yaml'
+      - name: npm install and build
+        run: |
+          pnpm --prefix ./portfolio-site install
+          pnpm --prefix ./portfolio-site run build
+        env:
+          SHLINK_KEY: ${{ secrets.SHLINK_KEY }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: ./portfolio-site/build
