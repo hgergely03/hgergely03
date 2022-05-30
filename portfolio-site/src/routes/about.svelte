@@ -100,7 +100,7 @@
 		</div>
 		<div class="row">
 			<div class="col">
-				<h2 class="large-heading">{$t('about.competitions')}</h2>
+				<h2 class="large-heading" id="competitions">{$t('about.competitions')}</h2>
 			</div>
 		</div>
 		<div class="mx-auto pb-2" id="awards">
