@@ -23,7 +23,7 @@
     },
     "napp": {
         "title": "nApp",
-        "motto": "The park is a place of magic.",
+        "motto": "Mobile countdown until the Sun becomes a red giant",
         "summaryTitle": "About the project",
         "summary": "The park is a place of magic.",
         "coverImageUrl": "../assets/napp-cover.png",
@@ -39,13 +39,13 @@
     },
     "elmesema": {
         "title": "ElmeSéma",
-        "motto": "The park is a place of magic.",
+        "motto": "Tool for keeping track of ideas and brainstorming",
         "summaryTitle": "About the project",
-        "summary": "The park is a place of magic.",
+        "summary": "Work in progress",
         "coverImageUrl": "../assets/elmesema-cover.png",
         "p1": {
-            "title": "P1 Title",
-            "content": "Lorem ipsum",
+            "title": "Work in progress",
+            "content": "Work in progress",
             "imgUrl": "../assets/elmesema-cover.png"
         },
         "stack0": {
@@ -55,13 +55,13 @@
     },
     "hazizz": {
         "title": "Házizz",
-        "motto": "The park is a place of magic.",
+        "motto": "The number one homework managing app",
         "summaryTitle": "About the project",
-        "summary": "The park is a place of magic.",
+        "summary": "Work in progress",
         "coverImageUrl": "../assets/hazizz-cover.png",
         "p1": {
-            "title": "P1 Title",
-            "content": "Lorem ipsum",
+            "title": "Work in progress",
+            "content": "Work in progress",
             "imgUrl": "../assets/hazizz-cover.png"
         },
         "stack0": {
@@ -71,13 +71,13 @@
     },
     "flutter-nameday-api": {
         "title": "Flutter Nameday API",
-        "motto": "The park is a place of magic.",
+        "motto": "Namedays in Flutter",
         "summaryTitle": "About the project",
-        "summary": "The park is a place of magic.",
+        "summary": "Work in progress",
         "coverImageUrl": "../assets/flutter-nameday-api-cover.png",
         "p1": {
-            "title": "P1 Title",
-            "content": "Lorem ipsum",
+            "title": "Work in progress",
+            "content": "Work in progress",
             "imgUrl": "../assets/flutter-nameday-api-cover.png"
         },
         "stack0": {
