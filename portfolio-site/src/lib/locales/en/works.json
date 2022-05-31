@@ -23,45 +23,53 @@
     },
     "napp": {
         "title": "nApp",
-        "motto": "Mobile countdown until the Sun becomes a red giant",
+        "motto": "Experience the Sun in ways never seen before",
         "summaryTitle": "About the project",
-        "summary": "The park is a place of magic.",
+        "summary": "The two-in-one app package features an application containing a countdown until our Sun becoming a red giant, alongside numerous interesting facts about its lifecycle. Its companion app, nApp: VR, is a virtual reality experience that lets users explore the Sun's evolution both across time and space.",
         "coverImageUrl": "../assets/napp-cover.png",
         "p1": {
-            "title": "P1 Title",
-            "content": "Lorem ipsum",
+            "title": "Development",
+            "content": "Being visually appealing is cardinal in the app. Flutter is a great choice to build such a UI. With its help, information can be easily displayed in a clean and intuitive way. During the development, both designing the user interface and its development were part of my duties. With the app duo in 2021, the developer group received second place in the Szegedi Innovatív Informatika Verseny.",
             "imgUrl": "../assets/napp-cover.png"
         },
         "stack0": {
             "title": "Flutter",
             "imgUrl": "../assets/dart-flutter.png"
+        },
+        "stack1": {
+            "title": "Unity",
+            "imgUrl": "../assets/unity.png"
         }
     },
     "elmesema": {
         "title": "ElmeSéma",
         "motto": "Tool for keeping track of ideas and brainstorming",
         "summaryTitle": "About the project",
-        "summary": "Work in progress",
+        "summary": "ElmeSéma is an application built for the purpose of capturing and noting ideas as fast as possible. Gone are the days of forgetting great ideas, as the app was designed with great care for speed and simplicity. With its built in AI-driven features, it also helps with expanding upon the ideas.",
         "coverImageUrl": "../assets/elmesema-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
+            "title": "The challange of speed",
+            "content": "Achieving the goal of being able to capture and note ideas as fast as possible was a challenge. This challange was overcome with the use of cutting-edge technologies. For instance, Dialogflow is used to capture ideas based on the user's voice input. There are also recommendations based on the content already saved.",
             "imgUrl": "../assets/elmesema-cover.png"
         },
         "stack0": {
             "title": "Flutter",
             "imgUrl": "../assets/dart-flutter.png"
+        },
+        "stack1": {
+            "title": "Google Dialogflow",
+            "imgUrl": "../assets/dialogflow.png"
         }
     },
     "hazizz": {
         "title": "Házizz",
         "motto": "The number one homework managing app",
         "summaryTitle": "About the project",
-        "summary": "Work in progress",
+        "summary": "Students constantly hear the eternal question: 'What was the homework?' Házizz delivers a solution to this problem.",
         "coverImageUrl": "../assets/hazizz-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
+            "title": "Sharing homework",
+            "content": "With an easy-to-use interface, students can easily share the homework with their classmates.",
             "imgUrl": "../assets/hazizz-cover.png"
         },
         "stack0": {
@@ -73,11 +81,11 @@
         "title": "Flutter Nameday API",
         "motto": "Namedays in Flutter",
         "summaryTitle": "About the project",
-        "summary": "Work in progress",
+        "summary": "A small wrapper library for Dart that allows developers to implement nameday functionality in their Flutter apps.",
         "coverImageUrl": "../assets/flutter-nameday-api-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
+            "title": "International namedays, every day",
+            "content": "A wrapper for easy usage of Abalin.net API. Thanks to it, lengthy boilerplate code can be avoided. Instead, with just a few lines of code the nameday data of 20 countries becomes available.",
             "imgUrl": "../assets/flutter-nameday-api-cover.png"
         },
         "stack0": {

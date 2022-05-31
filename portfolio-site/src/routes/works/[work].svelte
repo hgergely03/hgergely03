@@ -30,7 +30,7 @@
 						</p>
 					</div>
 					<div class="col-md-6">
-						<img class="img-fluid post-image" src={$t(url + '.p1' + '.imgUrl')} alt={$t(url + '.coverImageUrl')} />
+						<img class="img-fluid post-image d-block d-md-inline mx-auto" src={$t(url + '.p1' + '.imgUrl')} alt={$t(url + '.p1' + '.title')} />
 					</div>
 				</div>
 			<div class="row pt-5">

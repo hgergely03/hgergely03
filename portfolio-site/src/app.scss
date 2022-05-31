@@ -224,9 +224,17 @@ body::-webkit-scrollbar {
 	}
 }
 
+.post-image {
+	max-height: 70%;
+}
+
 @media only screen and (max-width: 512px) {
 	.icon {
 		width: 2rem;
 		height: 2rem;
+	}
+
+	.post-image {
+		max-height: 90%;
 	}
 }

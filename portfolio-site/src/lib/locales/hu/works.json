@@ -23,45 +23,53 @@
     },
     "napp": {
         "title": "nApp",
-        "motto": "Mobilos visszaszámláló a Nap vörös óriássá válásáig",
+        "motto": "A Nap felfedezése eddig nem látott módokon",
         "summaryTitle": "A projektről",
-        "summary": "The park is a place of magic.",
+        "summary": "E kettő az egyben alkalmazás csomag első eleme egy applikáció, amely a Nap életciklusáról szóló információk mellett egy a Napunk vörös óriássá válásáig tartó visszaszámlálót tartalmaz. Ennek a társa a nApp: VR, melyben a virtuális valóság keretei között fedezhetik fel a felhasználók a Nap evolúcióját, térben és időben.",
         "coverImageUrl": "../assets/napp-cover.png",
         "p1": {
-            "title": "P1 Title",
-            "content": "Lorem ipsum",
+            "title": "Fejlesztés",
+            "content": "Az alkamazásban nagy szerepet játszik az esztétikus megjelenítés, az ilyesfajta UI felépítéséhez pedig remek választás a Flutter. Segítségével könnyen és átláthatóan átadható az információ. A fejlesztés során mind a felhasználói felület megtervezése, mind a fejlesztése a feladataim közé tartozott. A Szegedi Innovatív Informatika Verseny-en 2021-ben második helyezést ért el az alkalmazás párossal a fejlesztő csapat.",
             "imgUrl": "../assets/napp-cover.png"
         },
         "stack0": {
             "title": "Flutter",
             "imgUrl": "../assets/dart-flutter.png"
+        },
+        "stack1": {
+            "title": "Unity",
+            "imgUrl": "../assets/unity.png"
         }
     },
     "elmesema": {
         "title": "ElmeSéma",
         "motto": "Eszköz az ötletek lejegyzésére és brainstormingra",
         "summaryTitle": "A projektről",
-        "summary": "Work in progress",
+        "summary": "Az ElmeSéma az ötletek lehető leggyorsabb lejegyzésére létrehozott alkalmazás. A világmegváltó ötletek feledésbe merülése már a múlté, mivel az applikáció tervezésekor különös figyelmet kapott a sebesség és az egyszerűség. Ráadásul a beépített AI hajtotta funkcióknak köszönhetően még az ötletek bővítésében is segítséget nyújt az app.",
         "coverImageUrl": "../assets/elmesema-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
+            "title": "A kihívás: gyorsaság",
+            "content": "A cél, hogy az ötleteket a lehető leggyorsabban lehessen lejegyezni kihívást jelentett. Éppen ezért élvonalbeli technológiák kerültek felhasználásra. Ilyen a Dialogflow, mellyel az ötletek a felhasználó hangja alapján kerülnek rögzítésre. Emellett az alkalmazás különböző ajánlásokat kínál a már meglévő tartalom alapján.",
             "imgUrl": "../assets/elmesema-cover.png"
         },
         "stack0": {
             "title": "Flutter",
             "imgUrl": "../assets/dart-flutter.png"
+        },
+        "stack1": {
+            "title": "Google Dialogflow",
+            "imgUrl": "../assets/dialogflow.png"
         }
     },
     "hazizz": {
         "title": "Házizz",
-        "motto": "Az elsőszámú házi feladat kezelő alkalmazás",
+        "motto": "Az első számú házi feladat kezelő alkalmazás",
         "summaryTitle": "A projektről",
-        "summary": "Work in progress",
+        "summary": "Diák korában az ember sokszor hallhatja az örök kérdést: \"Mi volt a házi?\" Erre a problémára kínál megoldást a Házizz.",
         "coverImageUrl": "../assets/hazizz-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
+            "title": "A házifeladat megosztása",
+            "content": "A könnyen használható kezelőfelületnek köszönhetően a diákok könnyen megoszthatják a házi feladatot az osztálytársaikkal.",
             "imgUrl": "../assets/hazizz-cover.png"
         },
         "stack0": {
@@ -73,12 +81,12 @@
         "title": "Fluter Nameday API",
         "motto": "Névnapok a Flutterben",
         "summaryTitle": "A projektről",
-        "summary": "Work in progress",
+        "summary": "Egy kis méretű wrapper könyvtár Dartban, amely lehetővé teszi a névnap funkcionalitás implementációját a fejlesztőknek a Flutter alkalmazásukban.",
         "coverImageUrl": "../assets/flutter-nameday-api-cover.png",
         "p1": {
-            "title": "Work in progress",
-            "content": "Work in progress",
-            "imgUrl": "./assets/flutter-nameday-api-cover.png"
+            "title": "Nemzetközi névnapok, minden nap",
+            "content": "Wrapper Abalin.net API könnyű használatáért. Segítségével elkerülhető a hosszas boilerplate kód, helyette néhány sor kóddal elérhető 20 ország névnap adata.",
+            "imgUrl": "../assets/flutter-nameday-api-cover.png"
         },
         "stack0": {
             "title": "Dart",
