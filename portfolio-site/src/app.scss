@@ -31,7 +31,6 @@ body::-webkit-scrollbar {
 }
 
 /* Overwrite Bootstrap classes */
-// TODO: Dark mode
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -107,7 +106,7 @@ body::-webkit-scrollbar {
 		background-color: $light-page-background;
 		background-color: var(--light-page-background);
 	}
-	
+
 	.badge {
 		background-color: $underline-red;
 		background-color: var(--underline-red);

@@ -7,6 +7,7 @@ export let competitions = [
     'dusza-mobil-2020',
     'webgraf-2020',
     'gamf-prog',
+    'ccna-1',
     'bakonyi-bitfaragok-2021',
     'sziiv-napp',
     'bakonyi-bitfaragok-2022',
@@ -14,7 +15,8 @@ export let competitions = [
     'skills-junior-web',
     'skills-junior-sysadmin',
     'sziiv-elmesema',
-    'aszev'
+    'aszev',
+    'ccna-2',
 ];
 
 competitions = competitions.reverse();

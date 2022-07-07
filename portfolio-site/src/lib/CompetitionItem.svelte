@@ -53,6 +53,7 @@
 			<a href={$t(base + '.fallBack')} target="_blank">
 				{$t('about.linkToAward')}
 			</a>
+			<br>
 		{:else}
 			<img src={'/assets/awards/' + competition + '.png'} alt={$t(base + '.title')} />
 		{/if}

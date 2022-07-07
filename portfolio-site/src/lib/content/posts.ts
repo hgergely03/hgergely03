@@ -9,9 +9,9 @@ export type Post = {
     stack: StackItem[];
 }
 
-// TODO: add localisation support
-// TODO: If ever making a blog, could use a headless CMS like https://prismic.io/dashboard/
-// TODO: Post inspiration: https://noted.lol/organize-your-bookmarks-with-the-self-hosted-servas/
+// IDEA: could add localisation support
+// IDEA: If ever making a blog, could use a headless CMS like https://prismic.io/dashboard/
+// IDEA: Post inspiration: https://noted.lol/organize-your-bookmarks-with-the-self-hosted-servas/
 
 type Paragraph = {
     title: string;

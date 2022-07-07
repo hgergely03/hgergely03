@@ -52,7 +52,7 @@
  -->
 
 <header class="nav-filled">
-	<!-- TODO: Overwrite BS animation -->
+	<!-- TODO: Overwrite BS .nav-link animation -->
 	<!-- https://getbootstrap.com/docs/5.0/customize/sass/ Sigh -->
 	<Navbar dark expand="md">
 		<NavbarBrand href="/">HG</NavbarBrand>

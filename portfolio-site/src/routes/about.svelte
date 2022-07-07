@@ -13,8 +13,6 @@
 	});
 </script>
 
-<!-- TODO: About page could be unified with [post] -->
-
 <section>
 	<PostCover title={$t('about.title')} backgroundUrl="assets/about_me.jpg"
 		>{$t('about.motto')}</PostCover
