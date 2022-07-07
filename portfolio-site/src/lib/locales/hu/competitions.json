@@ -1,116 +1,190 @@
 {
+    "teamMates": {
+        "SKornel": {
+            "name": "Stefán Kornél",
+            "site": "https://skornel02.hu/"
+        },
+        "IErik": {
+            "name": "Isakov Erik",
+            "site": "false"
+        },
+        "RGergely": {
+            "name": "Ruzsa Gergely",
+            "site": "https://ruzger.hu/"
+        },
+        "VAvar": {
+            "name": "Vad Avar",
+            "site": "https://vadavar.hu/"
+        },
+        "KKinga": {
+            "name": "Kiss Kinga",
+            "site": "false"
+        },
+        "NGabor": {
+            "name": "Nagy Gábor",
+            "site": "false"
+        }
+    },
     "dusza-hagyomanyos-2018": {
         "slug": "dusza-hagyomanyos-2018",
         "title": "Dusza Árpád Országos Programozói Emlékverseny Hagyományos kategória",
         "date": "2018-2019",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "webex-hackathon": {
         "slug": "webex-hackathon",
         "title": "Webex Hackathon",
         "date": "2019",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "dusza-mobil-2019": {
         "slug": "dusza-mobil-2019",
         "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2019-2020",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "dusza-hagyomanyos-2019": {
         "slug": "dusza-hagyomanyos-2019",
         "title": "Dusza Árpád Országos Programozói Emlékverseny Hagyományos kategória",
         "date": "2019-2020",
-        "place": "2. hely"
+        "place": "2. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "sziiv-parkmyst": {
         "slug": "sziiv-parkmyst",
         "title": "Szegedi Innovatív Informatika Verseny - Parkmyst",
         "date": "2020",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "SKornel",
+            "teamMate1": "VAvar"
+        }
     },
-
     "dusza-mobil-2020": {
         "slug": "dusza-mobil-2020",
         "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2020-2021",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "webgraf-2020": {
         "slug": "webgraf-2020",
         "title": "Webgráf",
         "date": "2020-2021",
-        "place": "2. hely"
+        "place": "2. hely",
+        "noImage": "true",
+        "fallBack": "https://uni-eszterhazy.hu/matinf/webgraf-2020-programozoi-verseny#:~:text=a%20webgraf%202020%20dontojeben%20az%20elso%20ket%20helyet%20a%20budapesti%20bmszc%20neumann%20janos%20informatikai%20technikum%20diakjai%20szerzetek%20meg%2C",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "SKornel",
+            "teamMate1": "VAvar"
+        }
     },
-
     "gamf-prog": {
         "slug": "gamf-prog",
         "title": "Neumann János Egyetem Programozóverseny",
         "date": "2021",
-        "place": "2. hely"
+        "place": "2. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "bakonyi-bitfaragok-2021": {
         "slug": "bakonyi-bitfaragok-2021",
         "title": "Bakonyi Bitfaragó Bajnokság",
         "date": "2021",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "SKornel",
+            "teamMate1": "VAvar"
+        }
     },
-
     "sziiv-napp": {
         "slug": "sziiv-napp",
         "title": "Szegedi Innovatív Informatika Verseny - nApp",
         "date": "2021",
-        "place": "2. hely"
+        "place": "2. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "KKinga",
+            "teamMate1": "NGabor"
+        }
     },
-
     "bakonyi-bitfaragok-2022": {
         "slug": "bakonyi-bitfaragok-2022",
         "title": "Bakonyi Bitfaragó Bajnokság",
         "date": "2022",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "SKornel",
+            "teamMate1": "VAvar"
+        }
     },
-
     "webgraf-2021": {
         "slug": "webgraf-2021",
         "title": "Webgráf",
         "date": "2021",
         "place": "Döntő"
     },
-
     "dusza-mobil-2021": {
         "slug": "dusza-mobil-2021",
         "title": "Dusza Árpád Országos Programozói Emlékverseny Mobil kategória",
         "date": "2021",
-        "place": "1. hely"
+        "place": "1. hely",
+        "teamMates": {
+            "number": "2",
+            "teamMate0": "IErik",
+            "teamMate1": "SKornel"
+        }
     },
-
     "skills-junior-web": {
         "slug": "skills-junior-web",
         "title": "Skills Junior web kategória",
         "date": "2022",
         "place": "7. hely"
     },
-
     "skills-junior-sysadmin": {
         "slug": "skills-junior-sysadmin",
         "title": "Skills Junior informatikai rendszerüzemeltető kategória",
         "date": "2022",
         "place": "9. hely"
     },
-
     "sziiv-elmesema": {
         "slug": "sziiv-elmesema",
         "title": "Szegedi Innovatív Informatika Verseny - ElmeSéma",
         "date": "2022",
-        "place": "Döntő"
+        "place": "Döntő",
+        "noImage": "true",
+        "fallBack": "https://www.inf.u-szeged.hu/sziiv/program#:~:text=csapatn%C3%A9v_v%C3%A9gleges(1)m%C3%A1solata,ElmeS%C3%A9ma"
     },
-
     "aszev": {
         "slug": "aszev",
         "title": "Ágazati és ágazaton belüli specializáció szakmai érettségi vizsgatárgyak versenye",

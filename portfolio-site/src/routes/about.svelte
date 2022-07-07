@@ -1,8 +1,16 @@
 <script lang="ts">
+	import CompetitionItem from '$lib/CompetitionItem.svelte';
 	import { competitions } from '$lib/content/competitions';
 	import PostCover from '$lib/PostCover.svelte';
 	import PostSummary from '$lib/PostSummary.svelte';
+	import StackItem from '$lib/StackItem.svelte';
 	import { t } from '$lib/translations';
+	import { theme } from '$lib/Navbar.svelte';
+
+	let currentTheme: string;
+	theme.subscribe((value) => {
+		currentTheme = value;
+	});
 </script>
 
 <!-- TODO: About page could be unified with [post] -->
@@ -38,64 +46,24 @@
 		</div>
 		<div class="left-line">
 			<div class="row px-2 px-lg-0">
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/csharp-logo.png"
-						alt="img"
-					/>
-					<p>{$t('about.cSharp')}</p>
-				</div>
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/dart-flutter.png"
-						alt="img"
-					/>
-					<p>{$t('about.dartFlutter')}</p>
-				</div>
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/html-css-js.png"
-						alt="img"
-					/>
-					<p>{$t('about.webTechs')}</p>
-				</div>
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/bootstrap.png"
-						alt="img"
-					/>
-					<p>{$t('about.bootstrap')}</p>
-				</div>
+				<!-- TODO: Translate alt -->
+				<StackItem title="about.cSharp" src="/assets/logos/csharp-logo.png" alt="C# logo" />
+				<StackItem
+					title="about.dartFlutter"
+					src="/assets/logos/dart-flutter.png"
+					alt="Dart & Flutter logo"
+				/>
+				<StackItem
+					title="about.webTechs"
+					src="/assets/logos/html-css-js.png"
+					alt="Web technology logos"
+				/>
+				<StackItem title="about.bootstrap" src="/assets/logos/bootstrap.png" alt="Bootstrap logo" />
 			</div>
 			<div class="row mt-sm-5 d-flex justify-content-center">
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/svelte.png"
-						alt="img"
-					/>
-					<p>{$t('about.svelte')}</p>
-				</div>
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/figma.png"
-						alt="img"
-					/>
-					<p>{$t('about.figma')}</p>
-				</div>
-				<div class="col-sm stack-item">
-					<img
-						class="img-fluid rounded-circle mb-3 stack-img"
-						src="/assets/git-linux.png"
-						alt="img"
-					/>
-					<p>{$t('about.gitAndLinux')}</p>
-				</div>
+				<StackItem title="about.svelte" src="/assets/logos/svelte.png" alt="img" />
+				<StackItem title="about.figma" src="/assets/logos/figma.png" alt="img" />
+				<StackItem title="about.gitAndLinux" src="/assets/logos/git-linux.png" alt="img" />
 			</div>
 		</div>
 		<div class="row">
@@ -105,39 +73,7 @@
 		</div>
 		<div class="mx-auto pb-2" id="awards">
 			{#each competitions as competition}
-				<div class="row award-item d-flex align-items-center mb-2 p-2">
-					<div class="col-8 award-name">{$t('competitions.' + competition + '.title')}</div>
-					<div class="col-4 d-flex justify-content-end">
-						<div class="align-right">
-							<span class="badge award-bubble rounded-pill">
-								{$t('competitions.' + competition + '.date')}
-							</span>
-							<span class="badge award-bubble rounded-pill">
-								{$t('competitions.' + competition + '.place')}
-							</span>
-						</div>
-					</div>
-				</div>
-				<!-- <ul class="list-group">
-					<li class="list-group-item d-flex align-items-center mb-2">
-						<div class="me-auto"></div>
-						<span class="badge award-bubble rounded-pill mx-4"></span>
-						<div class="place"><span class="badge award-bubble rounded-pill"></span></div>
-					</li>
-				</ul> -->
-				<!-- <div class="row">
-					<div class="col-md-6 gx-md-5">
-						<p class="text-start text-md-end school">
-							{$t('competitions.' + competition + '.title')}
-						</p>
-						<p class="text-start text-md-end">{$t('competitions.' + competition + '.date')}</p>
-					</div>
-					<div class="col-md-6">
-						<p class="paragraph">
-							{$t('competitions.' + competition + '.place')}
-						</p>
-					</div>
-				</div> -->
+				<CompetitionItem {competition} {currentTheme} />
 			{/each}
 		</div>
 	</div>
@@ -159,10 +95,6 @@
 
 	#about {
 		margin-top: 2rem;
-	}
-
-	.align-right {
-		text-align: right;
 	}
 
 	@media only screen and (max-width: 768px) {

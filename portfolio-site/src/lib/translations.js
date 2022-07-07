@@ -82,6 +82,7 @@ const config = ({
             ).default,
         },
     ],
+    fallbackLocale: 'en',
 });
 
 export const { t, locale, locales, loading, loadTranslations } = new i18n(config);

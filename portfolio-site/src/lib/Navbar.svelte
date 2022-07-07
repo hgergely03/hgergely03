@@ -7,8 +7,8 @@
 	import { browser } from '$app/env';
 	import { t } from '$lib/translations';
 	import { locale } from '$lib/translations';
-	import FaMoon from 'svelte-icons/fa/FaMoon.svelte'
-	import FaSun from 'svelte-icons/fa/FaSun.svelte'
+	import FaMoon from 'svelte-icons/fa/FaMoon.svelte';
+	import FaSun from 'svelte-icons/fa/FaSun.svelte';
 	import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'sveltestrap';
 	import { writable } from 'svelte/store';
 

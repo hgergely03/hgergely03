@@ -6,15 +6,16 @@
 	export const load = async ({ url }: { url: any }) => {
 		const { pathname } = url;
 
-		const defaultLocale = 'en'; // get from cookie, user session, ...
+		let defaultLocale;
 		if (browser) {
+			defaultLocale = navigator.language; // get from cookie, user session, ...
 			let storedLocale = localStorage.getItem('locale');
 			if (storedLocale) {
 				locale.forceSet(storedLocale);
 			}
 		}
 
-		const initLocale = locale.get() || defaultLocale; // set default if no locale already set
+		const initLocale = locale.get() || defaultLocale || 'en'; // set default if no locale already set
 
 		await loadTranslations(initLocale, pathname); // keep this just before the `return`
 
@@ -34,7 +35,12 @@
 	});
 
 	if (browser) {
-		currentTheme = localStorage.getItem('theme') || 'light';
+		let storedTheme = localStorage.getItem('theme');
+		if (storedTheme) {
+			currentTheme = storedTheme;
+		} else {
+			currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
 		theme.set(currentTheme);
 	}
 </script>

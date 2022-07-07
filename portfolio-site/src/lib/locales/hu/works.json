@@ -14,11 +14,11 @@
         },
         "stack0": {
             "title": "Svelte",
-            "imgUrl": "../assets/svelte.png"
+            "imgUrl": "../assets/logos/svelte.png"
         },
         "stack1": {
             "title": "HTML, CSS",
-            "imgUrl": "../assets/html-css-js.png"
+            "imgUrl": "../assets/logos/html-css-js.png"
         }
     },
     "napp": {
@@ -34,11 +34,11 @@
         },
         "stack0": {
             "title": "Flutter",
-            "imgUrl": "../assets/dart-flutter.png"
+            "imgUrl": "../assets/logos/dart-flutter.png"
         },
         "stack1": {
             "title": "Unity",
-            "imgUrl": "../assets/unity.png"
+            "imgUrl": "../assets/logos/unity.png"
         }
     },
     "elmesema": {
@@ -54,11 +54,11 @@
         },
         "stack0": {
             "title": "Flutter",
-            "imgUrl": "../assets/dart-flutter.png"
+            "imgUrl": "../assets/logos/dart-flutter.png"
         },
         "stack1": {
             "title": "Google Dialogflow",
-            "imgUrl": "../assets/dialogflow.png"
+            "imgUrl": "../assets/logos/dialogflow.png"
         }
     },
     "hazizz": {
@@ -74,7 +74,7 @@
         },
         "stack0": {
             "title": "Flutter",
-            "imgUrl": ".../assets/dart-flutter.png"
+            "imgUrl": ".../assets/logos/dart-flutter.png"
         }
     },
     "flutter-nameday-api": {
@@ -90,7 +90,7 @@
         },
         "stack0": {
             "title": "Dart",
-            "imgUrl": "../assets/dart-flutter.png"
+            "imgUrl": "../assets/logos/dart-flutter.png"
         }
     },
     "project6": {
