@@ -43,6 +43,22 @@ const config = ({
             ).default,
         },
         {
+            locale: 'en',
+            key: 'contact',
+            routes: ['/contact'],
+            loader: async () => (
+                await import('./locales/en/contact.json')
+            ).default,
+        },
+        {
+            locale: 'en',
+            key: 'privacy',
+            routes: ['/privacy'],
+            loader: async () => (
+                await import('./locales/en/privacy.json')
+            ).default,
+        },
+        {
             locale: 'hu',
             key: 'common',
             loader: async () => (
@@ -79,6 +95,22 @@ const config = ({
             routes: ['/works', /\/works\/.*/, '/'],
             loader: async () => (
                 await import('./locales/hu/works.json')
+            ).default,
+        },
+        {
+            locale: 'hu',
+            key: 'contact',
+            routes: ['/contact'],
+            loader: async () => (
+                await import('./locales/hu/contact.json')
+            ).default,
+        },
+        {
+            locale: 'hu',
+            key: 'privacy',
+            routes: ['/privacy'],
+            loader: async () => (
+                await import('./locales/hu/privacy.json')
             ).default,
         },
     ],

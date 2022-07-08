@@ -13,6 +13,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>{$t(url + '.title')}</title>
+</svelte:head>
+
 <section>
 	{#if post}
 		<PostCover title={$t(url + '.title')} backgroundUrl={$t(url + '.coverImageUrl')}>{$t(url + '.motto')}</PostCover>

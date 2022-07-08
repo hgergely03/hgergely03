@@ -16,7 +16,7 @@ export let competitions = [
     'skills-junior-sysadmin',
     'sziiv-elmesema',
     'aszev',
-    'ccna-2',
+    'ccna-2'
 ];
 
 competitions = competitions.reverse();

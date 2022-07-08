@@ -4,6 +4,10 @@
 	import { t } from '$lib/translations';
 </script>
 
+<svelte:head>
+	<title>{$t('work.title')}</title>
+</svelte:head>
+
 <section>
 	<div class="container">
 		<div class="row">

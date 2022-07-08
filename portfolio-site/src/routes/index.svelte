@@ -23,12 +23,12 @@
 <!-- TODO: SEO: Meta tags, change description, etc. -->
 <svelte:head>
 	<title>{$t('home.title')}</title>
-	<meta name="description" content="Svelte demo app" />
+	<!-- <meta name="description" content="Svelte demo app" /> -->
 </svelte:head>
 
 <Hero/>
 <Works/>
 <About/>
 
-<style lang="scss">
-</style>
+<!-- <style lang="scss">
+</style> -->

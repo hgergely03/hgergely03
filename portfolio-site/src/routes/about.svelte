@@ -13,6 +13,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{$t('about.title')}</title>
+</svelte:head>
+
 <section>
 	<PostCover title={$t('about.title')} backgroundUrl="assets/about_me.jpg"
 		>{$t('about.motto')}</PostCover
