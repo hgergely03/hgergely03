@@ -143,6 +143,12 @@
             "teamMate1": "NGabor"
         }
     },
+    "english-c1": {
+        "slug": "english-c1",
+        "title": "Angol - Cambridge Assessment CAE (C1-C2 szintnek megfelelő)",
+        "date": "2021",
+        "place": "Nyelvvizsga"
+    },
     "bakonyi-bitfaragok-2022": {
         "slug": "bakonyi-bitfaragok-2022",
         "title": "Bakonyi Bitfaragó Bajnokság",

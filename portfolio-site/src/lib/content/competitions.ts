@@ -10,6 +10,7 @@ export let competitions = [
     'ccna-1',
     'bakonyi-bitfaragok-2021',
     'sziiv-napp',
+    'english-c1',
     'bakonyi-bitfaragok-2022',
     'dusza-mobil-2021',
     'skills-junior-web',
