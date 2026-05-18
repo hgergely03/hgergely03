@@ -1,5 +1,5 @@
 import eslintPluginAstro from 'eslint-plugin-astro';
-// TODO: Add rules
+// TODO: Set up ESLint rules
 export default [
   // add more generic rule sets here, such as:
   // js.configs.recommended,

@@ -1,0 +1,87 @@
+/** Color properties */
+@property --color-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FF6161;
+}
+
+@property --color-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #7A00E4;
+}
+
+@property --color-tertiary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FE2C2C;
+}
+
+@property --color-dark {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0C090D;
+}
+
+
+/** Spacing properties */
+
+@property --spacing-extra-small {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0.25rem;
+}
+
+@property --spacing-small {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0.75rem;
+}
+
+@property --spacing-normal {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 1.25rem;
+}
+
+@property --spacing-medium {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 1.5rem;
+}
+
+@property --spacing-large {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 2.75rem;
+}
+
+@property --spacing-extra-large {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 4rem;
+}
+
+@property --spacing-extra-extra-large {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 7.5rem;
+}
+
+:root {
+    /** Colors */
+    --color-primary: #FF6161;
+    --color-secondary: #7A00E4;
+    --color-tertiary: #FE2C2C;
+    --color-dark: #0C090D;
+    --color-light: #FFFFFF;
+
+    /** Spacing */
+    --spacing-extra-small: 0.25rem;
+    --spacing-small: 0.75rem;
+    --spacing-normal: 1.25rem;
+    --spacing-medium: 1.5rem;
+    --spacing-large: 2.75rem;
+    --spacing-extra-large: 4rem;
+    --spacing-extra-extra-large: 7.5rem;
+}

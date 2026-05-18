@@ -1,0 +1,23 @@
+---
+import type { INavItem } from './INavItem';
+
+interface Props extends Omit<INavItem, 'icon'> { }
+
+const { label, route } = Astro.props;
+---
+
+<style>
+    a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--color-light);
+        text-decoration: none;
+    }
+</style>
+
+<a href={route}>
+    <slot name="icon" />
+    {label}
+</a>

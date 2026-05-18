@@ -1,0 +1,68 @@
+---
+import type { INavItem } from "./INavItem";
+import { Image } from 'astro:assets';
+import NavItem from "./NavItem.astro";
+import HomeIcon from "../../assets/img/icons/home.png";
+import AboutIcon from "../../assets/img/icons/about.png";
+import ProjectsIcon from "../../assets/img/icons/projects.png";
+import ContactIcon from "../../assets/img/icons/contact.png";
+/* TODO: Change PNGs to SVGs? */
+
+
+const navItems: INavItem[] = [
+    {
+        label: "Home",
+        icon: HomeIcon,
+        route: "/",
+    },
+    {
+        label: "About",
+        icon: AboutIcon,
+        route: "/about",
+    },
+    {
+        label: "Projects",
+        icon: ProjectsIcon,
+        route: "/projects",
+    },
+    {
+        label: "Contact",
+        icon: ContactIcon,
+        route: "/contact",
+    },
+];
+---
+
+<style>
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: var(--spacing-extra-extra-large);
+        justify-content: center;
+        background-color: var(--color-dark);
+        border-radius: var(--spacing-small);
+        padding: var(--spacing-small) var(--spacing-medium);
+    }
+
+    .nav-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+</style>
+
+<nav>
+    {
+        navItems.map((item) => (
+            <NavItem
+                label={item.label}
+                route={item.route}
+            >
+                {/* Icon is used to supplement label within link. 
+                    The image does not convey other information than that already provided in the link text, 
+                    so a null (empty) value is used to avoid redundancy and repetition.
+                    See Example 2 at https://www.w3.org/WAI/tutorials/images/functional/ */}
+                <Image src={item.icon} class="nav-icon" alt="" slot="icon" />
+            </NavItem>
+        ))
+    }
+</nav>
