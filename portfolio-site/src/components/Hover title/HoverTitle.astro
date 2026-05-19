@@ -1,0 +1,117 @@
+---
+export interface Props {
+    hoverText: string;
+    firstLineText: string;
+    firstLineHighlightText: string;
+    secondLineText: string;
+    showFirstLine?: boolean;
+    showSecondLine?: boolean;
+}
+
+const {
+    hoverText,
+    firstLineText,
+    firstLineHighlightText,
+    secondLineText,
+    showFirstLine = true,
+    showSecondLine = true,
+} = Astro.props;
+---
+
+<style>
+    .hover-title {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hover-text {
+        color: var(--color-dark);
+        font-size: 10.25rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+        background-clip: text;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0.3) 40%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        -webkit-text-stroke-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        letter-spacing: 2px;
+        /** Low opacity: around 0.08-0.28 */
+        opacity: 0.8;
+    }
+
+    .title {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .first-line {
+        font-size: 1.25rem;
+        color: var(--color-light);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    .first-line-highlight {
+        color: transparent;
+        background-image: var(--gradient-primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        margin: 0;
+    }
+
+    .second-line {
+        font-size: 2.75rem;
+        color: var(--color-light);
+        font-weight: 500;
+        opacity: 0.9;
+        margin: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        .hover-text {
+            font-size: 15vw;
+        }
+
+        .first-line {
+            font-size: 2.5vw;
+        }
+
+        .second-line {
+            font-size: 4vw;
+        }
+    }
+</style>
+
+<div class="hover-title">
+    <p class="hover-text">{hoverText}</p>
+
+    {
+        (showFirstLine || showSecondLine) && (
+            <div class="title">
+                {showFirstLine && (
+                    <p class="first-line">
+                        {firstLineText}
+                        <span class="first-line-highlight">
+                            {firstLineHighlightText}
+                        </span>
+                    </p>
+                )}
+
+                {showSecondLine && <p class="second-line">{secondLineText}</p>}
+            </div>
+        )
+    }
+</div>
