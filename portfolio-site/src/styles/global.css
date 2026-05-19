@@ -85,3 +85,8 @@
     --spacing-extra-large: 4rem;
     --spacing-extra-extra-large: 7.5rem;
 }
+
+body {
+  font-family: var(--font-inter);
+  font-weight: 600;
+}
