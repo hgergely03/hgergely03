@@ -39,14 +39,20 @@ const navItems: INavItem[] = [
         flex-direction: row;
         gap: var(--spacing-extra-extra-large);
         justify-content: center;
-        background-color: var(--color-dark);
+        position: sticky;
+        top: var(--spacing-medium);
+        padding: 0.5rem var(--spacing-medium);
+        /** Rounded corners with gradient border */
+        border: 1px solid transparent;
         border-radius: var(--spacing-small);
-        padding: var(--spacing-small) var(--spacing-medium);
+        background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
     }
 
     .nav-icon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2rem;
+        height: 2rem;
     }
 </style>
 

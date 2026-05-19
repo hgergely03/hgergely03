@@ -15,9 +15,13 @@ const { label, route } = Astro.props;
         color: var(--color-light);
         text-decoration: none;
     }
+
+    span {
+        font-size: 1rem;
+    }
 </style>
 
 <a href={route}>
     <slot name="icon" />
-    {label}
+    <span>{label}</span>
 </a>

@@ -76,6 +76,10 @@
     --color-dark: #0C090D;
     --color-light: #FFFFFF;
 
+    /** Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    --gradient-light: linear-gradient(45deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.25));
+
     /** Spacing */
     --spacing-extra-small: 0.25rem;
     --spacing-small: 0.75rem;
