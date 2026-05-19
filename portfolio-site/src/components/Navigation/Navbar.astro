@@ -1,33 +1,46 @@
 ---
-import type { INavItem } from "./INavItem";
 import { Image } from 'astro:assets';
 import NavItem from "./NavItem.astro";
 import HomeIcon from "../../assets/img/icons/home.png";
+import HomeIconActive from "../../assets/img/icons/home-active.png";
 import AboutIcon from "../../assets/img/icons/about.png";
+import AboutIconActive from "../../assets/img/icons/about-active.png";
 import ProjectsIcon from "../../assets/img/icons/projects.png";
+import ProjectsIconActive from "../../assets/img/icons/projects-active.png";
 import ContactIcon from "../../assets/img/icons/contact.png";
+import ContactIconActive from "../../assets/img/icons/contact-active.png";
 /* TODO: Change PNGs to SVGs? */
 
+interface INavItem {
+    label: string;
+    icon: ImageMetadata;
+    activeIcon: ImageMetadata;
+    route: string;
+}
 
 const navItems: INavItem[] = [
     {
         label: "Home",
         icon: HomeIcon,
+        activeIcon: HomeIconActive,
         route: "/",
     },
     {
         label: "About",
         icon: AboutIcon,
+        activeIcon: AboutIconActive,
         route: "/about",
     },
     {
         label: "Projects",
         icon: ProjectsIcon,
+        activeIcon: ProjectsIconActive,
         route: "/projects",
     },
     {
         label: "Contact",
         icon: ContactIcon,
+        activeIcon: ContactIconActive,
         route: "/contact",
     },
 ];
@@ -42,33 +55,50 @@ const navItems: INavItem[] = [
         position: sticky;
         top: var(--spacing-medium);
         padding: 0.5rem var(--spacing-medium);
-        /** Rounded corners with gradient border */
-        border: 1px solid transparent;
-        border-radius: var(--spacing-small);
-        background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
-        background-origin: border-box;
-        background-clip: padding-box, border-box;
+        margin: 0 auto;
+        max-width: 80vw;
     }
 
     .nav-icon {
         width: 2rem;
         height: 2rem;
     }
+
+    @media screen and (max-width: 768px) {
+        nav {
+            gap: var(--spacing-large);
+            position: fixed;
+            top: unset;
+            bottom: var(--spacing-medium);
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: max-content;
+            padding: var(--spacing-small) var(--spacing-medium);
+        }
+    }
+
+    @media screen and (max-width: 512px) {
+        nav {
+            gap: var(--spacing-medium);
+        }
+    }
 </style>
 
-<nav>
+<nav class="rounded-gradient-border">
     {
-        navItems.map((item) => (
-            <NavItem
-                label={item.label}
-                route={item.route}
-            >
-                {/* Icon is used to supplement label within link. 
-                    The image does not convey other information than that already provided in the link text, 
-                    so a null (empty) value is used to avoid redundancy and repetition.
-                    See Example 2 at https://www.w3.org/WAI/tutorials/images/functional/ */}
-                <Image src={item.icon} class="nav-icon" alt="" slot="icon" />
-            </NavItem>
-        ))
+        navItems.map((item) => {
+            const active = Astro.url.pathname === item.route;
+
+            return (
+                <NavItem
+                    label={item.label}
+                    route={item.route}
+                    active={active}
+                >
+                    <Image src={active ? item.activeIcon : item.icon} class="nav-icon" alt="" slot="icon" />
+                </NavItem>
+            );
+        })
     }
 </nav>

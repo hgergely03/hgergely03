@@ -1,9 +1,11 @@
 ---
-import type { INavItem } from './INavItem';
+export interface Props {
+    label: string;
+    route: string;
+    active: boolean;
+}
 
-interface Props extends Omit<INavItem, 'icon'> { }
-
-const { label, route } = Astro.props;
+const { label, route, active } = Astro.props;
 ---
 
 <style>
@@ -19,9 +21,13 @@ const { label, route } = Astro.props;
     span {
         font-size: 1rem;
     }
+    
+    span.active {
+        font-weight: 600;
+    }
 </style>
 
 <a href={route}>
     <slot name="icon" />
-    <span>{label}</span>
+    <span class={active ? "active" : ""}>{label}</span>
 </a>
