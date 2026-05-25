@@ -1,6 +1,9 @@
 ---
+import Button from "../components/Button/Button.astro";
 import HoverTitle from "../components/Hover title/HoverTitle.astro";
 import Layout from "../layouts/Layout.astro";
+import HomeIcon from "../assets/img/icons/home.png";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="Home">
@@ -11,5 +14,7 @@ import Layout from "../layouts/Layout.astro";
             firstLineHighlightText="line"
             secondLineText="Second line"
         />
+
+        <Button href="/about" label="label" isDark={false} isPrimaryStroke={true} />
     </div>
 </Layout>

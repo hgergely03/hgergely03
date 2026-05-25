@@ -96,11 +96,9 @@ body {
   font-weight: 400;
 }
 
-.rounded-gradient-border {
+.gradient-border {
   border: 1px solid transparent;
-  border-radius: var(--spacing-small);
-  /** Necessary for gradient border with rounded corners */
-  background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
+  /** Set background-image on elements */
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
