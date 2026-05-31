@@ -1,0 +1,57 @@
+---
+import Button from '../Button/Button.astro';
+import ProjectsIcon from "../../assets/img/icons/projects.png";
+
+export interface Props {
+    firstLineText: string;
+    secondLineText?: string;
+    showSecondLine?: boolean;
+    class?: string | string[];
+    showButton?: boolean;
+}
+
+const { firstLineText, secondLineText, showSecondLine = true, class: className, showButton = true, ...rest } = Astro.props;
+const backgroundImageUrl = `url(${ProjectsIcon.src})`; 
+---
+
+<style define:vars={{ backgroundImageUrl }}>
+    .project-card {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.80) 100%), var(--backgroundImageUrl) #353535 50% / contain no-repeat;
+        border: 1px solid transparent;
+        border-radius: var(--spacing-small);
+        padding: var(--spacing-medium) var(--spacing-large);
+        box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.02);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-small);
+    }
+
+    .project-card > div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-extra-small);
+    }
+
+    h3 {
+        margin: 0;
+        font-size: 2.25rem;
+        font-weight: bold;
+        color: var(--color-light);
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--color-primary);
+    }
+</style>
+
+<div class={`project-card ${className || ''}`} {...rest}>
+    <div>
+        <h3>{firstLineText}</h3>
+        {showSecondLine && secondLineText && <p>{secondLineText}</p>}
+    </div>
+    {showButton && <Button href="" label="View more" isDark={false} isPrimaryStroke={true} />}
+</div>
