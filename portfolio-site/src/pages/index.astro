@@ -1,20 +1,94 @@
 ---
+import AnimatedCarousel from "../components/AnimatedCarousel/AnimatedCarousel.astro";
+import CarouselItem, {
+    type ICarouselItem,
+} from "../components/AnimatedCarousel/CarouselItem.astro";
+import Bento from "../components/Bento/Bento.astro";
 import Button from "../components/Button/Button.astro";
 import HoverTitle from "../components/Hover title/HoverTitle.astro";
+import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
 import Layout from "../layouts/Layout.astro";
-import HomeIcon from "../assets/img/icons/home.png";
-import { Image } from "astro:assets";
+import Homepage1 from "../assets/img/icons/homepage-1.png";
+import Homepage2 from "../assets/img/icons/homepage-2.png";
+import Homepage3 from "../assets/img/icons/homepage-3.png";
+
+const carouselItems: ICarouselItem[] = [
+    {
+        label: "Located in Budapest",
+        decorationSrc: Homepage1,
+        decorationAlt: "",
+    },
+    {
+        label: "Designing impactful experiences, developing full stack business solutions", 
+        decorationSrc: Homepage2,
+        decorationAlt: "",
+    },
+    {
+        label: "2 years experience in the industry",
+        decorationSrc: Homepage3,
+        decorationAlt: "",
+    },
+];
 ---
 
-<Layout title="Home">
-    <div style="height: 1000px;">
-        <HoverTitle
-            hoverText="Lorem ispum"
-            firstLineText="First"
-            firstLineHighlightText="line"
-            secondLineText="Second line"
-        />
+<style>
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-large)
+    }
 
-        <Button href="/about" label="label" isDark={false} isPrimaryStroke={true} />
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-extra-extra-large);
+    }
+</style>
+
+<Layout title="Home">
+    <!-- Hero -->
+
+    <div class="content">
+        <!-- About me -->
+        <section>
+            <HoverTitle
+                hoverText="About"
+                firstLineText="About"
+                firstLineHighlightText="me"
+                secondLineText="Details at a glance"
+            />
+
+            <AnimatedCarousel items={carouselItems} />
+        
+            <ProjectCard firstLineText="Experience, knowledge and achievements" showButton={false} />
+
+            <Button
+                href="/about"
+                label="Get to know me"
+                isDark={false}
+                isPrimaryStroke={true}
+            />
+        </section>
+        <!-- Projects -->
+        <section>
+            <HoverTitle
+                hoverText="Projects"
+                firstLineText="Featured"
+                firstLineHighlightText="works"
+                secondLineText="Projects delivering tangible and measurable impact"
+            />
+        
+            <Bento />
+        
+            <Button
+                href="/projects"
+                label="Explore my portfolio"
+                isDark={false}
+                isPrimaryStroke={true}
+            />
+        </section>
     </div>
+
+    <!-- Contact -->
 </Layout>

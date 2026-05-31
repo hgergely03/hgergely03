@@ -27,6 +27,7 @@ const { label, route, active } = Astro.props;
     }
 </style>
 
+<!-- TODO: Style selected state -->
 <a href={route}>
     <slot name="icon" />
     <span class={active ? "active" : ""}>{label}</span>

@@ -58,6 +58,8 @@ const navItems: INavItem[] = [
         margin: 0 auto;
         max-width: 80vw;
         z-index: 10;
+        background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
+        border-radius: var(--spacing-small);
     }
 
     .nav-icon {
@@ -86,7 +88,7 @@ const navItems: INavItem[] = [
     }
 </style>
 
-<nav class="rounded-gradient-border">
+<nav class="gradient-border">
     {
         navItems.map((item) => {
             const active = Astro.url.pathname === item.route;
@@ -97,6 +99,7 @@ const navItems: INavItem[] = [
                     route={item.route}
                     active={active}
                 >
+                <!-- TODO: Check image sizes and srcs (add higher res variants to smaller resolutions if needed) -->
                     <Image src={active ? item.activeIcon : item.icon} class="nav-icon" alt="" slot="icon" />
                 </NavItem>
             );
