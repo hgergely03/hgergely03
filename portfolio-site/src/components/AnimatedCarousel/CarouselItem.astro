@@ -1,0 +1,52 @@
+---
+import { Image } from "astro:assets";
+
+export interface ICarouselItem {
+    label: string;
+    decorationSrc: ImageMetadata;
+    decorationAlt: string;
+    highLighted?: boolean;
+}
+
+export interface Props extends ICarouselItem {}
+
+const {
+    label,
+    decorationSrc,
+    decorationAlt,
+    highLighted = false,
+} = Astro.props;
+---
+
+<style>
+    .carousel-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-medium);
+        padding: var(--spacing-normal);
+        width: 100%;
+    }
+
+    .decoration {
+        max-width: 100%;
+        height: auto;
+    }
+
+    p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+    }
+</style>
+
+<div class="carousel-item">
+    <Image
+        class="decoration"
+        src={decorationSrc}
+        alt={decorationAlt}
+        slot="decoration"
+    />
+    <p>{label}</p>
+</div>
