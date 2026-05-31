@@ -58,8 +58,6 @@ const navItems: INavItem[] = [
         margin: 0 auto;
         max-width: 80vw;
         z-index: 10;
-        background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
-        border-radius: var(--spacing-small);
     }
 
     .nav-icon {
@@ -67,7 +65,19 @@ const navItems: INavItem[] = [
         height: 2rem;
     }
 
-    @media screen and (max-width: 768px) {
+    .absolute-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        border-radius: var(--spacing-small);
+        background-image: linear-gradient(var(--color-dark), var(--color-dark)), var(--gradient-light);
+        opacity: 0;
+    }
+
+    @media screen and (max-width: 992px) {
         nav {
             gap: var(--spacing-large);
             position: fixed;
@@ -77,18 +87,24 @@ const navItems: INavItem[] = [
             right: 0;
             margin: 0 auto;
             width: max-content;
-            padding: var(--spacing-small) var(--spacing-medium);
+            padding: var(--spacing-small) var(--spacing-large);
         }
     }
 
     @media screen and (max-width: 512px) {
         nav {
             gap: var(--spacing-medium);
+            padding: var(--spacing-small) var(--spacing-medium);
         }
     }
 </style>
 
-<nav class="gradient-border">
+<nav class="">
+    <!-- Background is a separate element from nav, because the background-image property 
+     necessary for gradient border cannot be animated with GSAP.
+     Instead opacity animation is used, where only the background needs to be transparent. -->
+    <span class="absolute-background gradient-border"></span>
+
     {
         navItems.map((item) => {
             const active = Astro.url.pathname === item.route;
@@ -106,3 +122,19 @@ const navItems: INavItem[] = [
         })
     }
 </nav>
+
+<script>
+    import gsap from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to(".absolute-background", {
+        opacity: 1,
+        ease: "power2.out", 
+        duration: 0.4,
+        scrollTrigger: {
+            start: "top+=200",
+            toggleActions: "play pause resume reverse",
+        }
+    }); 
+</script>
