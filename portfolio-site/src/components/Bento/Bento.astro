@@ -1,0 +1,55 @@
+---
+import ProjectCard from "../ProjectCard/ProjectCard.astro";
+---
+
+<style>
+    .bento {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-template-areas:
+            "a a a a a a b b b"
+            "a a a a a a b b b"
+            "a a a a a a b b b"
+            "a a a a a a c c c"
+            "d d d e e e c c c"
+            "d d d e e e c c c"
+            "d d d e e e c c c"
+            "d d d e e e c c c"
+            ;
+        column-gap: var(--spacing-small);
+        row-gap: var(--spacing-small);
+    }
+
+    .project-card:nth-of-type(1) {
+        grid-area: a;
+    }
+
+    .project-card:nth-of-type(2) {
+        grid-area: b;
+    }
+
+    .project-card:nth-of-type(3) {
+        grid-area: c;
+    }
+
+    .project-card:nth-of-type(4) {
+        grid-area: d;
+    }
+
+    .project-card:nth-of-type(5) {
+        grid-area: e;
+    }
+
+    @media screen and (max-width: 768px) {
+        /** // TODO: Create responsive bento */
+    }
+</style>
+
+<div class="bento">
+    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+</div>
