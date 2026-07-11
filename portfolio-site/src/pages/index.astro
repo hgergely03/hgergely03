@@ -6,11 +6,12 @@ import CarouselItem, {
 import Bento from "../components/Bento/Bento.astro";
 import Button from "../components/Button/Button.astro";
 import HoverTitle from "../components/Hover title/HoverTitle.astro";
-import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
-import Layout from "../layouts/Layout.astro";
 import Homepage1 from "../assets/img/icons/homepage-1.png";
 import Homepage2 from "../assets/img/icons/homepage-2.png";
 import Homepage3 from "../assets/img/icons/homepage-3.png";
+import Layout from "../layouts/Layout.astro";
+import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
+import VideoProjectCard from "../components/ProjectCard/VideoProjectCard.astro";
 
 const carouselItems: ICarouselItem[] = [
     {
@@ -61,7 +62,9 @@ const carouselItems: ICarouselItem[] = [
 
             <AnimatedCarousel items={carouselItems} />
         
-            <ProjectCard firstLineText="Experience, knowledge and achievements" showButton={false} />
+            <VideoProjectCard>
+                <ProjectCard slot="project-card" firstLineText="Experience, knowledge and achievements" showButton={false} />
+            </VideoProjectCard>
 
             <Button
                 href="/about"
@@ -70,6 +73,7 @@ const carouselItems: ICarouselItem[] = [
                 isPrimaryStroke={true}
             />
         </section>
+
         <!-- Projects -->
         <section>
             <HoverTitle
