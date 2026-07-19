@@ -10,8 +10,8 @@ import Homepage3 from "../assets/img/icons/homepage-3.png";
 import PlaceholderImg from "../assets/img/placeholder-1.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
-import VideoProjectCard from "../components/ProjectCard/VideoProjectCard.astro";
 import BusinessCard from "../components/BusinessCard/BusinessCard.astro";
+import Footer from "../components/Footer/Footer.astro";
 
 const carouselItems: ICarouselItem[] = [
     {
@@ -45,6 +45,7 @@ const carouselItems: ICarouselItem[] = [
     }
 
     .content {
+        margin: 0 var(--spacing-layout);
         display: flex;
         flex-direction: column;
         gap: var(--spacing-extra-extra-large);
@@ -112,4 +113,6 @@ const carouselItems: ICarouselItem[] = [
             <BusinessCard />
         </section>
     </div>
+
+    <Footer />
 </Layout>

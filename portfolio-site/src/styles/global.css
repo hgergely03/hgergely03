@@ -89,6 +89,7 @@
     --spacing-large: 2.75rem;
     --spacing-extra-large: 4rem;
     --spacing-extra-extra-large: 7.5rem;
+    --spacing-layout: 15vw;
 }
 
 body {
@@ -108,6 +109,14 @@ body {
 }
 
 /** Media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  :root {
+    --spacing-layout: 10vw;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  :root {
+    --spacing-layout: 5vw;
+  }
 }

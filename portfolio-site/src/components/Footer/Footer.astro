@@ -1,0 +1,93 @@
+---
+import GitHubIcon from "../../assets/img/icons/github.svg";
+import LinkedInIcon from "../../assets/img/icons/linkedin.svg";
+import DribbbleIcon from "../../assets/img/icons/dribbble.svg";
+import { Image } from "astro:assets";
+---
+
+<style>
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-normal);
+        padding: var(--spacing-large) var(--spacing-layout);
+        margin-top: var(--spacing-extra-extra-large);
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        background-image:
+            linear-gradient(var(--color-dark), var(--color-dark)),
+            var(--gradient-primary);
+    }
+
+    a {
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-light);
+    }
+
+    .row {
+        display: flex;
+        gap: var(--spacing-medium);
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-normal) var(--spacing-extra-large);
+    }
+
+    .social {
+        display: flex;
+        gap: var(--spacing-medium);
+    }
+
+    .icon {
+        width: var(--spacing-large);
+        height: auto;
+    }
+
+    .copyright {
+        font-size: 1.25rem;
+        font-weight: 200;
+        margin: 0px;
+    }
+
+    @media screen and (max-width: 1400px) {
+        .row {
+            flex-direction: column;
+            gap: var(--spacing-medium);
+            align-items: start;
+        }
+    }
+</style>
+
+<!-- TODO: Add top drop shadow -->
+<footer class="gradient-border">
+    <div class="row">
+        <span class="links">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/contact">Contact</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/cookies">Cookies</a>
+        </span>
+        <span class="social">
+            <a class="icon" href="" target="_blank" rel="noopener noreferrer">
+                <Image class="icon" src={GitHubIcon} alt="GitHub Icon" />
+            </a>
+            <a class="icon" href="" target="_blank" rel="noopener noreferrer">
+                <Image class="icon" src={LinkedInIcon} alt="LinkedIn Icon" />
+            </a>
+            <a class="icon" href="" target="_blank" rel="noopener noreferrer">
+                <Image class="icon" src={DribbbleIcon} alt="Dribbble Icon" />
+            </a>
+        </span>
+    </div>
+    <p class="copyright">&copy; {new Date().getFullYear()} Horváth Gergely</p>
+</footer>
