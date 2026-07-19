@@ -103,6 +103,10 @@ body {
   background-clip: padding-box, border-box;
 }
 
+.project-card-large {
+  height: 50vh;
+}
+
 /** Media queries */
 @media screen and (max-width: 768px) {
 

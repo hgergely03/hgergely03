@@ -1,17 +1,17 @@
 ---
 import AnimatedCarousel from "../components/AnimatedCarousel/AnimatedCarousel.astro";
-import CarouselItem, {
-    type ICarouselItem,
-} from "../components/AnimatedCarousel/CarouselItem.astro";
+import { type ICarouselItem } from "../components/AnimatedCarousel/CarouselItem.astro";
 import Bento from "../components/Bento/Bento.astro";
 import Button from "../components/Button/Button.astro";
 import HoverTitle from "../components/Hover title/HoverTitle.astro";
 import Homepage1 from "../assets/img/icons/homepage-1.png";
 import Homepage2 from "../assets/img/icons/homepage-2.png";
 import Homepage3 from "../assets/img/icons/homepage-3.png";
+import PlaceholderImg from "../assets/img/placeholder-1.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
 import VideoProjectCard from "../components/ProjectCard/VideoProjectCard.astro";
+import BusinessCard from "../components/BusinessCard/BusinessCard.astro";
 
 const carouselItems: ICarouselItem[] = [
     {
@@ -20,7 +20,7 @@ const carouselItems: ICarouselItem[] = [
         decorationAlt: "",
     },
     {
-        label: "Designing impactful experiences, developing full stack business solutions", 
+        label: "Designing impactful experiences, developing full stack business solutions",
         decorationSrc: Homepage2,
         decorationAlt: "",
     },
@@ -37,7 +37,11 @@ const carouselItems: ICarouselItem[] = [
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: var(--spacing-large)
+        gap: var(--spacing-large);
+    }
+
+    section > * {
+        width: 100%;
     }
 
     .content {
@@ -61,10 +65,13 @@ const carouselItems: ICarouselItem[] = [
             />
 
             <AnimatedCarousel items={carouselItems} />
-        
-            <VideoProjectCard>
-                <ProjectCard slot="project-card" firstLineText="Experience, knowledge and achievements" showButton={false} />
-            </VideoProjectCard>
+
+            <ProjectCard
+                class="project-card-large"
+                label="Experience, knowledge and achievements"
+                backgroundImageSrc={PlaceholderImg.src}
+                href="/about"
+            />
 
             <Button
                 href="/about"
@@ -82,9 +89,9 @@ const carouselItems: ICarouselItem[] = [
                 firstLineHighlightText="works"
                 secondLineText="Projects delivering tangible and measurable impact"
             />
-        
+
             <Bento />
-        
+
             <Button
                 href="/projects"
                 label="Explore my portfolio"
@@ -92,7 +99,17 @@ const carouselItems: ICarouselItem[] = [
                 isPrimaryStroke={true}
             />
         </section>
-    </div>
 
-    <!-- Contact -->
+        <!-- Contact -->
+        <section>
+            <HoverTitle
+                hoverText="Contact"
+                firstLineText="Get in"
+                firstLineHighlightText="touch"
+                secondLineText="Let's have a chat or just say hello"
+            />
+
+            <BusinessCard />
+        </section>
+    </div>
 </Layout>
