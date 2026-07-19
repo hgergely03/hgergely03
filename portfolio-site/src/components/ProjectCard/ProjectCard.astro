@@ -1,27 +1,21 @@
 ---
-import Button from "../Button/Button.astro";
-import ProjectsIcon from "../../assets/img/icons/projects.png";
-
 export interface Props {
-    firstLineText: string;
-    secondLineText?: string;
-    showSecondLine?: boolean;
+    label: string;
+    backgroundImageSrc: string;
     class?: string | string[];
-    showButton?: boolean;
+    href?: string;
 }
 
 const {
-    firstLineText,
-    secondLineText,
-    showSecondLine = true,
+    label: firstLineText,
+    backgroundImageSrc,
     class: className,
-    showButton = true,
+    href,
     ...rest
 } = Astro.props;
-const backgroundImageUrl = `url(${ProjectsIcon.src})`;
 ---
 
-<style define:vars={{ backgroundImageUrl }}>
+<style define:vars={{ backgroundImage: `url("${backgroundImageSrc}")` }}>
     .project-card {
         background:
             linear-gradient(
@@ -29,53 +23,36 @@ const backgroundImageUrl = `url(${ProjectsIcon.src})`;
                 rgba(0, 0, 0, 0.2) 0%,
                 rgba(0, 0, 0, 0.8) 100%
             ),
-            var(--backgroundImageUrl) #353535 50% / contain no-repeat;
-        border: 1px solid transparent;
-        border: none;
+            var(--backgroundImage) #353535 50% / cover no-repeat;
         border-radius: var(--spacing-small);
-        padding: var(--spacing-medium) var(--spacing-large);
+        padding: var(--spacing-normal) var(--spacing-normal);
         box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.02);
         display: flex;
         flex-direction: column;
-        flex-grow: 1;
-        justify-content: center;
-        gap: var(--spacing-small);
-    }
-
-    .project-card > div {
-        display: flex;
-        flex-direction: column;
-        gap: var(--spacing-extra-small);
+        justify-content: end;
+        align-items: start;
     }
 
     h3 {
         margin: 0;
-        font-size: 2.25rem;
-        font-weight: bold;
-        color: var(--color-light);
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
     }
 
-    p {
-        margin: 0;
-        font-size: 1.5rem;
-        font-weight: 300;
-        color: var(--color-primary);
+    a {
+        text-decoration: none;
     }
 </style>
 
 <div class={`project-card ${className || ""}`} {...rest}>
-    <div>
-        <h3>{firstLineText}</h3>
-        {showSecondLine && secondLineText && <p>{secondLineText}</p>}
-    </div>
     {
-        showButton && (
-            <Button
-                href=""
-                label="View more"
-                isDark={false}
-                isPrimaryStroke={true}
-            />
+        href ? (
+            <a href={href}>
+                <h3>{firstLineText}</h3>
+            </a>
+        ) : (
+            <h3>{firstLineText}</h3>
         )
     }
 </div>
