@@ -18,6 +18,12 @@ const { title } = Astro.props;
         color: var(--color-light);
     }
 
+    @media screen and (max-width: 1200px) {
+        body {
+            margin: 0 10vw;
+        }
+    }
+
     @media screen and (max-width: 768px) {
         body {
             margin: 0 5vw;

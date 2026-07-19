@@ -1,24 +1,30 @@
 ---
 import ProjectCard from "../ProjectCard/ProjectCard.astro";
+import PlaceholderImg from "../../assets/img/placeholder-1.png";
 ---
 
 <style>
     .bento {
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(8, 1fr);
-        grid-template-areas:
-            "a a a a a a b b b"
-            "a a a a a a b b b"
-            "a a a a a a b b b"
-            "a a a a a a c c c"
-            "d d d e e e c c c"
-            "d d d e e e c c c"
-            "d d d e e e c c c"
-            "d d d e e e c c c"
-            ;
         column-gap: var(--spacing-small);
         row-gap: var(--spacing-small);
+        width: 100%;
+        height: 70vh;
+    }
+
+    .layout {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+        grid-template-areas:
+            "a a a a a a c c c"
+            "a a a a a a c c c"
+            "a a a a a a c c c"
+            "a a a a a a c c c"
+            "a a a a a a c c c"
+            "b b b b b b c c c"
+            "b b b b b b c c c"
+            "b b b b b b c c c"
+            "b b b b b b c c c";
     }
 
     .project-card:nth-of-type(1) {
@@ -33,23 +39,42 @@ import ProjectCard from "../ProjectCard/ProjectCard.astro";
         grid-area: c;
     }
 
-    .project-card:nth-of-type(4) {
-        grid-area: d;
-    }
+    /* // TODO: Different layout for smaller screens? (see Figma) */
+    @media screen and (max-width: 1200px) {
+            .layout {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+                grid-template-areas:
+                    "a b c";
+                gap: var(--spacing-normal);
+                height: 40vh;
+            }
+        }
 
-    .project-card:nth-of-type(5) {
-        grid-area: e;
-    }
-
-    @media screen and (max-width: 768px) {
-        /** // TODO: Create responsive bento */
+    @media screen and (max-width: 996px) {
+        .layout {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "a"
+                "b"
+                "c";
+                gap: var(--spacing-normal);
+        }
     }
 </style>
 
-<div class="bento">
-    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
-    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
-    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
-    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
-    <ProjectCard firstLineText="Super cool project name" secondLineText="Catchy second line" />
+<div class="bento layout">
+    <ProjectCard
+        label="Super cool project name"
+        backgroundImageSrc={PlaceholderImg.src}
+    />
+    <ProjectCard
+        label="Super cool project name"
+        backgroundImageSrc={PlaceholderImg.src}
+    />
+    <ProjectCard
+        label="Super cool project name"
+        backgroundImageSrc={PlaceholderImg.src}
+    />
 </div>
