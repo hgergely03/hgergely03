@@ -21,7 +21,7 @@
 @property --color-dark {
   syntax: "<color>";
   inherits: false;
-  initial-value: #0C090D;
+  initial-value: #000000;
 }
 
 
@@ -74,7 +74,8 @@
     --color-primary: #FF6161;
     --color-secondary: #7A00E4;
     --color-tertiary: #FE2C2C;
-    --color-dark: #0C090D;
+    /**--color-dark: #0C090D;*/
+    --color-dark: #000000;
     --color-light: #FFFFFF;
 
     /** Gradients */
