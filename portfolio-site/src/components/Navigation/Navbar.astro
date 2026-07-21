@@ -114,8 +114,9 @@ const navItems: INavItem[] = [
                     route={item.route}
                     active={active}
                 >
-                <!-- TODO: Check image sizes and srcs (add higher res variants to smaller resolutions if needed) -->
-                    <Image src={active ? item.activeIcon : item.icon} class="nav-icon" alt="" slot="icon" />
+                    <!-- TODO: Check image sizes and srcs (add higher res variants to smaller resolutions if needed) -->
+                    <!-- Icon is strictly decorative, so alt attribute can stay empty -->
+                    <Image src={active ? item.activeIcon : item.icon} class="nav-icon" loading="eager" alt="" slot="icon" />
                 </NavItem>
             );
         })
