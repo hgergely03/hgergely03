@@ -1,8 +1,14 @@
 ---
 import ProjectCard from "../ProjectCard/ProjectCard.astro";
-import PlaceholderImg from "../../assets/img/placeholder-1.png";
-import Placeholder2Img from "../../assets/img/placeholder-2.png";
-import Placeholder3Img from "../../assets/img/placeholder-3.png";
+import type { IBentoItem } from "./BentoItem";
+
+export interface Props {
+    items: IBentoItem[];
+    class?: string | string[];
+    href?: string;
+}
+
+const { items, class: className, href, ...rest } = Astro.props;
 ---
 
 <style>
@@ -43,15 +49,14 @@ import Placeholder3Img from "../../assets/img/placeholder-3.png";
 
     /* // TODO: Different layout for smaller screens? (see Figma) */
     @media screen and (max-width: 1200px) {
-            .layout {
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-rows: 1fr;
-                grid-template-areas:
-                    "a b c";
-                gap: var(--spacing-normal);
-                height: 40vh;
-            }
+        .layout {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            grid-template-areas: "a b c";
+            gap: var(--spacing-normal);
+            height: 40vh;
         }
+    }
 
     @media screen and (max-width: 996px) {
         .layout {
@@ -61,22 +66,19 @@ import Placeholder3Img from "../../assets/img/placeholder-3.png";
                 "a"
                 "b"
                 "c";
-                gap: var(--spacing-normal);
+            gap: var(--spacing-normal);
         }
     }
 </style>
 
 <div class="bento layout">
-    <ProjectCard
-        label="Super cool project name"
-        backgroundImageSrc={PlaceholderImg.src}
-    />
-    <ProjectCard
-        label="Super cool project name"
-        backgroundImageSrc={Placeholder2Img.src}
-    />
-    <ProjectCard
-        label="Super cool project name"
-        backgroundImageSrc={Placeholder3Img.src}
-    />
+    {
+        items.map((item) => (
+            <ProjectCard
+                label={item.label}
+                backgroundImageSrc={item.backgroundImageSrc}
+                href={item.href}
+            />
+        ))
+    }
 </div>

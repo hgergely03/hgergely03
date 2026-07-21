@@ -8,10 +8,14 @@ import Homepage1 from "../assets/img/icons/homepage-1.png";
 import Homepage2 from "../assets/img/icons/homepage-2.png";
 import Homepage3 from "../assets/img/icons/homepage-3.png";
 import PlaceholderImg from "../assets/img/placeholder-1.png";
+import Placeholder2Img from "../assets/img/placeholder-2.png";
+import Placeholder3Img from "../assets/img/placeholder-3.png";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
 import BusinessCard from "../components/BusinessCard/BusinessCard.astro";
 import Footer from "../components/Footer/Footer.astro";
+import type { IBentoItem } from "../components/Bento/BentoItem";
+
 
 const carouselItems: ICarouselItem[] = [
     {
@@ -28,6 +32,22 @@ const carouselItems: ICarouselItem[] = [
         label: "2 years experience in the industry",
         decorationSrc: Homepage3,
         decorationAlt: "",
+    },
+];
+
+const bentoItems: IBentoItem[] = [
+    {
+        label: "Project 1",
+        backgroundImageSrc: PlaceholderImg.src,
+        href: "/about"
+    },
+    {
+        label: "Project 2",
+        backgroundImageSrc: Placeholder2Img.src,
+    },
+    {
+        label: "Project 3",
+        backgroundImageSrc: Placeholder3Img.src,
     },
 ];
 ---
@@ -91,7 +111,7 @@ const carouselItems: ICarouselItem[] = [
                 secondLineText="Projects delivering tangible and measurable impact"
             />
 
-            <Bento />
+            <Bento items={bentoItems} />
 
             <Button
                 href="/projects"

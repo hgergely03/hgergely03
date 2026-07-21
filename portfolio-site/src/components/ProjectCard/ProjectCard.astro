@@ -25,12 +25,15 @@ const {
             ),
             var(--backgroundImage) #353535 50% / cover no-repeat;
         border-radius: var(--spacing-small);
-        padding: var(--spacing-normal) var(--spacing-normal);
         box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.02);
         display: flex;
         flex-direction: column;
         justify-content: end;
         align-items: start;
+    }
+
+    .padding {
+        padding: var(--spacing-normal) var(--spacing-normal);
     }
 
     h3 {
@@ -42,17 +45,25 @@ const {
 
     a {
         text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
     }
 </style>
 
-<div class={`project-card ${className || ""}`} {...rest}>
-    {
-        href ? (
-            <a href={href}>
+{
+    href ? (
+        <div class={`project-card ${className || ""}`} {...rest}>
+            <a href={href} class="padding">
                 <h3>{firstLineText}</h3>
             </a>
-        ) : (
+        </div>
+    ) : (
+        <div class={`project-card padding ${className || ""}`} {...rest}>
             <h3>{firstLineText}</h3>
-        )
-    }
-</div>
+        </div>
+    )
+}
