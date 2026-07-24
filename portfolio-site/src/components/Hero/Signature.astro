@@ -1,0 +1,229 @@
+---
+import AstroIcon from "../../assets/img/icons/logo/astro.svg";
+import CSharpIcon from "../../assets/img/icons/logo/c_sharp.svg";
+import CssIcon from "../../assets/img/icons/logo/css.svg";
+import DotNetIcon from "../../assets/img/icons/logo/dotnet.svg";
+import FlutterIcon from "../../assets/img/icons/logo/flutter.svg";
+import MssqlIcon from "../../assets/img/icons/logo/mssql.svg";
+import ReactIcon from "../../assets/img/icons/logo/react.svg";
+
+interface SignatureIcon {
+    src: string;
+    x: number;
+    y: number;
+}
+
+interface SignatureText {
+    x: number;
+    y: number;
+    gradient: string;
+}
+
+const icons: SignatureIcon[] = [
+    {
+        src: ReactIcon.src,
+        x: 12,
+        y: 3,
+    },
+    {
+        src: FlutterIcon.src,
+        x: 22,
+        y: 6,
+    },
+    {
+        src: CSharpIcon.src,
+        x: 37,
+        y: 5,
+    },
+    {
+        src: AstroIcon.src,
+        x: 44,
+        y: 4,
+    },
+    {
+        src: DotNetIcon.src,
+        x: 65,
+        y: 5,
+    },
+    {
+        src: CssIcon.src,
+        x: 80,
+        y: 7,
+    },
+    {
+        src: MssqlIcon.src,
+        x: 85,
+        y: 6,
+    },
+];
+
+const signatures: SignatureText[] = [
+    {
+        x: 50,
+        y: 7.5,
+        gradient: "#linear-1"
+    },
+    {
+        x: 49.5,
+        y: 6,
+        gradient: "#linear-2"
+    },
+    {
+        x: 49,
+        y: 4.5,
+        gradient: "#linear-3"
+    },
+];
+---
+
+<style>
+    h1, h2 {
+        margin: 0;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        bottom: 15.5vh;
+        font-size: 4.2rem;
+    }
+
+    h2 > span:last-child {
+        background-image: var(--gradient-primary);
+    }
+
+    svg {
+        width: 100%;
+    }
+
+    svg text {
+        font-family: var(--font-inter);
+        stroke-width: 0.05;
+        fill: transparent;
+        paint-order: stroke;
+        font-weight: 700;
+        text-anchor: middle;
+        font-size: 0.6rem;
+        dominant-baseline: middle;
+    }
+
+    svg image {
+        width: 2.5px;
+        height: 2.5px;
+    }
+
+    /* .floating-icon:nth-of-type(1) {
+        animation: wiggle-1 2.5s ease-in-out infinite;
+    }
+
+    @keyframes wiggle-1 {
+        0% { transform: translate(-1px, -1px); }
+        25% { transform: translate(-1px, 1px); }
+        50% { transform: translate(1px, -1px); }
+        75% { transform: translate(1px, 1px); }
+        100% { transform: translate(-1px, -1px); }
+    } */
+</style>
+
+<!-- Use multiple text elements for 'shadows' but hide them from screen readers. 
+     See: https://stackoverflow.com/a/53004280 -->
+<h1 id="asd" aria-labelledby="name-0">
+    <svg viewBox="0 0 100 15" aria-hidden="true">
+        <defs>
+            <linearGradient id="linear-1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(255, 44, 44, 0.8)"></stop>
+                <stop offset="40%" stop-color="rgba(255, 44, 44, 0.21)"></stop>
+                <stop offset="100%" stop-color="rgba(255, 44, 44, 0.07)"></stop>
+            </linearGradient>
+    
+            <linearGradient id="linear-2" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(255, 97, 97, 0.4)"></stop>
+                <stop offset="70%" stop-color="rgba(122, 0, 228, 0.12)"></stop>
+                <stop offset="100%" stop-color="rgba(122, 0, 228, 0)"></stop>
+            </linearGradient>
+    
+            <linearGradient id="linear-3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="rgba(92, 0, 172, 0.3)"></stop>
+                <stop offset="40%" stop-color="rgba(92, 0, 172, 0.2)"></stop>
+                <stop offset="100%" stop-color="rgba(92, 0, 172, 0)"></stop>
+            </linearGradient>
+    
+            <clipPath id="text-clip">
+                <text
+                    x="50"
+                    y="7.5"
+                    stroke="url(#linear-1)"
+                    text-anchor="middle"
+                    font-size="0.6rem">Horváth Gergely</text
+                >
+            </clipPath>
+        </defs>
+    
+        {
+            signatures.map((sig, index) => (
+                <text
+                    x={sig.x}
+                    y={sig.y}
+                    stroke=`url(${sig.gradient})`
+                    id=`name-${index}`
+                >
+                    Horváth Gergely
+                </text>
+            ))
+        }
+
+        <g clip-path="url(#text-clip)">
+            {
+                icons.map((icon) => (
+                        <image
+                            x={icon.x}
+                            y={icon.y}
+                            href={icon.src}
+                            class="floating-icon"
+                        />
+                ))
+            }
+        </g>
+    </svg>
+</h1>
+<h2>
+    <span>Developer. </span>
+    <span>Designer. </span>
+    <span class="gradient-text">Creator.</span>
+</h2>
+
+<script>
+    // TODO: Refactor this script or change to CSS animation
+    import gsap from "gsap";
+
+    const limit = {max: 1, pullRatio: 0},
+    getRandom = () => gsap.utils.random(-limit.max, limit.max),
+    round = (value: number) => Math.round(value * 10000) / 10000,
+    getModifier = (home: number) => (value: string) => {
+      const val = parseFloat(value);
+      return round(val + (home - val) * limit.pullRatio) + "px";
+    };
+
+    gsap.utils.toArray(".floating-icon").forEach((element) => {
+        wander(element as gsap.TweenTarget, gsap.getProperty(element as gsap.TweenTarget, "x"), gsap.getProperty(element as gsap.TweenTarget, "y"))
+    });
+
+    function wander(element: gsap.TweenTarget, homeX: any, homeY: any) {
+        gsap.set(element, {
+            x: homeX + (gsap.getProperty(element, "x") as number - homeX) / (1 - limit.pullRatio),
+            y: homeY + (gsap.getProperty(element, "y") as number - homeY) / (1 - limit.pullRatio)
+        })
+        gsap.to(element, {
+            x: homeX + getRandom(),
+            y: homeY + getRandom(),
+            modifiers: {
+            x: getModifier(homeX),
+            y: getModifier(homeY)
+            },
+            duration: gsap.utils.random(1.5, 4), 
+            ease: "sine.inOut",
+            onComplete: () => wander(element, homeX, homeY)
+        });
+    }
+</script>
