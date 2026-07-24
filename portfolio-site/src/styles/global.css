@@ -105,6 +105,19 @@ body {
   background-clip: padding-box, border-box;
 }
 
+.gradient-outline-text {
+  background-clip: text;
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+
+.gradient-text {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .project-card-large {
   height: 50vh;
 }
