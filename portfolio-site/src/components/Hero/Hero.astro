@@ -7,6 +7,17 @@ import Signature from "./Signature.astro";
     div {
         width: 100%;
         padding: var(--spacing-extra-extra-large) 0px;
+        /** TODO: Test browser compatibility
+            As an alternative, see SVG masking: https://www.w3schools.com/css/css3_masking_svg.asp */
+        --mask: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 1) 0,
+                rgba(0, 0, 0, 1) 45%,
+                rgba(0, 0, 0, 0) 90%,
+                rgba(0, 0, 0, 0) 0
+            )
+            100% 50% / 100% 100% repeat-x;
+        mask: var(--mask);
     }
 </style>
 
