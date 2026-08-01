@@ -64,7 +64,6 @@ const navItems: INavItem[] = [
 
     .nav-icon {
         width: 2rem;
-        height: 2rem;
     }
 
     .absolute-background {
@@ -133,6 +132,24 @@ const navItems: INavItem[] = [
     gsap.to(".absolute-background", {
         opacity: 1,
         ease: "power2.out", 
+        duration: 0.4,
+        scrollTrigger: {
+            start: "top+=200",
+            toggleActions: "play pause resume reverse",
+        }
+    }); 
+
+    gsap.fromTo(".nav-icon", { 
+        display: "none",
+        height: "0px",
+        opacity: 0
+     }, 
+     {
+        display: "block",
+        height: "2rem",
+        opacity: 1,
+        autoAlpha: 1,
+        ease: "power2.inOut", 
         duration: 0.4,
         scrollTrigger: {
             start: "top+=200",
