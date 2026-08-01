@@ -12,7 +12,7 @@ import Signature from "./Signature.astro";
     @property --1-y-position {
         syntax: "<percentage>";
         inherits: false;
-        initial-value: 5%;
+        initial-value: 10%;
     }
 
     @property --2-x-position {
@@ -24,7 +24,7 @@ import Signature from "./Signature.astro";
     @property --2-y-position {
         syntax: "<percentage>";
         inherits: false;
-        initial-value: 15%;
+        initial-value: 20%;
     }
 
     @property --3-x-position {
@@ -50,7 +50,7 @@ import Signature from "./Signature.astro";
         height: 100%;
         display: flex;
         align-items: center;
-        animation: gradient 5s ease infinite alternate;
+        animation: gradient 5s ease-in-out infinite alternate forwards;
         background:
             radial-gradient(
                 circle at var(--1-x-position) var(--1-y-position),
@@ -89,9 +89,8 @@ import Signature from "./Signature.astro";
                 rgba(255, 255, 255, 0.06) 0%,
                 rgba(255, 255, 255, 0.2) 100%
             );
-        animation-delay: 0.6s;
         /** TODO: Handle prefer-reduced-motion */
-        animation: line 2s ease-in-out;
+        animation: line 2s ease-in-out 0.6s;
         transform-origin: top;
         position: absolute;
         left: 50%;
@@ -99,10 +98,11 @@ import Signature from "./Signature.astro";
     }
 
     @keyframes gradient {
-        /* 100% {
-            --1-x-position: 35%;
-            --1-y-position: 35%;
-        } */
+        100% {
+            --1-x-position: 25%;
+            --2-x-position: 100%;
+            --3-x-position: 80%;
+        }
     }
 
     @keyframes line {

@@ -17,6 +17,7 @@ interface SignatureText {
     x: number;
     y: number;
     gradient: string;
+    mask?: string;
 }
 
 const icons: SignatureIcon[] = [
@@ -61,17 +62,19 @@ const signatures: SignatureText[] = [
     {
         x: 50,
         y: 7.5,
-        gradient: "#linear-1"
+        gradient: "#linear-1",
     },
     {
         x: 49.5,
         y: 6,
-        gradient: "#linear-2"
+        gradient: "#linear-2",
+        mask: "url(#light-mask)",
     },
     {
         x: 49,
         y: 4.5,
-        gradient: "#linear-3"
+        gradient: "#linear-3",
+        mask: "url(#light-mask)",
     },
 ];
 ---
@@ -94,10 +97,6 @@ const signatures: SignatureText[] = [
         font-size: 4.2rem;
     }
 
-    h2 > span:last-child {
-        background-image: var(--gradient-primary);
-    }
-
     svg {
         width: 100%;
     }
@@ -116,6 +115,28 @@ const signatures: SignatureText[] = [
     svg image {
         width: 2.5px;
         height: 2.5px;
+    }
+
+    #light-mask-1 {
+         fill: rgba(255, 255, 255, 1);
+         animation: light-mask-1 5s ease-in-out infinite alternate forwards;
+    }
+
+    #light-mask-2 {
+         fill: rgba(255, 255, 255, 0.4);
+         animation: light-mask-2 5s ease-in-out infinite alternate forwards;
+    }
+
+    @keyframes light-mask-1 {
+        100% {
+            fill: rgba(255, 255, 255, 0.4);
+        }
+    }
+
+    @keyframes light-mask-2 {
+        100% {
+            fill: rgba(255, 255, 255, 1);
+        }
     }
 
     /* .floating-icon:nth-of-type(1) {
@@ -154,6 +175,12 @@ const signatures: SignatureText[] = [
                 <stop offset="40%" stop-color="rgba(92, 0, 172, 0.2)"></stop>
                 <stop offset="100%" stop-color="rgba(92, 0, 172, 0)"></stop>
             </linearGradient>
+
+            <mask id="light-mask">
+                <rect id="light-mask-1" x="5" y="0" width="30" height="15"/>
+                <rect id="light-mask-2" x="35" y="0" width="35" height="30"/>
+                <rect id="light-mask-2" x="70" y="0" width="30" height="15"/>
+            </mask>
     
             <clipPath id="text-clip">
                 <text
@@ -173,6 +200,7 @@ const signatures: SignatureText[] = [
                     y={sig.y}
                     stroke=`url(${sig.gradient})`
                     id=`name-${index}`
+                    mask={sig.mask}
                 >
                     Horváth Gergely
                 </text>

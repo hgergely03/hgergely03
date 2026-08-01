@@ -116,6 +116,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-primary);
 }
 
 .project-card-large {
