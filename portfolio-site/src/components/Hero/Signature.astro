@@ -134,7 +134,7 @@ const signatures: SignatureText[] = [
 <div class="signature">
 <!-- Use multiple text elements for 'shadows' but hide them from screen readers. 
      See: https://stackoverflow.com/a/53004280 -->
-<h1 id="asd" aria-labelledby="name-0">
+<h1 aria-labelledby="name-0">
     <svg viewBox="0 0 100 15" aria-hidden="true">
         <defs>
             <linearGradient id="linear-1" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -194,15 +194,15 @@ const signatures: SignatureText[] = [
     </svg>
 </h1>
 <h2>
-    <span>Developer. </span>
-    <span>Designer. </span>
-    <span class="gradient-text">Creator.</span>
+    Developer. Designer. Creator.
 </h2>
 <div/>
 
 <script>
     // TODO: Refactor this script or change to CSS animation
     import gsap from "gsap";
+    import { SplitText } from "gsap/SplitText";
+    gsap.registerPlugin(SplitText);
 
     const limit = {max: 1, pullRatio: 0},
     getRandom = () => gsap.utils.random(-limit.max, limit.max),
@@ -233,4 +233,20 @@ const signatures: SignatureText[] = [
             onComplete: () => wander(element, homeX, homeY)
         });
     }
+
+    const splitText = SplitText.create("h2", { type: "words" });
+
+    /* Solution because adding class to the last word in HTML does not work 
+        as GSAP wraps the split words in div elements. 
+        TODO: See for alternative solution: https://gsap.com/community/forums/topic/28020-splittext-gradient-text-is-it-possible/
+        */
+    const lastWord = splitText.words[splitText.words.length - 1];
+    gsap.set(lastWord, {className: "gradient-text"});
+
+    gsap.from(splitText.words, {
+        duration: 1, 
+        y: 20,
+        autoAlpha: 0,
+        stagger: 0.05
+    });
 </script>
