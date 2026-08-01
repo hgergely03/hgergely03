@@ -1,12 +1,72 @@
 ---
 import Signature from "./Signature.astro";
-
 ---
 
 <style>
-    div {
+    @property --1-x-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 5%;
+    }
+
+    @property --1-y-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 5%;
+    }
+
+    @property --2-x-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 80%;
+    }
+
+    @property --2-y-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 15%;
+    }
+
+    @property --3-x-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 0%;
+    }
+
+    @property --3-y-position {
+        syntax: "<percentage>";
+        inherits: false;
+        initial-value: 170%;
+    }
+
+    .hero {
+        position: relative;
         width: 100%;
-        padding: var(--spacing-extra-extra-large) 0px;
+        height: 90vh;
+    }
+
+    .lights {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        animation: gradient 5s ease infinite alternate;
+        background:
+            radial-gradient(
+                circle at var(--1-x-position) var(--1-y-position),
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0) 80%
+            ),
+            radial-gradient(
+                circle at var(--2-x-position) var(--2-y-position),
+                rgba(0, 0, 0, 1),
+                rgba(0, 0, 0, 0) 70%
+            ),
+            radial-gradient(
+                circle at var(--3-x-position) var(--3-y-position),
+                rgba(122, 0, 228, 1),
+                rgba(122, 0, 228, 0.5) 70%
+            );
         /** TODO: Test browser compatibility
             As an alternative, see SVG masking: https://www.w3schools.com/css/css3_masking_svg.asp */
         --mask: linear-gradient(
@@ -19,8 +79,46 @@ import Signature from "./Signature.astro";
             100% 50% / 100% 100% repeat-x;
         mask: var(--mask);
     }
+
+    hr {
+        border: 0;
+        height: var(--spacing-extra-extra-large);
+        width: 1px;
+        background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0.06) 0%,
+                rgba(255, 255, 255, 0.2) 100%
+            );
+        animation-delay: 0.6s;
+        /** TODO: Handle prefer-reduced-motion */
+        animation: line 2s ease-in-out;
+        transform-origin: top;
+        position: absolute;
+        left: 50%;
+        bottom: 15%;
+    }
+
+    @keyframes gradient {
+        /* 100% {
+            --1-x-position: 35%;
+            --1-y-position: 35%;
+        } */
+    }
+
+    @keyframes line {
+        0% {
+            transform: scale(1, 0);
+        }
+
+        100% {
+            transform: scale(1, 1);
+        }
+    }
 </style>
 
-<div>
-    <Signature />
+<div class="hero">
+    <div class="lights">
+        <Signature />
+    </div>
+    <hr>
 </div>

@@ -77,6 +77,11 @@ const signatures: SignatureText[] = [
 ---
 
 <style>
+    /** TODO: Make this component responsive */
+    .signature {
+        width: 100%;
+    }
+
     h1, h2 {
         margin: 0;
     }
@@ -126,6 +131,7 @@ const signatures: SignatureText[] = [
     } */
 </style>
 
+<div class="signature">
 <!-- Use multiple text elements for 'shadows' but hide them from screen readers. 
      See: https://stackoverflow.com/a/53004280 -->
 <h1 id="asd" aria-labelledby="name-0">
@@ -192,6 +198,7 @@ const signatures: SignatureText[] = [
     <span>Designer. </span>
     <span class="gradient-text">Creator.</span>
 </h2>
+<div/>
 
 <script>
     // TODO: Refactor this script or change to CSS animation
