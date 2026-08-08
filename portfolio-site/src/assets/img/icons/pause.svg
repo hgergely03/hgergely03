@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Inspo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="53" y="16" width="60" height="224" rx="14" ry="14"/>
+  <rect class="cls-1" x="143" y="16" width="60" height="224" rx="14" ry="14"/>
+</svg>

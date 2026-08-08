@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Inspo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M233.49,116.73L62.08,17.76c-8.68-5.01-19.53,1.25-19.53,11.27v197.92c0,10.02,10.85,16.29,19.53,11.27l171.41-98.96c8.68-5.01,8.68-17.54,0-22.55Z"/>
+</svg>

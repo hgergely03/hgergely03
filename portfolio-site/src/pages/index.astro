@@ -16,6 +16,9 @@ import ProjectCard from "../components/ProjectCard/ProjectCard.astro";
 import BusinessCard from "../components/BusinessCard/BusinessCard.astro";
 import Footer from "../components/Footer/Footer.astro";
 import type { IBentoItem } from "../components/Bento/BentoItem";
+import VideoProjectCard from "../components/ProjectCard/VideoProjectCard.astro";
+import PlaceholderVideo from "/videos/about.mp4";
+import PlaceholderCover from "../assets/img/video-placeholder-cover.png";
 
 
 const carouselItems: ICarouselItem[] = [
@@ -87,6 +90,12 @@ const bentoItems: IBentoItem[] = [
             />
 
             <AnimatedCarousel items={carouselItems} />
+
+            <VideoProjectCard
+                label="Experience, knowledge and achievements"
+                videoSrc={PlaceholderVideo}
+                posterSrc={PlaceholderCover.src}
+            />
 
             <ProjectCard
                 class="project-card-large"

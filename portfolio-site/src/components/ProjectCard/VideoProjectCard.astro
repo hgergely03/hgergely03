@@ -1,15 +1,127 @@
 ---
+import { Image } from "astro:assets";
+import PlayIcon from "../../assets/img/icons/play.svg";
+import PauseIcon from "../../assets/img/icons/pause.svg";
+
+export interface Props {
+    label: string;
+    videoSrc: string;
+    posterSrc: string;
+}
+
+const { videoSrc, posterSrc, label } = Astro.props;
 ---
 
 <style>
-    /* TODO: Responsive video card */
-    .video-project-card {
-        
+    .video-container {
+        width: 100%;
+        position: relative;
+        display: flex;
+    }
+
+    #video {
+        width: 100%;
+        display: flex;
+        border-radius: var(--spacing-small);
+        object-fit: cover;
+        box-shadow: 0 0 7px 2px rgba(255, 255, 255, 0.02);
+    }
+
+    #controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: var(--spacing-small);
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    #play-button {
+        display: flex;
+        padding: var(--spacing-small);
+        background-color: var(--color-light);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .invisible {
+        visibility: hidden;
+    }
+
+    #play-button > img {
+        width: 1.5rem;
+        height: 1.5rem;
     }
 </style>
 
-<!-- TODO: Add play button and controls -->
- <!-- TODO: start on hover, stop all other videos in group -->
-<div class="video-project-card">
-    <slot name="project-card" />
+<!-- TODO: Subtitles for videos with audio? -->
+<div class="video-container">
+    <video
+        id="video"
+        class="project-card-large"
+        controls
+        preload="none"
+        poster={posterSrc}
+    >
+        <source src={videoSrc} type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+    </video>
+    <div class="hidden" id="controls">
+        <p id="label">{label}</p>
+        <button id="play-button" aria-label="Play video">
+            <Image id="play-icon" src={PlayIcon} alt="" />
+            <Image class="hidden" id="pause-icon" src={PauseIcon} alt="" />
+        </button>
+    </div>
 </div>
+
+<script>
+    import gsap from "gsap";
+
+    const video = document.getElementById("video") as HTMLVideoElement;
+    const controls = document.getElementById("controls") as HTMLDivElement;
+    const playButton = document.getElementById(
+        "play-button",
+    ) as HTMLButtonElement;
+    const playIcon = document.getElementById("play-icon") as HTMLImageElement;
+    const pauseIcon = document.getElementById("pause-icon") as HTMLImageElement;
+    const label = document.getElementById("label") as HTMLParagraphElement;
+    // TODO: Unify durations and easings across animations
+    var timeLine = gsap.timeline({ paused: true }).to(label, {
+        duration: 1,
+        autoAlpha: 0,
+        ease: "power1.inOut",
+    }).reverse();
+
+    video.controls = false;
+    controls.classList.toggle("hidden");
+
+    function toggleControls() {
+        playIcon.classList.toggle("hidden");
+        pauseIcon.classList.toggle("hidden");
+    }
+
+    playButton.addEventListener("click", () => {
+        if (video.paused || video.ended) {
+            video.play();
+        } else {
+            video.pause();
+        }
+
+        toggleControls();
+        timeLine.reversed(!timeLine.reversed());
+    });
+
+    video.addEventListener("ended", () => {
+        toggleControls();
+    });
+</script>
