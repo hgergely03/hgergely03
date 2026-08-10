@@ -25,7 +25,6 @@ const {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
     }
 
     .hover-text {
@@ -38,12 +37,12 @@ const {
         background-image: linear-gradient(
             to bottom,
             rgba(255, 255, 255, 1) 0%,
-            rgba(255, 255, 255, 0.3) 40%,
-            rgba(255, 255, 255, 0) 100%
+            rgba(255, 255, 255, 0.4) 40%,
+            rgba(255, 255, 255, 0.15) 100%
         );
         letter-spacing: 2px;
         /** Low opacity: around 0.08-0.28 */
-        opacity: 0.8;
+        mask: url("#text-mask");
     }
 
     .title {
@@ -91,6 +90,17 @@ const {
     }
 </style>
 
+<!-- TODO: Get rid of multiple SVG elements / same id -->
+<svg height="0">
+  <mask id="text-mask">
+    <radialGradient id="mask-gradient">
+      <stop stop-color="rgba(255, 255, 255, 1)" offset="0%" />
+      <stop stop-color="rgba(255, 255, 255, 0)" offset="100%" />
+    </radialGradient>
+    <rect width="2000" height="200" x="-300" y="30" fill="rgba(255, 255, 255, 0.4)" />
+    <circle id="mask-circle" cx="50" cy="150" r="0" fill="url(#mask-gradient)" />
+  </mask>
+</svg>
 <div class="hover-title">
     <p class="hover-text gradient-outline-text">{hoverText}</p>
 
@@ -111,3 +121,35 @@ const {
         )
     }
 </div>
+
+<script>
+    import gsap from "gsap";
+    const titles = document.querySelectorAll('.hover-title') as NodeListOf<HTMLDivElement>;
+    const maskCircle = document.getElementById("mask-circle") as SVGCircleElement | null;
+
+    /** Add event listeners to each title as the script is only loaded once 
+        (while the component is used multiple times.) */
+    titles.forEach((title) => {
+        title.addEventListener("mouseenter", () => {
+            maskCircle?.setAttribute("r", "120");
+        });
+
+        title.addEventListener("mouseleave", () => {
+            gsap.to(maskCircle, {
+                attr: { r: 0 },
+                duration: 0.2,
+                ease: "power2.inOut",
+            });
+        });
+
+        title.addEventListener("mousemove", (event) => {
+            if (maskCircle) {
+                const rect = title.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                maskCircle.setAttribute("cx", x.toString());
+                maskCircle.setAttribute("cy", y.toString());
+            }
+        });
+    });
+</script>
