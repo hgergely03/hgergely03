@@ -31,11 +31,11 @@ const { videoSrc, posterSrc, label } = Astro.props;
         position: absolute;
         bottom: 0;
         left: 0;
-        padding: var(--spacing-small);
+        padding: var(--spacing-normal);
         display: flex;
         width: 100%;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
         box-sizing: border-box;
     }
 
@@ -48,6 +48,13 @@ const { videoSrc, posterSrc, label } = Astro.props;
         cursor: pointer;
     }
 
+    h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
     .hidden {
         display: none;
     }
@@ -57,8 +64,8 @@ const { videoSrc, posterSrc, label } = Astro.props;
     }
 
     #play-button > img {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.2rem;
+        height: 1.2rem;
     }
 </style>
 
@@ -75,8 +82,10 @@ const { videoSrc, posterSrc, label } = Astro.props;
         <source src="movie.ogg" type="video/ogg" />
         Your browser does not support the video tag.
     </video>
+    <!-- TODO: Look into controls accessibility -->
     <div class="hidden" id="controls">
-        <p id="label">{label}</p>
+        <!-- TODO: Create label component shared between ProjectCard and VideoProjectCard -->
+        <h3 id="label">{label}</h3>
         <button id="play-button" aria-label="Play video">
             <Image id="play-icon" src={PlayIcon} alt="" />
             <Image class="hidden" id="pause-icon" src={PauseIcon} alt="" />
@@ -87,6 +96,7 @@ const { videoSrc, posterSrc, label } = Astro.props;
 <script>
     import gsap from "gsap";
 
+    // TODO: Get rid of multiple video elements / same id
     const video = document.getElementById("video") as HTMLVideoElement;
     const controls = document.getElementById("controls") as HTMLDivElement;
     const playButton = document.getElementById(
