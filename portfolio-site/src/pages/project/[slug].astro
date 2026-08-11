@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+import HomeIcon from "../../assets/img/icons/home.png";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+
+<style>
+
+</style>
+
+<Layout title="Projects">
+    <!-- TODO: https://docs.astro.build/en/guides/images/#images-in-content-collections -->
+    <Image src={project.data.previewImgSrc!} alt="" />
+</Layout>
+
+
