@@ -1,0 +1,171 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.git.enabled": false,
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "project",
+      "pageBundle": false,
+      "previewPath": "project",
+      "fields": [
+        {
+          "title": "Preview image",
+          "name": "previewImgSrc",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft",
+          "default": "true"
+        },
+        {
+          "title": "Publishing date",
+          "name": "publishDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug",
+          "editable": true,
+          "default": "{{slug}}"
+        },
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "required": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Video source",
+          "name": "videoSrc",
+          "type": "image"
+        },
+        {
+          "title": "Metrics",
+          "name": "metrics",
+          "type": "block",
+          "fieldGroup": [
+            "metric"
+          ]
+        },
+        {
+          "title": "Gallery",
+          "name": "gallery",
+          "type": "block",
+          "fieldGroup": [
+            "galleryImage"
+          ]
+        },
+        {
+          "title": "Technologies",
+          "name": "technologies",
+          "type": "block",
+          "fieldGroup": [
+            "technology"
+          ]
+        },
+        {
+          "title": "Related posts",
+          "name": "relatedPosts",
+          "type": "contentRelationship",
+          "contentTypeName": "project",
+          "contentTypeValue": "slug",
+          "multiple": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.taxonomy.fieldGroups": [
+    {
+      "id": "metric",
+      "labelField": "label",
+      "fields": [
+        {
+          "title": "Label",
+          "name": "label",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Value",
+          "name": "value",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string",
+          "single": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "galleryImage",
+      "labelField": "caption",
+      "fields": [
+        {
+          "title": "Image source",
+          "name": "imgSrc",
+          "type": "image",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Caption",
+          "name": "caption",
+          "type": "string",
+          "single": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "technology",
+      "labelField": "name",
+      "fields": [
+        {
+          "title": "Name",
+          "name": "name",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Image source",
+          "name": "iconSrc",
+          "type": "image",
+          "single": true,
+          "required": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "projects",
+      "path": "[[workspace]]/src/content/projects",
+      "contentTypes": [
+        "project"
+      ]
+    }
+  ]
+}
