@@ -12,8 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.10",
     "astro": "^6.4.2",
-    "gsap": "^3.15.0"
+    "gsap": "^3.15.0",
+    "sharp": "^0.35.4",
+    "typescript": "^6.0"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^8.59.3",
