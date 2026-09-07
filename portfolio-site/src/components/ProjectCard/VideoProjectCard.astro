@@ -53,6 +53,7 @@ const { videoSrc, posterSrc, label } = Astro.props;
         font-size: 1.1rem;
         font-weight: 400;
         color: rgba(255, 255, 255, 0.8);
+        max-width: 70%;
     }
 
     .hidden {
@@ -79,7 +80,6 @@ const { videoSrc, posterSrc, label } = Astro.props;
         poster={posterSrc}
     >
         <source src={videoSrc} type="video/mp4" />
-        <source src="movie.ogg" type="video/ogg" />
         Your browser does not support the video tag.
     </video>
     <!-- TODO: Look into controls accessibility -->
