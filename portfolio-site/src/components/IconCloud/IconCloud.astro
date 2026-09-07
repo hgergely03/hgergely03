@@ -1,0 +1,80 @@
+---
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+    technologies: {
+        name: string;
+        iconSrc: ImageMetadata;
+    }[],
+}
+
+const { technologies } = Astro.props;
+const iconPositions = [
+    { x: 43, y: 12 },
+    { x: 58, y: 7 },
+    { x: 16, y: 6 },
+    { x: 27, y: 19 },
+    { x: 85, y: 18 },
+    { x: 75, y: 10 },
+]
+
+const viewBoxWidth = 100;
+const viewBoxHeight = 25;
+const iconSize = 5;
+function getPosition(index: number): { x: number; y: number } {
+    if (index >= iconPositions.length) {
+        const position = {
+            x: Math.max(Math.random() * viewBoxWidth - iconSize, 0),
+            y: Math.min(Math.random() * viewBoxHeight + iconSize, viewBoxHeight - iconSize),
+        };
+
+        // check if the position is too close to any existing icon positions
+        for (const existingPosition of iconPositions) {
+            const distance = Math.sqrt(
+                Math.pow(position.x - existingPosition.x, 2) +
+                Math.pow(position.y - existingPosition.y, 2)
+            );
+
+            if (distance < iconSize * 2) {
+                return getPosition(index);
+            }
+        }
+
+        iconPositions.push(position);
+
+        return position;
+    }
+
+    return iconPositions[index];
+}
+---
+
+<style>
+    svg image {
+        width: 5px;
+        height: 5px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        
+    }
+
+    @media screen and (max-width: 1200px) {
+        
+    }
+</style>
+
+<svg viewBox=`0 0 ${viewBoxWidth} ${viewBoxHeight}`>
+    {
+        technologies.map((technology, index) => (
+                <image
+                    x={getPosition(index).x}
+                    y={getPosition(index).y}
+                    href={technology.iconSrc.src}
+                    class="floating-icon"
+                />
+        ))
+    }
+</svg>
+
+<script src="../../scripts/wander.ts" />

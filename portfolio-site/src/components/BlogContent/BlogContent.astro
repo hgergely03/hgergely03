@@ -1,0 +1,73 @@
+---
+import type { ImageMetadata } from 'astro';
+
+export interface Props {
+    paragraphs: {
+        title: string;
+        body: string;
+        imgSrc: ImageMetadata;
+        imgAlt: string;
+    }[],
+}
+
+const { paragraphs } = Astro.props;
+---
+
+<style>
+    .paragraph-container {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-extra-extra-large);
+        max-width: 50vw;
+    }
+
+    .content-paragraph {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--spacing-extra-extra-large);
+        align-items: center;
+    }
+
+    .content-text {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-medium);
+    }
+
+    p, h2 {
+        margin: 0;
+    }
+
+    img {
+        aspect-ratio: 4 / 5.6;
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: var(--spacing-small);
+    }
+
+    @media screen and (max-width: 1200px) {
+        .paragraph-container {
+            max-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .content-paragraph {
+            grid-template-columns: 1fr;
+        gap: var(--spacing-large);
+        }
+    }
+</style>
+
+<div class="paragraph-container">
+    {paragraphs.map((paragraph) => (
+        <div class="content-paragraph">
+            <div class="content-text">
+                <!-- TODO: 90% white text color (CSS vars and global rules?) -->
+                <h2>{paragraph.title}</h2>
+                <p>{paragraph.body}</p>
+            </div>
+            <img src={paragraph.imgSrc.src} alt={paragraph.imgAlt} />
+        </div>
+    ))}
+</div>

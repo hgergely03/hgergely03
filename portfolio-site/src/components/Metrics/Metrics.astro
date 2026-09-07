@@ -1,0 +1,108 @@
+---
+import { type IMetric } from "./Metric"
+
+export interface Props {
+    metrics: IMetric[];
+}
+
+const { metrics } = Astro.props;
+---
+
+<style>
+    p {
+        margin: 0;
+    }
+
+    .metrics {
+        display: flex;
+        gap: var(--spacing-extra-extra-large);
+        width: 100%;
+    }
+
+    .descriptions {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-medium);
+        max-width: 30%;
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+
+    .description > .label {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--color-light);
+    }
+
+    .description > .text {
+        font-size: 1.25rem;
+        font-weight: 200;
+        /** TODO: Define a CSS variable for this color */
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    .values {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--spacing-extra-large) var(--spacing-extra-extra-large);
+        align-content: center;
+        justify-content: center;
+    }
+
+    .value {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-extra-small);
+        align-items: center;
+    }
+
+    .value > .number {
+        font-size: 2.75rem;
+        font-weight: 600;
+    }
+
+    .value > .label {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    @media (max-width: 768px) {
+        .metrics {
+            flex-direction: column;
+            align-items: center;
+            gap: var(--spacing-extra-large);
+        }
+
+        .descriptions {
+            max-width: 100%;
+        }
+    }
+</style>
+
+<div class="metrics">
+    <div class="descriptions">
+        {
+            metrics.map((metric) => (
+                <div class="description">
+                    <p class="label">{metric.label}</p>
+                    <p class="text">{metric.description}</p>
+                </div>
+            ))
+        }
+    </div>
+    <div class="values">
+        {
+            metrics.map((metric) => (
+                <div class="value">
+                    <p class="number">{metric.value}</p>
+                    <p class="label">{metric.label}</p>
+                </div>
+            ))
+        }
+    </div>
+</div>
