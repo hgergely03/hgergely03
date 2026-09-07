@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # vscode time tracker extension
 .timetracker
+
+# frontmatter cms
+.frontmatter/

@@ -3,6 +3,7 @@ import AnimatedCarousel from "../components/AnimatedCarousel/AnimatedCarousel.as
 import { type ICarouselItem } from "../components/AnimatedCarousel/CarouselItem.astro";
 import Bento from "../components/Bento/Bento.astro";
 import Button from "../components/Button/Button.astro";
+import { getCollection } from "astro:content";
 import HoverTitle from "../components/Hover title/HoverTitle.astro";
 import Hero from "../components/Hero/Hero.astro";
 import Homepage1 from "../assets/img/icons/homepage-1.png";
@@ -17,7 +18,6 @@ import type { IBentoItem } from "../components/Bento/BentoItem";
 import VideoProjectCard from "../components/ProjectCard/VideoProjectCard.astro";
 import PlaceholderVideo from "/videos/about.mp4";
 import PlaceholderCover from "../assets/img/video-placeholder-cover.png";
-
 
 const carouselItems: ICarouselItem[] = [
     {
@@ -37,21 +37,41 @@ const carouselItems: ICarouselItem[] = [
     },
 ];
 
-const bentoItems: IBentoItem[] = [
-    {
-        label: "Project 1",
-        backgroundImageSrc: PlaceholderImg.src,
-        href: "/about"
-    },
-    {
-        label: "Project 2",
-        backgroundImageSrc: Placeholder2Img.src,
-    },
-    {
-        label: "Project 3",
-        backgroundImageSrc: Placeholder3Img.src,
-    },
-];
+const projects = await getCollection("projects");
+const highLightedProjects = projects
+    .filter((project) => project.data.highlighted)
+    .slice(0, 3);
+
+const bentoItems: IBentoItem[] = highLightedProjects.map((project) => ({
+    label: project.data.title,
+    backgroundImageSrc: project.data.previewImgSrc?.src ?? PlaceholderImg.src,
+    href: `/project/${project.id}`,
+}));
+
+if (bentoItems.length < 3) {
+    const remainingItems = 3 - bentoItems.length;
+    const placehholderItems = [
+        {
+            label: "Project 1",
+            backgroundImageSrc: Placeholder3Img.src,
+            href: "",
+        },
+        {
+            label: "Project 2",
+            backgroundImageSrc: PlaceholderImg.src,
+            href: "",
+        },
+        {
+            label: "Project 3",
+            backgroundImageSrc: Placeholder2Img.src,
+            href: "",
+        },
+    ];
+    
+    for (let i = remainingItems; i > 0; i--) {
+        bentoItems.push(placehholderItems[i]);
+    }
+}
 ---
 
 <style>
