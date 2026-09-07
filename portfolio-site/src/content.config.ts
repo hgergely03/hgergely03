@@ -9,11 +9,21 @@ const projects = defineCollection({
     description: z.string().optional(),
     tags: z.array(z.string()).optional(),
     previewImgSrc: image().optional(),
-    videoSrc: z.string().optional(),
+    video: z.object({
+      videoSrc: z.string(),
+      posterSrc: image(),
+      label: z.string(),
+    }).optional(),
     metrics: z.array(z.object({
       label: z.string(),
-      value: z.string(),
+      value: z.string(),  
       description: z.string(),
+    })).optional(),
+    paragraphs: z.array(z.object({
+      title: z.string(),
+      body: z.string(),  
+      imgSrc: image(),
+      imgAlt: z.string(),
     })).optional(),
     gallery: z.array(z.object({
       imgSrc: image(),
@@ -24,6 +34,7 @@ const projects = defineCollection({
       iconSrc: image(),
     })).optional(),
     publishDate: z.coerce.date(),
+    highlighted: z.boolean().optional(),
     relatedPosts: z.array(reference("project")).optional(),
   }),
 });

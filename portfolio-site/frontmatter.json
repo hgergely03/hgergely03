@@ -51,9 +51,32 @@
           "type": "tags"
         },
         {
-          "title": "Video source",
-          "name": "videoSrc",
-          "type": "image"
+          "title": "Video",
+          "name": "video",
+          "required": false,
+          "type": "fields",
+          "fields": [
+            {
+              "title": "Video source",
+              "name": "videoSrc",
+              "type": "file",
+              "fileExtensions": [
+                "video/mp4",
+                "video/webm",
+                "video/ogg"
+              ]
+            },
+            {
+              "title": "Poster source",
+              "name": "posterSrc",
+              "type": "image"
+            },
+            {
+              "title": "Label",
+              "name": "label",
+              "type": "string"
+            }
+          ]
         },
         {
           "title": "Metrics",
@@ -61,6 +84,14 @@
           "type": "block",
           "fieldGroup": [
             "metric"
+          ]
+        },
+        {
+          "title": "Paragraphs",
+          "name": "paragraphs",
+          "type": "block",
+          "fieldGroup": [
+            "paragraph"
           ]
         },
         {
@@ -86,6 +117,11 @@
           "contentTypeName": "project",
           "contentTypeValue": "slug",
           "multiple": true
+        },
+        {
+          "title": "Highlighted",
+          "name": "highlighted",
+          "type": "boolean"
         }
       ]
     }
@@ -112,6 +148,40 @@
         {
           "title": "Description",
           "name": "description",
+          "type": "string",
+          "single": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "paragraph",
+      "labelField": "title",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Body",
+          "name": "body",
+          "type": "string",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Image source",
+          "name": "imgSrc",
+          "type": "image",
+          "single": true,
+          "required": true
+        },
+        {
+          "title": "Image alt text",
+          "name": "imgAlt",
           "type": "string",
           "single": true,
           "required": true
