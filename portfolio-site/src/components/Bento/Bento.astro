@@ -4,11 +4,9 @@ import type { IBentoItem } from "./BentoItem";
 
 export interface Props {
     items: IBentoItem[];
-    class?: string | string[];
-    href?: string;
 }
 
-const { items, class: className, href } = Astro.props;
+const { items } = Astro.props;
 ---
 
 <style>
