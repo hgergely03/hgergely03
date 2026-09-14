@@ -143,4 +143,10 @@ body {
   :root {
     --spacing-layout: 5vw;
   }
+
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+  }
 }

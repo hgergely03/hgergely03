@@ -12,7 +12,14 @@ const { items } = Astro.props;
 <style>
     .carousel {
         display: flex;
+        align-items: center;
         gap: var(--spacing-extra-extra-large);
+    }
+
+    @media screen and (max-width: 1200px) {
+        .carousel {
+            gap: var(--spacing-large);
+        }
     }
 
     @media screen and (max-width: 768px) {
