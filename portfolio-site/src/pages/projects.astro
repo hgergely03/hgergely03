@@ -1,19 +1,57 @@
 ---
+import Bento from "../components/Bento/Bento.astro";
+import HoverTitle from "../components/Hover title/HoverTitle.astro";
 import Layout from "../layouts/Layout.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
+const projectByYear = projects.reduce((map, project) => {
+    const year = project.data.publishDate.getFullYear();
+
+    if (!map.has(year)) {
+        map.set(year, []);
+    }
+
+    map.get(year)?.push(project);
+
+    return map;
+}, new Map<number, typeof projects>());
 ---
 
+<style>
+    .content {
+        margin: var(--spacing-extra-extra-large) var(--spacing-layout);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-extra-extra-large);
+    }
+</style>
+
 <Layout title="Projects">
-    <h1>My posts</h1>
-    <ul>
+    <div class="content">
+        <HoverTitle
+            hoverText="Projects"
+            firstLineText="All"
+            firstLineHighlightText="projects"
+            secondLineText="Year by year archive of my works"
+        />
         {
-            projects.map((project) => (
-                <li>
-                    <a href={`/project/${project.id}`}>{project.data.title}</a>
-                </li>
+            projectByYear.entries().map(([year, projects]) => (
+                <section>
+                    <HoverTitle
+                        hoverText={year.toString()}
+                        secondLineText={year.toString()}
+                    />
+                    <Bento
+                        items={projects.map((project) => ({
+                            label: project.data.title,
+                            backgroundImageSrc:
+                                project.data.previewImgSrc?.src ?? "",
+                            href: `/project/${project.id}`,
+                        }))}
+                    />
+                </section>
             ))
         }
-    </ul>
+    </div>
 </Layout>
