@@ -1,0 +1,50 @@
+---
+import type { CollectionEntry } from "astro:content";
+import ProjectCard from "../../components/ProjectCard/ProjectCard.astro";
+
+export interface Props {
+  posts: CollectionEntry<"projects">[];
+}
+
+const { posts } = Astro.props;
+---
+
+<style>
+  .related-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-large);
+    height: 50vh;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    .related-posts {
+      gap: var(--spacing-normal);
+      height: 40vh;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .related-posts {
+      height: auto;
+      grid-template-columns: 1fr;
+    }
+
+    .related-posts > * {
+      height: 25vh;
+    }
+  }
+</style>
+
+<div class="related-posts">
+  {
+    posts.map((post) => (
+      <ProjectCard
+        label={post.data.title}
+        backgroundImageSrc={post.data.previewImgSrc?.src ?? ""}
+        href={`/project/${post.id}`}
+      />
+    ))
+  }
+</div>

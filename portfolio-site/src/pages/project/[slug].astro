@@ -6,6 +6,8 @@ import Metrics from "../../components/Metrics/Metrics.astro";
 import VideoProjectCard from "../../components/ProjectCard/VideoProjectCard.astro";
 import BlogContent from "../../components/BlogContent/BlogContent.astro";
 import IconCloud from "../../components/IconCloud/IconCloud.astro";
+import { getEntries } from "astro:content";
+import RelatedPosts from "../../components/RelatedPosts/RelatedPosts.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -17,21 +19,25 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const url = project.data.previewImgSrc?.src;
+const heroImageUrl = project.data.previewImgSrc?.src;
+const relatedPosts = await getEntries(project.data.relatedPosts);
 ---
 
-<style define:vars={{ backgroundImage: `url("${url}")` }}>
+<style define:vars={{ backgroundImage: `url("${heroImageUrl}")` }}>
   .hero {
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%),
       var(--backgroundImage) #353535 50% / cover no-repeat;
   }
 
-  .hero > p {
+  .hero > .hero-content {
     position: absolute;
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
+  }
+
+  .hero > .hero-content > p {
     /** TODO: Unify with .second-line from HoverTitle */
     color: var(--color-light);
     font-size: 2.75rem;
@@ -39,6 +45,28 @@ const url = project.data.previewImgSrc?.src;
     text-align: center;
     opacity: 0.9;
     margin: 0;
+  }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-normal);
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-medium);
+  }
+
+  .tag {
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.012) 100%);
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: var(--spacing-extra-small) var(--spacing-normal);
+    border-radius: var(--spacing-medium);
   }
 
   section {
@@ -60,7 +88,18 @@ const url = project.data.previewImgSrc?.src;
 <Layout title={project.data.title}>
   <!-- TODO: https://docs.astro.build/en/guides/images/#images-in-content-collections -->
   <div class="hero">
-    <p>{project.data.title}</p>
+    <div class="hero-content">
+      <p>{project.data.title}</p>
+      {
+        project.data.tags && (
+          <div class="tags">
+            {project.data.tags.map((tag) => (
+              <span class="gradient-border tag">{tag}</span>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </div>
   <div class="content">
     <!-- Details video -->
@@ -109,9 +148,9 @@ const url = project.data.previewImgSrc?.src;
       project.data.technologies && (
         <section>
           <HoverTitle
-            hoverText="Technology"
+            hoverText="Stack"
             firstLineText="Used"
-            firstLineHighlightText="stack"
+            firstLineHighlightText="technology"
             secondLineText="Technologies bringing the project to life"
           />
           <IconCloud technologies={project.data.technologies} />
@@ -119,17 +158,17 @@ const url = project.data.previewImgSrc?.src;
       )
     }
 
-    <!-- Paragraphs -->
+    <!-- Related posts -->
     {
-      project.data.paragraphs && (
+      relatedPosts && (
         <section>
           <HoverTitle
-            hoverText="Paragraph"
-            firstLineText="Lorem"
-            firstLineHighlightText="ipsum"
-            secondLineText="Long section title"
+            hoverText="Related"
+            firstLineText="Recommended"
+            firstLineHighlightText="projects"
+            secondLineText="You might be interested in these"
           />
-          <BlogContent paragraphs={project.data.paragraphs} />
+          <RelatedPosts posts={relatedPosts} />
         </section>
       )
     }
