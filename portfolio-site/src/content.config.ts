@@ -35,7 +35,7 @@ const projects = defineCollection({
     })).optional(),
     publishDate: z.coerce.date(),
     highlighted: z.boolean().optional(),
-    relatedPosts: z.array(reference("project")).optional(),
+    relatedPosts: z.array(reference("projects")),
   }),
 });
 

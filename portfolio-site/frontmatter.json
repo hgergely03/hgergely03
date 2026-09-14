@@ -114,7 +114,7 @@
           "title": "Related posts",
           "name": "relatedPosts",
           "type": "contentRelationship",
-          "contentTypeName": "project",
+          "contentTypeName": "projects",
           "contentTypeValue": "slug",
           "multiple": true
         },
