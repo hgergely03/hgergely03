@@ -94,7 +94,7 @@ const signatures: SignatureText[] = [
         text-align: center;
         position: relative;
         bottom: 15.5vh;
-        font-size: 4.2rem;
+        font-size: var(--font-size-extra-extra-large);
     }
 
     svg {
@@ -150,6 +150,30 @@ const signatures: SignatureText[] = [
         75% { transform: translate(1px, 1px); }
         100% { transform: translate(-1px, -1px); }
     } */
+
+    @media screen and (max-width: 1600px) {
+        h2 {
+            bottom: 12.5vh;
+        }
+    }
+
+    @media screen and (max-width: 1400px) {
+        h2 {
+            bottom: 10vh;
+        }
+    }
+
+    @media screen and (max-width: 996px) {
+        h2 {
+            bottom: 7vh;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h2 {
+            bottom: 3vh;
+        }
+    }
 </style>
 
 <div class="signature">

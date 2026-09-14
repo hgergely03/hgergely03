@@ -91,6 +91,9 @@
   --spacing-extra-large: 4rem;
   --spacing-extra-extra-large: 7.5rem;
   --spacing-layout: 15vw;
+
+  /** Typography */
+  --font-size-extra-extra-large: clamp(1rem, 16px + 2.65vw, 7rem);
 }
 
 body {
