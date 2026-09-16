@@ -105,7 +105,7 @@ const signatures: SignatureText[] = [
 
     svg text {
         font-family: var(--font-inter);
-        stroke-width: 0.05;
+        stroke-width: 0.07;
         fill: transparent;
         paint-order: stroke;
         font-weight: 700;
@@ -158,8 +158,13 @@ const signatures: SignatureText[] = [
             display: block;
         }
 
+        h2 {
+            top: 55%;
+        }
+
         svg text {
             font-size: 1.25rem;
+            stroke-width: 0.1;
         }
 
         .icons-clip {
@@ -182,6 +187,7 @@ const signatures: SignatureText[] = [
 <h1 aria-labelledby="name-0">
     <svg viewBox="0 0 100 70" aria-hidden="true">
         <defs>
+            <!-- Gradients for signature and its shadows -->
             <linearGradient id="linear-1" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stop-color="rgba(255, 44, 44, 0.8)"></stop>
                 <stop offset="40%" stop-color="rgba(255, 44, 44, 0.21)"></stop>
@@ -200,12 +206,14 @@ const signatures: SignatureText[] = [
                 <stop offset="100%" stop-color="rgba(92, 0, 172, 0)"></stop>
             </linearGradient>
 
+            <!-- Masks for moving light parts -->
             <mask id="light-mask">
                 <rect id="light-mask-1" x="5" y="0" width="30" height="35"/>
                 <rect id="light-mask-2" x="35" y="0" width="35" height="60"/>
                 <rect id="light-mask-2" x="70" y="0" width="30" height="35"/>
             </mask>
     
+            <!-- Clipping path used by floating icons -->
             <clipPath id="text-clip">
                 <text
                     x="50"
@@ -216,6 +224,7 @@ const signatures: SignatureText[] = [
                 >
             </clipPath>
 
+            <!-- Clipping path used by floating icons on mobile -->
             <clipPath id="text-clip-multiline">
                 <text
                     x="48"
@@ -261,23 +270,15 @@ const signatures: SignatureText[] = [
             ))
         }
 
+        <!-- Floating icons -->
         <g class="icons-clip">
             {
                 icons.map((icon) => (
                         <image
-                            class="d-lg"
+                            class="floating-icon"
                             x={icon.x}
                             y={icon.y}
                             href={icon.src}
-                            class="floating-icon"
-                        />
-
-                        <image
-                            class="d-sm"
-                            x={icon.x-1}
-                            y={icon.y+2}
-                            href={icon.src}
-                            class="floating-icon"
                         />
                 ))
             }
