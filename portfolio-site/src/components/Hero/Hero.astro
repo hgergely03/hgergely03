@@ -39,6 +39,42 @@ import Signature from "./Signature.astro";
         initial-value: 170%;
     }
 
+    @property --1-gradient-1 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(0, 0, 0, 1);
+    }
+
+    @property --1-gradient-2 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(0, 0, 0, 0);
+    }
+
+    @property --2-gradient-1 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(0, 0, 0, 1);
+    }
+
+    @property --2-gradient-2 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(0, 0, 0, 0);
+    }
+
+    @property --3-gradient-1 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(122, 0, 228, 1);
+    }
+
+    @property --3-gradient-2 {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: rgba(122, 0, 228, 0.5);
+    }
+
     .lights {
         width: 100%;
         height: 100%;
@@ -48,18 +84,18 @@ import Signature from "./Signature.astro";
         background:
             radial-gradient(
                 circle at var(--1-x-position) var(--1-y-position),
-                rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0) 80%
+                var(--1-gradient-1),
+                var(--1-gradient-2) 80%
             ),
             radial-gradient(
                 circle at var(--2-x-position) var(--2-y-position),
-                rgba(0, 0, 0, 1),
-                rgba(0, 0, 0, 0) 70%
+                var(--2-gradient-1),
+                var(--2-gradient-2) 70%
             ),
             radial-gradient(
                 circle at var(--3-x-position) var(--3-y-position),
-                rgba(122, 0, 228, 1),
-                rgba(122, 0, 228, 0.5) 70%
+                var(--3-gradient-1),
+                var(--3-gradient-2) 70%
             );
         /** TODO: Test browser compatibility
             As an alternative, see SVG masking: https://www.w3schools.com/css/css3_masking_svg.asp */
@@ -106,6 +142,12 @@ import Signature from "./Signature.astro";
 
         100% {
             transform: scale(1, 1);
+        }
+    }
+
+    @media screen and (max-width: 996px) {
+        .lights {
+            --3-gradient-2: rgba(122, 0, 228, 0.7);
         }
     }
 </style>
