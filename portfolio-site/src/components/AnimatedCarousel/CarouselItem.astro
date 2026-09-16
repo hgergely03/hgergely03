@@ -40,9 +40,19 @@ const {
         text-align: center;
     }
 
+    @media screen and (max-width: 1200px) {
+        .carousel-item:nth-last-of-type(1) {
+            grid-column: span 2;
+        }
+    }
+
     @media screen and (max-width: 768px) {
-        .carousel-item {
-            max-width: 60%;
+        .carousel-item > img {
+            max-width: 50%;
+        }
+
+        .carousel-item:nth-last-of-type(1) {
+            grid-column: span 1;
         }
     }
 </style>

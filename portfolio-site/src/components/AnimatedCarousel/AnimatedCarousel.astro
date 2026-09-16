@@ -11,20 +11,29 @@ const { items } = Astro.props;
 
 <style>
     .carousel {
-        display: flex;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(3, 1fr);
         align-items: center;
         gap: var(--spacing-extra-extra-large);
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1400px) {
         .carousel {
             gap: var(--spacing-large);
+        }
+    }
+    
+    @media screen and (max-width: 1200px) {
+        .carousel {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-medium);
         }
     }
 
     @media screen and (max-width: 768px) {
         .carousel {
-            flex-direction: column;
+            grid-template-columns: auto;
             gap: var(--spacing-medium);
         }
     }
