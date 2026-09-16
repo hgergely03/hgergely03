@@ -1,0 +1,30 @@
+<style>
+    svg {
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+</style>
+
+<svg height="0" aria-hidden="true">
+    <mask id="mask-base">
+        <rect
+            width="2000"
+            height="200"
+            x="-300"
+            y="0"
+            fill="rgba(255, 255, 255, 0.4)"></rect>
+    </mask>
+    <mask id="mask-circle">
+        <radialGradient id="mask-gradient">
+            <stop stop-color="rgba(255, 255, 255, 1)" offset="0%"></stop>
+            <stop stop-color="rgba(255, 255, 255, 0)" offset="100%"></stop>
+        </radialGradient>
+        <circle
+            id="mask-circle-element"
+            cx="50"
+            cy="150"
+            r="0"
+            fill="url(#mask-gradient)"></circle>
+    </mask>
+</svg>
