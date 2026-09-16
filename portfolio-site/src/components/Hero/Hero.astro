@@ -164,19 +164,22 @@ import Signature from "./Signature.astro";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     gsap.registerPlugin(ScrollTrigger);
 
-    if (ScrollTrigger.isTouch === 1) {
-        ScrollTrigger.normalizeScroll(true);
-    }    
-
-    gsap.to("hr", {
-        scaleY: 1,
-        ease: "power2.inOut",
-        scrollTrigger: {
+    const triggerOptions = {
             trigger: ".hero",
             scrub: true,
             once: true,
             start: "top",
             end: "bottom top+=400",
-        },
+        };
+
+    if (ScrollTrigger.isTouch === 1) {
+        ScrollTrigger.normalizeScroll(true);
+        triggerOptions.end = "bottom top+=200";
+    }    
+
+    gsap.to("hr", {
+        scaleY: 1,
+        ease: "power2.inOut",
+        scrollTrigger: triggerOptions,
     });
 </script>
